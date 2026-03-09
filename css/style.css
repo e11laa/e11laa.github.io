@@ -5,22 +5,31 @@
 
 /* ── Variables ─────────────────────────────────────────────── */
 :root {
-  --bg:        #0a0a0a;
-  --bg-card:   #141414;
-  --bg-nav:    rgba(10, 10, 10, 0.92);
-  --text:      #f0f0f0;
-  --text-muted:#a0a0a0;
-  --accent:    #c8a97e;       /* warm gold — elegantly musical */
-  --accent-dim:#8a7254;
-  --border:    #2a2a2a;
-  --nav-h:     64px;
+  --bg: #fafafa;
+  /* Off-white background */
+  --bg-card: #ffffff;
+  /* Pure white for cards */
+  --bg-nav: rgba(250, 250, 250, 0.92);
+  --text: #111111;
+  /* Deepest gray, almost black */
+  --text-muted: #4a4a4a;
+  /* Darker gray for secondary text */
+  --accent: #e60000;
+  /* Red accent */
+  --accent-dim: #b30000;
+  /* Slightly darker red for hovers */
+  --border: #e5e5e5;
+  /* Light gray borders */
+  --nav-h: 64px;
   --section-gap: 6rem;
-  --radius:    6px;
+  --radius: 6px;
   --transition: 0.3s ease;
 }
 
 /* ── Reset & Base ───────────────────────────────────────────── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -35,7 +44,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Oxygen, Ubuntu, sans-serif;
+    Roboto, Oxygen, Ubuntu, sans-serif;
   line-height: 1.7;
   min-height: 100vh;
 }
@@ -52,7 +61,8 @@ a {
   transition: color var(--transition);
 }
 
-a:hover, a:focus-visible {
+a:hover,
+a:focus-visible {
   color: var(--text);
 }
 
@@ -111,7 +121,8 @@ ul {
   text-transform: lowercase;
 }
 
-.nav-logo:hover, .nav-logo:focus-visible {
+.nav-logo:hover,
+.nav-logo:focus-visible {
   color: var(--text);
 }
 
@@ -161,9 +172,11 @@ ul {
 .nav-toggle[aria-expanded="true"] .bar:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
+
 .nav-toggle[aria-expanded="true"] .bar:nth-child(2) {
   opacity: 0;
 }
+
 .nav-toggle[aria-expanded="true"] .bar:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
@@ -211,7 +224,7 @@ section {
   align-items: center;
   padding-top: var(--nav-h);
   background:
-    radial-gradient(ellipse at 60% 40%, rgba(200, 169, 126, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse at 60% 40%, rgba(200, 0, 0, 0.08) 0%, transparent 60%),
     var(--bg);
 }
 
@@ -256,7 +269,8 @@ section {
   transition: background var(--transition), color var(--transition);
 }
 
-.btn:hover, .btn:focus-visible {
+.btn:hover,
+.btn:focus-visible {
   background: var(--accent);
   color: var(--bg);
 }
@@ -390,7 +404,8 @@ section {
   transition: background var(--transition), color var(--transition);
 }
 
-.work-card-links a:hover, .work-card-links a:focus-visible {
+.work-card-links a:hover,
+.work-card-links a:focus-visible {
   background: var(--accent);
   color: var(--bg);
   border-color: var(--accent);
@@ -507,7 +522,8 @@ section {
   flex-shrink: 0;
 }
 
-.social-link:hover, .social-link:focus-visible {
+.social-link:hover,
+.social-link:focus-visible {
   color: var(--accent);
   border-color: var(--accent-dim);
 }
@@ -612,10 +628,14 @@ section {
 
 /* ── Reduced motion ─────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+
   html {
     scroll-behavior: auto;
   }
