@@ -103,10 +103,18 @@
     htmlNodes.forEach(function (el) {
       el.innerHTML = el.getAttribute('data-' + lang);
     });
+    /* Hide elements whose data-ja is empty string */
+    document.querySelectorAll('[data-ja=""]').forEach(function (el) {
+      if (lang === 'ja') {
+        el.setAttribute('hidden', '');
+      } else {
+        el.removeAttribute('hidden');
+      }
+    });
     /* Sync html[lang] for screen readers / SEO */
     document.documentElement.lang = lang;
     /* Update button label */
-    btn.textContent = lang === 'en' ? 'JP' : 'EN';
+    btn.textContent = lang === 'en' ? 'JAPANESE' : 'ENGLISH';
     btn.setAttribute('aria-label', lang === 'en' ? 'Switch to Japanese' : 'Switch to English');
     btn.setAttribute('data-current-lang', lang);
     /* Persist preference */
