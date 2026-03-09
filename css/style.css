@@ -525,6 +525,48 @@ section {
   letter-spacing: 0.04em;
 }
 
+/* ── Profile image ──────────────────────────────────────────── */
+.about-profile-img {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+/* ── Work card cover images ─────────────────────────────────── */
+.work-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+/* ── Language toggle button ─────────────────────────────────── */
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-family: inherit;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.65rem;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
+  margin-left: 0.75rem;
+  flex-shrink: 0;
+}
+
+.lang-toggle:hover,
+.lang-toggle:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+  outline: none;
+}
+
 /* ── Responsive — Tablet ────────────────────────────────────── */
 @media (min-width: 640px) {
   .about-grid {

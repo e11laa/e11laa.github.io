@@ -81,3 +81,46 @@
     btn.setAttribute('hidden', '');
   });
 }());
+
+/* ── Language toggle ────────────────────────────────────────── */
+(function () {
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  /* All elements with both data-en and data-ja */
+  var nodes     = document.querySelectorAll('[data-en][data-ja]');
+  /* Elements that contain child HTML tags (em, strong, etc.) */
+  var htmlNodes = document.querySelectorAll('[data-i18n-html="true"]');
+
+  function applyLang(lang) {
+    /* Plain-text nodes */
+    nodes.forEach(function (el) {
+      if (el.getAttribute('data-i18n-html') !== 'true') {
+        el.textContent = el.getAttribute('data-' + lang);
+      }
+    });
+    /* Rich-HTML nodes */
+    htmlNodes.forEach(function (el) {
+      el.innerHTML = el.getAttribute('data-' + lang);
+    });
+    /* Sync html[lang] for screen readers / SEO */
+    document.documentElement.lang = lang;
+    /* Update button label */
+    btn.textContent = lang === 'en' ? 'JP' : 'EN';
+    btn.setAttribute('aria-label', lang === 'en' ? 'Switch to Japanese' : 'Switch to English');
+    btn.setAttribute('data-current-lang', lang);
+    /* Persist preference */
+    try { localStorage.setItem('ellimia_lang', lang); } catch (e) {}
+  }
+
+  btn.addEventListener('click', function () {
+    var current = btn.getAttribute('data-current-lang');
+    applyLang(current === 'en' ? 'ja' : 'en');
+  });
+
+  /* On load: restore saved preference, or detect browser language */
+  var saved   = (function () { try { return localStorage.getItem('ellimia_lang'); } catch (e) { return null; } }());
+  var browser = navigator.language && navigator.language.startsWith('ja') ? 'ja' : 'en';
+  var initial = saved || browser;
+  if (initial === 'ja') applyLang('ja');
+}());
