@@ -65,21 +65,19 @@
   }
 })();
 
-// ── Reveal email on click ──────────────────────────────────────
+/* ── Reveal email on click ──────────────────────────────────── */
 (function () {
-  const btn = document.getElementById('reveal-email-btn');
-  if (!btn) return;
+  var btn  = document.getElementById('reveal-email-btn');
+  var link = document.getElementById('contact-email-link');
+  var text = document.getElementById('contact-email-text');
+  if (!btn || !link || !text) return;
   btn.addEventListener('click', function () {
-    const user = 'elliprod000';
-    const domain = 'gmail.com';
-    const address = user + '@' + domain;
-    const link = document.getElementById('contact-email-link');
-    const text = document.getElementById('contact-email-text');
-    if (link && text) {
-      text.textContent = address;
-      link.href = 'mailto:' + address;
-      link.style.display = '';
-      btn.style.display = 'none';
-    }
+    var user    = 'elliprod000';
+    var domain  = 'gmail.com';
+    var address = user + '@' + domain;
+    text.textContent = address;
+    link.href = 'mailto:' + address;
+    link.removeAttribute('hidden');
+    btn.setAttribute('hidden', '');
   });
 }());
