@@ -64,3 +64,22 @@
     });
   }
 })();
+
+// ── Reveal email on click ──────────────────────────────────────
+(function () {
+  const btn = document.getElementById('reveal-email-btn');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    const user = 'elliprod000';
+    const domain = 'gmail.com';
+    const address = user + '@' + domain;
+    const link = document.getElementById('contact-email-link');
+    const text = document.getElementById('contact-email-text');
+    if (link && text) {
+      text.textContent = address;
+      link.href = 'mailto:' + address;
+      link.style.display = '';
+      btn.style.display = 'none';
+    }
+  });
+}());
