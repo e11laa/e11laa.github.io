@@ -126,8 +126,17 @@
     applyLang(current === 'en' ? 'ja' : 'en');
   });
 
-  /* On load: restore saved preference; default is Japanese */
+  /* On load: restore saved preference; or auto-detect from browser language */
   var saved = (function () { try { return localStorage.getItem('ellimia_lang'); } catch (e) { return null; } }());
-  if (saved === 'en') applyLang('en');
-  /* No else needed — HTML is already rendered in Japanese by default */
+  if (saved === 'en') {
+    applyLang('en');
+  } else if (!saved) {
+    /* No manual preference saved — detect browser language */
+    var browserLang = (navigator.language || navigator.userLanguage || 'ja').toLowerCase();
+    if (!browserLang.startsWith('ja')) {
+      applyLang('en');
+    }
+    /* If ja, leave as-is (HTML default is Japanese) */
+  }
+  /* If saved === 'ja', leave as-is (user explicitly chose Japanese) */
 }());
