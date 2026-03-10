@@ -630,6 +630,7 @@ section {
     scroll-behavior: auto;
   }
 }
+
 /* ── Commission page ────────────────────────────────────────── */
 #commission {
   border-top: 1px solid var(--border);
@@ -677,7 +678,7 @@ section {
 }
 
 .commission-table td:nth-child(2) {
-  color: var(--accent);
+  color: var(--text);
   font-weight: 600;
   white-space: nowrap;
 }
