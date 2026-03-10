@@ -44,3 +44,5 @@ Disallow: /
 
 User-agent: Amazonbot
 Disallow: /
+
+Sitemap: https://ellimia.net/sitemap.xml
