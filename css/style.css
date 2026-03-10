@@ -118,21 +118,7 @@ ul {
   justify-content: space-between;
 }
 
-.nav-logo {
-  display: none;
-  /* Hidden as per user request */
-  text-transform: lowercase;
-  display: inline-block;
-  transform: scaleX(0.82);
-  /* Condense the font width horizontally */
-  transform-origin: left center;
-  /* Ensure it scales from the left edge naturally */
-}
 
-.nav-logo:hover,
-.nav-logo:focus-visible {
-  color: var(--text);
-}
 
 .nav-links {
   display: flex;
@@ -638,6 +624,11 @@ section {
 
   .nav-links a:last-child {
     border-bottom: none;
+  }
+
+  #hero {
+    background-size: 160%;
+    background-position: left 20% center;
   }
 }
 

@@ -40,8 +40,11 @@ npx serve
 
 ## Privacy & Robots
 
-`robots.txt` explicitly disallows the following crawling agents:
-`GPTBot`, `CCBot`, `Google-Extended`, `ChatGPT-User`, `anthropic-ai`, `Claude-Web`, `PerplexityBot`, `Bytespider`, `ImagesiftBot`, `Amazonbot`.
+`robots.txt` explicitly disallows the following AI training and scraping agents:
+`GPTBot`, `CCBot`, `Google-Extended`, `anthropic-ai`, `ClaudeBot`, `Bytespider`, `ImagesiftBot`, `Amazonbot`.
+
+The following user-assisting search bots are explicitly allowed to help users discover the site via AI search:
+`OAI-SearchBot`, `ChatGPT-User`, `Claude-Web`, `PerplexityBot`.
 
 ## License
 
