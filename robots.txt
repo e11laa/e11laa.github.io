@@ -21,3 +21,15 @@ Disallow: /
 
 User-agent: Claude-Web
 Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /

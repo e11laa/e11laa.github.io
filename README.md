@@ -31,35 +31,15 @@ Hosted on [GitHub Pages](https://pages.github.com/) at [ellimia.net](https://ell
 
 ## Getting Started
 
-No build step required. Simply open `index.html` in a browser, or push to the `main`
+No build step required. Simply open `index.html` in a browser, or commit to the `main`
 branch of this GitHub repository — GitHub Pages will serve it automatically.
 
-### Replace Placeholder Content
-
-All placeholder text is marked with `[square brackets]` for easy find-and-replace:
-
-1. **About** — Update the biography paragraphs in `#about`
-2. **Works** — Replace card titles, years, and descriptions; add real cover images to
-   `images/` and update the `<img>` tags
-3. **Achievements** — Fill in real career milestones and dates
-4. **Contact** — Replace `hello@example.com` and the `href="#"` social links with real URLs
-5. **Hero tagline** — Update the tagline in `#hero`
-6. **Meta tags** — Update `<meta name="description">` and Open Graph tags in `<head>`
-
-### Adding a Profile Photo
-
-1. Place your photo in `images/profile.jpg`
-2. In `index.html`, find the `about-image-placeholder` div and replace it with:
-   ```html
-   <img src="images/profile.jpg" alt="elli mia — portrait photo" />
-   ```
-
-### Adding Album Cover Art
-
-For each work card, replace the SVG placeholder with:
-```html
-<img src="images/cover-1.jpg" alt="[Album Title] cover art" />
+### Running Locally
+You can use any local server to preview the site:
+```bash
+python -m http.server 8000
 ```
+Then visit `http://localhost:8000` in your browser.
 
 ## Customisation
 
