@@ -8,7 +8,7 @@
 
   /* ── Mobile nav toggle ────────────────────────────────────── */
   const navToggle = document.getElementById("nav-toggle");
-  const navLinks  = document.getElementById("nav-links");
+  const navLinks = document.getElementById("nav-links");
 
   if (navToggle && navLinks) {
     navToggle.addEventListener("click", function () {
@@ -67,13 +67,13 @@
 
 /* ── Reveal email on click ──────────────────────────────────── */
 (function () {
-  var btn  = document.getElementById('reveal-email-btn');
+  var btn = document.getElementById('reveal-email-btn');
   var link = document.getElementById('contact-email-link');
   var text = document.getElementById('contact-email-text');
   if (!btn || !link || !text) return;
   btn.addEventListener('click', function () {
-    var user    = 'elliprod000';
-    var domain  = 'gmail.com';
+    var user = 'elliprod000';
+    var domain = 'gmail.com';
     var address = user + '@' + domain;
     text.textContent = address;
     link.href = 'mailto:' + address;
@@ -88,7 +88,7 @@
   if (!btn) return;
 
   /* All elements with both data-en and data-ja */
-  var nodes     = document.querySelectorAll('[data-en][data-ja]');
+  var nodes = document.querySelectorAll('[data-en][data-ja]');
   /* Elements that contain child HTML tags (em, strong, etc.) */
   var htmlNodes = document.querySelectorAll('[data-i18n-html="true"]');
 
@@ -118,7 +118,7 @@
     btn.setAttribute('aria-label', lang === 'en' ? 'Switch to Japanese' : 'Switch to English');
     btn.setAttribute('data-current-lang', lang);
     /* Persist preference */
-    try { localStorage.setItem('ellimia_lang', lang); } catch (e) {}
+    try { localStorage.setItem('ellimia_lang', lang); } catch (e) { }
   }
 
   btn.addEventListener('click', function () {
@@ -130,13 +130,13 @@
   var saved = (function () { try { return localStorage.getItem('ellimia_lang'); } catch (e) { return null; } }());
   if (saved === 'en') {
     applyLang('en');
-  } else if (!saved) {
+  } else if (saved === 'ja') {
+    applyLang('ja');
+  } else {
     /* No manual preference saved — detect browser language */
     var browserLang = (navigator.language || navigator.userLanguage || 'ja').toLowerCase();
     if (!browserLang.startsWith('ja')) {
       applyLang('en');
     }
-    /* If ja, leave as-is (HTML default is Japanese) */
   }
-  /* If saved === 'ja', leave as-is (user explicitly chose Japanese) */
 }());
