@@ -21,13 +21,15 @@ Hosted on GitHub Pages at [ellimia.net](https://ellimia.net).
 ```
 /
 ├── index.html          # Main single-page site
+├── 404.html            # Custom 404 error page
 ├── css/
 │   └── style.css       # All styles 
 ├── js/
 │   └── main.js         # Navigation, language toggle, email reveal
-├── images/             # Optimized assets (webp, png, etc.)
-├── CNAME               # Custom domain: ellimia.net
+├── images/             # Optimized assets (WebP)
+├── sitemap.xml         # XML Sitemap for search engines
 ├── robots.txt          # Disallows AI training crawlers
+├── CNAME               # Custom domain: ellimia.net
 ├── .gitignore
 └── README.md
 ```
