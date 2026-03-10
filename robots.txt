@@ -3,7 +3,24 @@
 User-agent: *
 Allow: /
 
-# Disallow AI training crawlers
+# --------------------------------------------------
+# Allow search & user-assist bots (AI検索でのヒットを許可)
+# --------------------------------------------------
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# --------------------------------------------------
+# Disallow AI training/scraping crawlers (モデル学習用収集を拒否)
+# --------------------------------------------------
 User-agent: GPTBot
 Disallow: /
 
@@ -13,16 +30,10 @@ Disallow: /
 User-agent: Google-Extended
 Disallow: /
 
-User-agent: ChatGPT-User
-Disallow: /
-
 User-agent: anthropic-ai
 Disallow: /
 
-User-agent: Claude-Web
-Disallow: /
-
-User-agent: PerplexityBot
+User-agent: ClaudeBot
 Disallow: /
 
 User-agent: Bytespider

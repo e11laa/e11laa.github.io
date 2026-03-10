@@ -1,17 +1,16 @@
-# elli mia — Personal Portfolio Website
+# elli mia — Official Portfolio Website
 
-Official portfolio website for **elli mia**, musician and composer.
-Hosted on [GitHub Pages](https://pages.github.com/) at [ellimia.net](https://ellimia.net).
+Official portfolio website for **elli mia**, electronic music producer, DJ, and artist based in Tsukuba, Ibaraki.
+Hosted on GitHub Pages at [ellimia.net](https://ellimia.net).
 
 ## Features
 
-- Single-page layout with smooth-scroll navigation
-- Sections: Hero · About · Works / Discography · Achievements · Contact · Footer
-- Dark, elegant theme — no external dependencies
-- Fully responsive (mobile-first)
-- Accessible: semantic HTML5, ARIA labels, keyboard navigation, skip link
-- Pure HTML + CSS + vanilla JS — works offline, no build tools required
-- Privacy-first: no tracking, no CDN, no real personal data in source
+- Single-page layout with smooth-scroll navigation.
+- Built with pure HTML, CSS, and vanilla JS — zero frameworks, zero external dependencies.
+- Fully responsive and accessible design.
+- Built-in Language Toggle (English / Japanese) persisting via `localStorage`.
+- Privacy-first: no tracking tools, no external CDNs, and email address hidden from basic scrapers.
+- AI blocks: `robots.txt` configured to deny access to major AI training crawlers.
 
 ## File Structure
 
@@ -19,42 +18,30 @@ Hosted on [GitHub Pages](https://pages.github.com/) at [ellimia.net](https://ell
 /
 ├── index.html          # Main single-page site
 ├── css/
-│   └── style.css       # All styles (dark theme, responsive)
+│   └── style.css       # All styles 
 ├── js/
-│   └── main.js         # Mobile nav toggle, active link highlight
-├── images/             # Add your images here (.gitkeep keeps the folder in git)
+│   └── main.js         # Navigation, language toggle, email reveal
+├── images/             # Optimized assets (webp, png, etc.)
 ├── CNAME               # Custom domain: ellimia.net
 ├── robots.txt          # Disallows AI training crawlers
 ├── .gitignore
 └── README.md
 ```
 
-## Getting Started
+## Running Locally
 
-No build step required. Simply open `index.html` in a browser, or commit to the `main`
-branch of this GitHub repository — GitHub Pages will serve it automatically.
-
-### Running Locally
-You can use any local server to preview the site:
+No build step required. Simply open `index.html` in a web browser.
+To test full functionality (like `localStorage` in some browsers), run a simple HTTP server:
 ```bash
-python -m http.server 8000
+python3 -m http.server
+# or
+npx serve
 ```
-Then visit `http://localhost:8000` in your browser.
-
-## Customisation
-
-| What to change | Where |
-|---|---|
-| Accent colour | `css/style.css` — `--accent` variable |
-| Background colour | `css/style.css` — `--bg` variable |
-| Font stack | `css/style.css` — `body { font-family: … }` |
-| Nav links | `index.html` — `<ul id="nav-links">` |
-| Footer copyright | `index.html` — `<footer>` |
 
 ## Privacy & Robots
 
-`robots.txt` disallows the following AI training crawlers:
-`GPTBot`, `CCBot`, `Google-Extended`, `ChatGPT-User`, `anthropic-ai`, `Claude-Web`
+`robots.txt` explicitly disallows the following crawling agents:
+`GPTBot`, `CCBot`, `Google-Extended`, `ChatGPT-User`, `anthropic-ai`, `Claude-Web`, `PerplexityBot`, `Bytespider`, `ImagesiftBot`, `Amazonbot`.
 
 ## License
 
