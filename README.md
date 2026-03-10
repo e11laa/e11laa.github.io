@@ -9,6 +9,10 @@ Hosted on GitHub Pages at [ellimia.net](https://ellimia.net).
 - Built with pure HTML, CSS, and vanilla JS — zero frameworks, zero external dependencies.
 - Fully responsive and accessible design.
 - Built-in Language Toggle (English / Japanese) persisting via `localStorage`.
+- Automatic language detection: non-Japanese browsers default to English on first visit.
+- JSON-LD structured data for improved search engine understanding.
+- Open Graph & Twitter Card meta tags for rich social media previews.
+- XML Sitemap for search engine crawling.
 - Privacy-first: no tracking tools, no external CDNs, and email address hidden from basic scrapers.
 - AI blocks: `robots.txt` configured to deny access to major AI training crawlers.
 

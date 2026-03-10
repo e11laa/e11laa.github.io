@@ -1,6 +1,6 @@
 /* ============================================================
    style.css — elli mia personal portfolio
-   Dark elegant theme, mobile-first, no external dependencies
+   Light elegant theme, mobile-first, no external dependencies
    ============================================================ */
 
 /* ── Variables ─────────────────────────────────────────────── */
@@ -118,8 +118,6 @@ ul {
   justify-content: space-between;
 }
 
-
-
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -219,7 +217,7 @@ section {
   padding-top: var(--nav-h);
   background:
     radial-gradient(ellipse at 35% 60%, rgba(250, 250, 250, 0.16) 10%, var(--bg) 80%),
-    url("../images/ellimia-background_new.png") no-repeat center center;
+    url("../images/ellimia-background_new.webp") no-repeat center center;
   background-size: 80%;
   background-color: var(--bg);
 }
@@ -299,21 +297,7 @@ section {
   max-width: 360px;
 }
 
-.about-image-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  text-align: center;
-  padding: 2rem;
-}
 
-.about-image-placeholder svg {
-  opacity: 0.35;
-}
 
 .about-text p {
   color: var(--text-muted);
