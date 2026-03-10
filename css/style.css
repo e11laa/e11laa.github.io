@@ -630,3 +630,93 @@ section {
     scroll-behavior: auto;
   }
 }
+/* ── Commission page ────────────────────────────────────────── */
+#commission {
+  border-top: 1px solid var(--border);
+}
+
+.commission-table-wrap {
+  overflow-x: auto;
+  margin: 2rem 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.commission-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  min-width: 540px;
+}
+
+.commission-table th,
+.commission-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.commission-table th {
+  background: var(--bg-card);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.commission-table tr:last-child td {
+  border-bottom: none;
+}
+
+.commission-table td:first-child {
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.commission-table td:nth-child(2) {
+  color: var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.commission-details {
+  display: grid;
+  gap: 0;
+  margin: 2.5rem 0;
+}
+
+.commission-item {
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 0;
+}
+
+.commission-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.commission-item dt {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.commission-item dd {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.commission-cta {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+/* ── Commission CTA section (index.html) ────────────────────── */
+#commission-cta {
+  border-top: 1px solid var(--border);
+}
