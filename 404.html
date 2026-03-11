@@ -18,31 +18,72 @@
             justify-content: center;
             text-align: center;
             padding: 2rem;
+            background-color: var(--bg);
+        }
+
+        .error-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            max-width: 600px;
+        }
+
+        .error-image {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            border-radius: var(--radius);
+        }
+
+        .error-text-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .error-code {
-            font-size: clamp(4rem, 12vw, 8rem);
+            font-size: clamp(3rem, 10vw, 6rem);
             font-weight: 700;
             color: var(--accent);
             line-height: 1;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
         }
 
         .error-message {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--text-muted);
             margin-bottom: 2rem;
-            max-width: 400px;
+            line-height: 1.6;
+        }
+
+        @media (min-width: 640px) {
+            .error-content {
+                flex-direction: row;
+                text-align: left;
+                gap: 3rem;
+            }
+            .error-text-wrap {
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="error-page">
-        <div>
-            <p class="error-code">404</p>
-            <p class="error-message">お探しのページは見つかりませんでした。<br>The page you're looking for doesn't exist.</p>
-            <a class="btn" href="/">トップページに戻る / Back to Home</a>
+        <div class="error-content">
+            <img src="images/404.webp" alt="404 Not Found Character" class="error-image" loading="lazy" />
+            <div class="error-text-wrap">
+                <p class="error-code">404</p>
+                <p class="error-message">
+                    お探しのページが見つかりませんでした。<br>
+                    The page you're looking for doesn't exist.
+                </p>
+                <a class="btn" href="/">トップページに戻る / Back</a>
+            </div>
         </div>
     </div>
 </body>
