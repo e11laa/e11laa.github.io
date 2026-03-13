@@ -6,30 +6,40 @@
 (function () {
   "use strict";
 
-  /* ── Mobile nav toggle ────────────────────────────────────── */
+  /* ── Mobile nav toggle / Focus trap ───────────────────────── */
   const navToggle = document.getElementById("nav-toggle");
   const navLinks = document.getElementById("nav-links");
 
   if (navToggle && navLinks) {
+    const mainContent = document.getElementById("main-content");
+    const footer = document.querySelector(".site-footer");
+
+    function setMenuState(open) {
+      navToggle.setAttribute("aria-expanded", String(open));
+      navLinks.classList.toggle("open", open);
+      
+      /* Focus trap via inert and scroll lock */
+      if (mainContent) mainContent.inert = open;
+      if (footer) footer.inert = open;
+      document.body.style.overflow = open ? "hidden" : "";
+    }
+
     navToggle.addEventListener("click", function () {
-      const expanded = navToggle.getAttribute("aria-expanded") === "true";
-      navToggle.setAttribute("aria-expanded", String(!expanded));
-      navLinks.classList.toggle("open", !expanded);
+      const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+      setMenuState(!isExpanded);
     });
 
     /* Close mobile menu when a link is clicked */
     navLinks.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        navToggle.setAttribute("aria-expanded", "false");
-        navLinks.classList.remove("open");
+        setMenuState(false);
       });
     });
 
     /* Close mobile menu on Escape key */
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && navLinks.classList.contains("open")) {
-        navToggle.setAttribute("aria-expanded", "false");
-        navLinks.classList.remove("open");
+        setMenuState(false);
         navToggle.focus();
       }
     });
@@ -95,6 +105,19 @@
   var langBtn = document.getElementById('lang-toggle');
   
   if (langBtn) {
+    /* Inject sr-only warning for external links BEFORE collecting translatable nodes */
+    var extLinks = document.querySelectorAll('a[target="_blank"]');
+    extLinks.forEach(function(link) {
+      // Don't inject if already exists (e.g., dynamically re-run)
+      if (link.querySelector('.sr-only')) return;
+      var span = document.createElement('span');
+      span.className = 'sr-only';
+      span.setAttribute('data-en', ' (opens in a new window)');
+      span.setAttribute('data-ja', ' (新しいタブで開く)');
+      span.textContent = ' (新しいタブで開く)';
+      link.appendChild(span);
+    });
+
     /* All elements with both data-en and data-ja */
     var nodes = document.querySelectorAll('[data-en][data-ja]');
     /* Elements that contain child HTML tags (em, strong, etc.) */
@@ -110,6 +133,11 @@
       /* Rich-HTML nodes */
       htmlNodes.forEach(function (el) {
         el.innerHTML = el.getAttribute('data-' + lang);
+      });
+      /* ARIA label nodes */
+      var ariaNodes = document.querySelectorAll('[data-aria-en][data-aria-ja]');
+      ariaNodes.forEach(function (el) {
+        el.setAttribute('aria-label', el.getAttribute('data-aria-' + lang));
       });
       /* Hide elements whose data-ja is empty string */
       document.querySelectorAll('[data-ja=""]').forEach(function (el) {
