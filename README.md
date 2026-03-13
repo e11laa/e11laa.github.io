@@ -10,23 +10,32 @@ Hosted on GitHub Pages at [ellimia.net](https://ellimia.net).
 - Fully responsive and accessible design.
 - Built-in Language Toggle (English / Japanese) persisting via `localStorage`.
 - Automatic language detection: non-Japanese browsers default to English on first visit.
-- JSON-LD structured data for improved search engine understanding.
-- Open Graph & Twitter Card meta tags for rich social media previews.
-- XML Sitemap for search engine crawling.
-- Privacy-first: no tracking tools, no external CDNs, and email address hidden from basic scrapers.
-- AI blocks: `robots.txt` configured to deny access to major AI training crawlers.
+- **PWA Ready**: Includes `manifest.json`, `theme-color`, and Apple Touch Icon for a native app-like experience when added to the home screen.
+- **Advanced Accessibility (a11y)**:
+  - Dynamically translated `aria-label` attributes for screen readers.
+  - Native `inert` focus trap mapping for the mobile navigation menu.
+  - Screen-reader only (`.sr-only`) warnings for external links opening in new tabs.
+  - Horizontally scrollable commission pricing table that maintains semantic structure on mobile.
+- **Performance & SEO**:
+  - `decoding="async"` for smoother image rendering and LCP preloading for the hero image.
+  - Semantic `<time>` tags for dates and `rel="me"` on social links for decentralized identity verification.
+  - JSON-LD structured data and XML Sitemap mapping for improved search engine understanding.
+- Privacy-first: no tracking tools, no external CDNs, JS-protected email reveal (with auto-copy to clipboard feature), and strict Referrer-Policy.
+- AI blocks: `robots.txt` configured to explicitly deny access to major AI dataset training crawlers (`GPTBot`, `Applebot-Extended`, `FacebookBot`, etc) while allowing real-time AI search bots (`ChatGPT-User`, `PerplexityBot`).
 
 ## File Structure
 
 ```
 /
 ├── index.html          # Main single-page site
-├── 404.html            # Custom 404 error page
+├── commission.html     # Services and pricing page
+├── 404.html            # Custom 404 error page (noindex)
 ├── css/
-│   └── style.css       # All styles 
+│   └── style.css       # All responsive & accessibility styles
 ├── js/
-│   └── main.js         # Navigation, language toggle, email reveal
+│   └── main.js         # Navigation, language toggle, email reveal, focus trap
 ├── images/             # Optimized assets (WebP)
+├── manifest.json       # Web App Manifest for PWA
 ├── sitemap.xml         # XML Sitemap for search engines
 ├── robots.txt          # Disallows AI training crawlers
 ├── CNAME               # Custom domain: ellimia.net
