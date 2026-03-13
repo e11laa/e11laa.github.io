@@ -5,11 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Not Found — elli mia</title>
+    <meta name="robots" content="noindex">
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <style>
         body {
             background-color: #ffffff;
@@ -47,6 +48,7 @@
         }
 
         .error-code {
+            font-size: 4rem;
             font-size: clamp(3rem, 10vw, 6rem);
             font-weight: 700;
             color: var(--accent);
@@ -79,7 +81,7 @@
 <body>
     <div class="error-page">
         <div class="error-content">
-            <img src="images/404.webp" alt="404 Not Found Character" class="error-image" loading="lazy" />
+            <img src="/images/404.webp" alt="404 Not Found Character" class="error-image" loading="eager" decoding="async" />
             <div class="error-text-wrap">
                 <p class="error-code">404</p>
                 <p class="error-message">

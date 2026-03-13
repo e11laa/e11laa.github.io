@@ -21,11 +21,32 @@
   <meta name="twitter:image:alt" content="exonorm cover art" />
   <link rel="canonical" href="https://ellimia.net/commission.html" />
   <title>ご依頼など | elli mia</title>
+  <meta name="theme-color" content="#fafafa">
   <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/profile.png" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ellimia.net/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Commission",
+      "item": "https://ellimia.net/commission.html"
+    }]
+  }
+  </script>
 </head>
 
 <body>
@@ -45,7 +66,7 @@
   <header class="site-header" role="banner">
     <nav class="nav-inner" aria-label="Main navigation">
       <!-- Mobile hamburger -->
-      <button class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false"
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false"
         aria-label="Open navigation menu">
         <span class="bar" aria-hidden="true"></span>
         <span class="bar" aria-hidden="true"></span>

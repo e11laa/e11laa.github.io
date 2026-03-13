@@ -24,7 +24,11 @@
   <meta name="twitter:image:alt" content="exonorm cover art" />
   <link rel="canonical" href="https://ellimia.net/" />
   <title>elli mia</title>
+  <meta name="theme-color" content="#fafafa">
   <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/profile.png" />
+  <link rel="preload" as="image" href="images/ellimia-background_new.webp" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -67,7 +71,7 @@
   <header class="site-header" role="banner">
     <nav class="nav-inner" aria-label="Main navigation">
       <!-- Mobile hamburger -->
-      <button class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false"
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false"
         aria-label="Open navigation menu">
         <span class="bar" aria-hidden="true"></span>
         <span class="bar" aria-hidden="true"></span>
@@ -117,7 +121,7 @@
         <div class="about-grid">
           <!-- Profile image -->
           <div class="about-image-wrap">
-            <img src="images/profile.png" alt="elli mia portrait" width="320" height="320" loading="lazy"
+            <img src="images/profile.png" alt="elli mia portrait" width="320" height="320" loading="lazy" decoding="async"
               class="about-profile-img" />
           </div>
           <!-- Biography text -->
@@ -154,10 +158,10 @@
           <!-- Card 1 -->
           <article class="work-card" aria-label="exonorm">
             <div class="work-card-image">
-              <img src="images/exonorm-jacket.webp" alt="exonorm cover art" width="300" height="300" loading="lazy" />
+              <img src="images/exonorm-jacket.webp" alt="exonorm cover art" width="300" height="300" loading="lazy" decoding="async" />
             </div>
             <div class="work-card-body">
-              <p class="work-card-year">2026</p>
+              <time datetime="2026" class="work-card-year">2026</time>
               <h3 class="work-card-title" data-en="exonorm" data-ja="exonorm">exonorm</h3>
               <p class="work-card-desc" data-i18n-html="true"
                 data-en="A ten-track debut album exploring a civilisation in cosmic crisis — fusing leftfield bass, drum and bass, and Vocaloid production into a dense, mythological soundworld."
@@ -179,10 +183,10 @@
           <article class="work-card" aria-label="animacy ep">
             <div class="work-card-image">
               <img src="images/animacy_jacket.webp" alt="animacy ep cover art" width="300" height="300"
-                loading="lazy" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="work-card-body">
-              <p class="work-card-year">2023</p>
+              <time datetime="2023" class="work-card-year">2023</time>
               <h3 class="work-card-title" data-en="animacy ep" data-ja="animacy ep">animacy ep</h3>
               <p class="work-card-desc"
                 data-en="A six-track EP featuring Hatsune Miku, released January 2023 — an early statement of elli mia's distinctive approach to Vocaloid-driven electronic music."
@@ -205,10 +209,10 @@
           <article class="work-card" aria-label="utumiyqcom — another">
             <div class="work-card-image">
               <img src="images/another-jacket.webp" alt="utumiyqcom — another cover art" width="300" height="300"
-                loading="lazy" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="work-card-body">
-              <p class="work-card-year">2024</p>
+              <time datetime="2024" class="work-card-year">2024</time>
               <h3 class="work-card-title" data-en="utumiyqcom — another" data-ja="utumiyqcom — another">utumiyqcom —
                 another</h3>
               <p class="work-card-desc"
@@ -233,10 +237,10 @@
           <article class="work-card" aria-label="Florallax - abzu">
             <div class="work-card-image">
               <img src="images/abzu-jacket.webp" alt="Florallax - abzu cover art" width="300" height="300"
-                loading="lazy" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="work-card-body">
-              <p class="work-card-year">2025</p>
+              <time datetime="2025" class="work-card-year">2025</time>
               <h3 class="work-card-title" data-en="Florallax - abzu" data-ja="Florallax - abzu">Florallax - abzu</h3>
               <p class="work-card-desc" data-i18n-html="true"
                 data-en="A collaboration piece for the online event 'VocaDuo' with viviα, Sugar88, and kataware. Exploring the relationship between societal issues and individual existence through epic motifs. Production and arrangement by elli mia."
@@ -263,7 +267,7 @@
         <ol class="timeline" aria-label="Career timeline">
 
           <li class="timeline-item">
-            <p class="timeline-year">2022</p>
+            <time datetime="2022" class="timeline-year">2022</time>
             <h3 class="timeline-title" data-en="Started DJing" data-ja="DJとして活動開始">DJとして活動開始</h3>
             <p class="timeline-desc"
               data-en="Began performing as a DJ in December 2022, marking the start of an active presence in Japan's net underground scene."
@@ -273,7 +277,7 @@
           </li>
 
           <li class="timeline-item">
-            <p class="timeline-year">2023</p>
+            <time datetime="2023" class="timeline-year">2023</time>
             <h3 class="timeline-title" data-i18n-html="true"
               data-en="EP Release, Active DJ Schedule &amp; purewire Launch"
               data-ja="EP リリース、DJ 活動本格化 &amp; purewire 始動">EP リリース、DJ 活動本格化 &amp; purewire 始動</h3>
@@ -285,7 +289,7 @@
           </li>
 
           <li class="timeline-item">
-            <p class="timeline-year">2024</p>
+            <time datetime="2024" class="timeline-year">2024</time>
             <h3 class="timeline-title" data-en="Collaboration: utumiyqcom — another"
               data-ja="コラボレーション：utumiyqcom — another">コラボレーション：utumiyqcom — another</h3>
             <p class="timeline-desc" data-i18n-html="true"
@@ -296,7 +300,7 @@
           </li>
 
           <li class="timeline-item">
-            <p class="timeline-year">2026</p>
+            <time datetime="2026" class="timeline-year">2026</time>
             <h3 class="timeline-title" data-i18n-html="true" data-en="Debut Album <em>exonorm</em> Released"
               data-ja="デビューアルバム 『exonorm』 リリース">デビューアルバム 『exonorm』 リリース</h3>
             <p class="timeline-desc" data-i18n-html="true"
@@ -366,7 +370,7 @@
 
             <li>
               <a class="social-link" href="https://twitter.com/e11laa" aria-label="Follow elli mia on X (Twitter)"
-                rel="noopener noreferrer" target="_blank">
+                rel="me noopener noreferrer" target="_blank">
                 <!-- X (Twitter) icon -->
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="#000000" aria-hidden="true">
                   <path
@@ -378,7 +382,7 @@
 
             <li>
               <a class="social-link" href="https://www.instagram.com/elix112_/"
-                aria-label="Follow elli mia on Instagram" rel="noopener noreferrer" target="_blank">
+                aria-label="Follow elli mia on Instagram" rel="me noopener noreferrer" target="_blank">
                 <!-- Instagram icon -->
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E4405F" stroke-width="1.5"
                   aria-hidden="true">
@@ -392,7 +396,7 @@
 
             <li>
               <a class="social-link" href="https://www.youtube.com/@elli-mia" aria-label="Follow elli mia on YouTube"
-                rel="noopener noreferrer" target="_blank">
+                rel="me noopener noreferrer" target="_blank">
                 <!-- YouTube icon -->
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF0000" stroke-width="1.5"
                   aria-hidden="true">
@@ -405,7 +409,7 @@
 
             <li>
               <a class="social-link" href="https://open.spotify.com/artist/6jZG2yZgv6K8NjivcnTQMj"
-                aria-label="Listen to elli mia on Spotify" rel="noopener noreferrer" target="_blank">
+                aria-label="Listen to elli mia on Spotify" rel="me noopener noreferrer" target="_blank">
                 <!-- Spotify icon -->
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1DB954" stroke-width="1.5"
                   aria-hidden="true">
@@ -420,7 +424,7 @@
 
             <li>
               <a class="social-link" href="https://soundcloud.com/eli2k3" aria-label="Listen to elli mia on SoundCloud"
-                rel="noopener noreferrer" target="_blank">
+                rel="me noopener noreferrer" target="_blank">
                 <!-- SoundCloud icon -->
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="1.5"
                   aria-hidden="true">
@@ -433,7 +437,7 @@
 
             <li>
               <a class="social-link" href="https://marshmallow-qa.com/ciplaf"
-                aria-label="Send anonymous messages via Marshmallow" rel="noopener noreferrer" target="_blank">
+                aria-label="Send anonymous messages via Marshmallow" rel="me noopener noreferrer" target="_blank">
                 <!-- Marshmallow icon -->
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5A9B8" stroke-width="1.5"
                   aria-hidden="true">
