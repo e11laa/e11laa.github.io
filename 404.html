@@ -75,6 +75,22 @@
                 align-items: flex-start;
             }
         }
+
+        .utility-link {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .utility-link:hover {
+            opacity: 1;
+            text-decoration: underline;
+            color: var(--accent);
+        }
     </style>
 </head>
 
@@ -89,6 +105,7 @@
                     The page you're looking for doesn't exist.
                 </p>
                 <a class="btn" href="/">トップページに戻る / Back</a>
+                <a href="cockoo-clock.html" class="utility-link">便利ツール</a>
             </div>
         </div>
     </div>
