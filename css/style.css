@@ -640,24 +640,86 @@ section {
 
   .commission-table-wrap {
     margin: 1.5rem 0;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
+    overflow: visible;
+    border: 0;
   }
 
   .commission-table {
-    min-width: 720px;
-    font-size: 0.8rem;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    font-size: 0.92rem;
   }
 
-  .commission-table th,
-  .commission-table td {
-    padding: 0.65rem 0.8rem;
-    word-break: keep-all;
-  }
-
-  .commission-table th:nth-child(3),
-  .commission-table td:nth-child(3) {
+  .commission-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
     white-space: nowrap;
+    border: 0;
+  }
+
+  .commission-table tbody {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .commission-table tr {
+    display: block;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .commission-table td {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem 1.1rem;
+    border-bottom: 1px solid var(--border);
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .commission-table td:last-child {
+    border-bottom: none;
+  }
+
+  .commission-table td::before {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  html[lang="ja"] .commission-table td:nth-child(1)::before {
+    content: "依頼種別";
+  }
+
+  html[lang="ja"] .commission-table td:nth-child(2)::before {
+    content: "料金目安";
+  }
+
+  html[lang="ja"] .commission-table td:nth-child(3)::before {
+    content: "概要";
+  }
+
+  html[lang="en"] .commission-table td:nth-child(1)::before {
+    content: "Type";
+  }
+
+  html[lang="en"] .commission-table td:nth-child(2)::before {
+    content: "Price (guide)";
+  }
+
+  html[lang="en"] .commission-table td:nth-child(3)::before {
+    content: "Notes";
   }
 }
 
