@@ -637,6 +637,28 @@ section {
     background-size: 160%;
     background-position: left 20% center;
   }
+
+  .commission-table-wrap {
+    margin: 1.5rem 0;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+
+  .commission-table {
+    min-width: 720px;
+    font-size: 0.8rem;
+  }
+
+  .commission-table th,
+  .commission-table td {
+    padding: 0.65rem 0.8rem;
+    word-break: keep-all;
+  }
+
+  .commission-table th:nth-child(3),
+  .commission-table td:nth-child(3) {
+    white-space: nowrap;
+  }
 }
 
 /* ── Reduced motion ─────────────────────────────────────────── */
