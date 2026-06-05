@@ -37,3 +37,7 @@
   - [x] css/style.css で `.portfolio-intro` の `max-width` を `none` に変更
   - [x] portfolio.html のご依頼・ご相談の段落に `.portfolio-intro` クラスを適用
   - [x] 動作確認とアーカイブ・リモートリポジトリへのプッシュ
+- [x] 見出しの階層整理と赤色ラベルの除去
+  - [x] css/style.css に中見出し用の `.portfolio-section-title` の定義を追加
+  - [x] portfolio.html の実績セクションから赤ラベル・下線を削除し、見出しを h3 に、カードの見出しを h4 に変更
+  - [x] 動作確認とアーカイブ・リモートリポジトリへのプッシュ

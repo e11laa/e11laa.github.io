@@ -9,7 +9,7 @@
 - **[NEW]** [portfolio.html](file:///c:/Users/affog/e11laa.github.io/portfolio.html) : 新規追加されたスキルおよび実績一覧（ポートフォリオ）ページ。
 - **[MODIFY]** [index.html](file:///c:/Users/affog/e11laa.github.io/index.html) : ナビゲーションメニューに `portfolio.html` へのリンクを追加。
 - **[MODIFY]** [commission.html](file:///c:/Users/affog/e11laa.github.io/commission.html) : ナビゲーションメニューに `portfolio.html` へのリンクを追加。
-- **[MODIFY]** [css/style.css](file:///c:/Users/affog/e11laa.github.io/css/style.css) : カード用メタデータ表示スタイル、縦長感を解消するための余白・横幅スタイルの追加、およびカードのリンク化に対応するホバースタイルの定義。
+- **[MODIFY]** [css/style.css](file:///c:/Users/affog/e11laa.github.io/css/style.css) : カード用メタデータ表示スタイル、縦長感を解消するための余白・横幅スタイルの追加、カードのリンク化に対応するホバースタイル、および中見出し（`h3`）用のスタイル定義。
 
 ---
 
@@ -27,7 +27,7 @@
   - 紹介文は Hero と同様にウィンドウ幅に合わせて広がるよう、`.portfolio-intro` クラスを適用しました。
 - **SEO & アクセシビリティ**: 
   - `CollectionPage` スキーマ（Structured Data）を記述。
-  - 適切な Heading Order（`h1` -> `h2` -> `h3`）を維持。
+  - 適切な Heading Order（`h1` -> `h2` -> `h3` -> `h4`）を維持。
   - 暗い背景のプレースホルダー要素には `aria-hidden="true"` を指定し、スクリーンリーダーでの冗長な読み上げを防止。
   - Skip Link および noscript 警告を既存ページと同一のコードで設置。
 
@@ -44,13 +44,16 @@
   - `portfolio.html` の `<body>` に `portfolio-page` クラスを付与し、セクション間の padding を `3rem 0` （通常は `6rem 0`）に縮小するスタイルを `style.css` に追加しました。これによりセクション同士が近接し、間の巨大な空白が解消されました。
 - **Hero説明文とCTA説明文の改行位置改善**:
   - 新たに定義した `.portfolio-intro` クラスの最大幅を `none` に設定し、コンテナ幅いっぱいにテキストが広がるようにしました。これにより、PCなどの広いウィンドウ幅において、テキストが必要以上に早い位置で改行されずにすっきりと表示されます。
-  - このスタイルを Hero セクションの紹介文、および CTA セクションの紹介文の双方に適用しました。
 - **「What I Do」説明文のプレースホルダー化と等幅化**:
   - スキル概要の全5カードの本文説明を、今後の自由な編集に対応できるよう `【説明文仮】` / `[Description placeholder]` のプレースホルダーテキストに差し替えました。
   - また、最初の「Songs / Vocal Works」カードに適用されていた横幅拡張用クラス（`featured-skill`）およびハイライト枠（`featured`）を削除し、すべてのスキルカードを等幅でグリッド表示するよう調整しました。
 - **スキル概要カードのリンク化**:
   - 各スキルカード（`What I Do`）の親要素を `article` からアンカーリンク（`a` タグ）に変更し、それぞれの実績セクションへジャンプできるよう実装しました。
   - テキストがリンク色（赤）を継承しないよう、`style.css` に `a.work-card { color: inherit; display: block; }` を定義した上で、カード全体にホバーした際にタイトルのみが赤色に変化するスタイリッシュな視覚効果を実装しました。
+- **見出しの階層整理と赤色ラベル・下線の除去**:
+  - 各実績セクションを大見出し（`h2`）から中見出し（`h3`）に変更し、それに合わせて `css/style.css` に一回り小さい中見出しスタイル `.portfolio-section-title` を定義して適用しました。
+  - また、各実績セクションに配置されていた赤色の短いラベル（`.section-label`）および赤い下線（`.divider`）をすべて削除し、スッキリとした外観にしました（CTAセクションからも赤ラベルを除去）。
+  - 実績セクションが `h3` になったことに伴い、セクション内部の実績カードの見出しを `h3` から `h4` （`.work-card-title`）へ変更し、正しい見出し階層（Outline）を維持しました。
 
 ---
 
