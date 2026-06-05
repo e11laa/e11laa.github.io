@@ -7,8 +7,8 @@
 ## 変更されたファイル一覧
 
 - **[NEW]** [portfolio.html](file:///c:/Users/affog/e11laa.github.io/portfolio.html) : 新規追加されたスキルおよび実績一覧（ポートフォリオ）ページ。
-- **[MODIFY]** [index.html](file:///c:/Users/affog/e11laa.github.io/index.html) : ナビゲーションメニューおよびセクション見出しの「作品」表記を「代表作」に変更し、`portfolio.html` へのリンクを追加。
-- **[MODIFY]** [commission.html](file:///c:/Users/affog/e11laa.github.io/commission.html) : ナビゲーションメニューの「作品」表記を「代表作」に変更し、`portfolio.html` へのリンクを追加。
+- **[MODIFY]** [index.html](file:///c:/Users/affog/e11laa.github.io/index.html) : ナビゲーションメニューおよびセクション見出しの「作品」表記を「代表作」に変更し、ナビゲーション全体を英語表記に統一の上、`portfolio.html` へのリンクを追加。
+- **[MODIFY]** [commission.html](file:///c:/Users/affog/e11laa.github.io/commission.html) : ナビゲーションメニュー全体を英語表記に統一の上、`portfolio.html` へのリンクを追加。
 - **[MODIFY]** [css/style.css](file:///c:/Users/affog/e11laa.github.io/css/style.css) : カード用メタデータ表示スタイル、縦長感を解消するための余白・横幅スタイルの追加、カードのリンク化に対応するホバースタイル、および中見出し（`h3`）用のスタイル定義。
 
 ---
@@ -28,12 +28,20 @@
 - **SEO & アクセシビリティ**: 
   - `CollectionPage` スキーマ（Structured Data）を記述。
   - 適切な Heading Order（`h1` -> `h2` -> `h3` -> `h4`）を維持。
-  - 暗い背景 of プレースホルダー要素には `aria-hidden="true"` を指定し、スクリーンリーダーでの冗長な読み上げを防止。
+  - 暗い背景のプレースホルダー要素には `aria-hidden="true"` を指定し、スクリーンリーダーでの冗長な読み上げを防止。
   - Skip Link および noscript 警告を既存ページと同一のコードで設置。
 
-### 2. ナビゲーションおよび見出しの更新（「作品」から「代表作」へ）
-- トップページ内の代表実績であるディスコグラフィーセクション（`index.html`）を「作品」から**「代表作」**へと表記変更しました（英語の `Works` は維持）。
-- これに伴い、`index.html`、`commission.html`、`portfolio.html` の全ナビゲーションヘッダーに配置されている `Works` リンクの日本語表示を「作品」から「代表作」へと一貫して更新し、ユーザーの混乱を防ぎました。
+### 2. ナビゲーションメニューの英語統一とラベル調整
+- ヘッダーのナビゲーション（リンク名）を、言語切替に関わらず常に英語表記で統一するよう更新しました（`data-ja` と `data-en` の双方に同じ英語名を設定）。
+- これまで `Portfolio` と呼んでいたポートフォリオページ（`portfolio.html`）へのリンク名を **`Works`** に変更しました。
+- それに伴い、競合を避けるためトップページ（`index.html#works`）の実績セクション（日本語の見出しは「代表作」）へのリンク名を **`Discography`** に変更しました。
+- **統一後のナビゲーション構成**:
+  - `About` (about section)
+  - `Discography` (index works section)
+  - `Works` (portfolio.html)
+  - `Achievements` (index achievements section)
+  - `Commission` (commission.html)
+  - `Contact` (index contact section)
 
 ### 3. 多言語対応 (`js/main.js` との連携)
 - 各見出しや説明文、リンク属性に至るまで、`data-ja` / `data-en` / `data-aria-ja` / `data-aria-en` を漏れなく付与しています。これにより、既存の `js/main.js` による動的な日英切り替えが `portfolio.html` 上でも完全に機能します。
