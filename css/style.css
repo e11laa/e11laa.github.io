@@ -926,11 +926,11 @@ a.work-card:hover .work-card-title {
 }
 
 @media (min-width: 1200px) {
-  .portfolio-page #portfolio-songs .container {
-    max-width: 1320px;
-  }
-
   .portfolio-page #portfolio-songs .works-grid {
+    width: calc(100vw - 3rem);
+    max-width: 1320px;
+    margin-left: 50%;
+    transform: translateX(-50%);
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
