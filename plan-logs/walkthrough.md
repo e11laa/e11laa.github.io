@@ -7,8 +7,8 @@
 ## 変更されたファイル一覧
 
 - **[NEW]** [portfolio.html](file:///c:/Users/affog/e11laa.github.io/portfolio.html) : 新規追加されたスキルおよび実績一覧（ポートフォリオ）ページ。
-- **[MODIFY]** [index.html](file:///c:/Users/affog/e11laa.github.io/index.html) : ナビゲーションメニューに `portfolio.html` へのリンクを追加。
-- **[MODIFY]** [commission.html](file:///c:/Users/affog/e11laa.github.io/commission.html) : ナビゲーションメニューに `portfolio.html` へのリンクを追加。
+- **[MODIFY]** [index.html](file:///c:/Users/affog/e11laa.github.io/index.html) : ナビゲーションメニューおよびセクション見出しの「作品」表記を「代表作」に変更し、`portfolio.html` へのリンクを追加。
+- **[MODIFY]** [commission.html](file:///c:/Users/affog/e11laa.github.io/commission.html) : ナビゲーションメニューの「作品」表記を「代表作」に変更し、`portfolio.html` へのリンクを追加。
 - **[MODIFY]** [css/style.css](file:///c:/Users/affog/e11laa.github.io/css/style.css) : カード用メタデータ表示スタイル、縦長感を解消するための余白・横幅スタイルの追加、カードのリンク化に対応するホバースタイル、および中見出し（`h3`）用のスタイル定義。
 
 ---
@@ -28,12 +28,12 @@
 - **SEO & アクセシビリティ**: 
   - `CollectionPage` スキーマ（Structured Data）を記述。
   - 適切な Heading Order（`h1` -> `h2` -> `h3` -> `h4`）を維持。
-  - 暗い背景のプレースホルダー要素には `aria-hidden="true"` を指定し、スクリーンリーダーでの冗長な読み上げを防止。
+  - 暗い背景 of プレースホルダー要素には `aria-hidden="true"` を指定し、スクリーンリーダーでの冗長な読み上げを防止。
   - Skip Link および noscript 警告を既存ページと同一のコードで設置。
 
-### 2. ナビゲーションの更新
-- `index.html` と `commission.html`、および `portfolio.html` 自身において、ヘッダーのナビゲーションリンクにポートフォリオを追加しました。
-- 順序は `About` -> `Works` -> `Portfolio`（新規） -> `Achievements` -> `Commission` -> `Contact` とし、ポートフォリオページ自身では該当リンクに `.nav-active` クラスを付与しています。
+### 2. ナビゲーションおよび見出しの更新（「作品」から「代表作」へ）
+- トップページ内の代表実績であるディスコグラフィーセクション（`index.html`）を「作品」から**「代表作」**へと表記変更しました（英語の `Works` は維持）。
+- これに伴い、`index.html`、`commission.html`、`portfolio.html` の全ナビゲーションヘッダーに配置されている `Works` リンクの日本語表示を「作品」から「代表作」へと一貫して更新し、ユーザーの混乱を防ぎました。
 
 ### 3. 多言語対応 (`js/main.js` との連携)
 - 各見出しや説明文、リンク属性に至るまで、`data-ja` / `data-en` / `data-aria-ja` / `data-aria-en` を漏れなく付与しています。これにより、既存の `js/main.js` による動的な日英切り替えが `portfolio.html` 上でも完全に機能します。
@@ -52,8 +52,8 @@
   - テキストがリンク色（赤）を継承しないよう、`style.css` に `a.work-card { color: inherit; display: block; }` を定義した上で、カード全体にホバーした際にタイトルのみが赤色に変化するスタイリッシュな視覚効果を実装しました。
 - **見出しの階層整理と赤色ラベル・下線の除去**:
   - 各実績セクションを大見出し（`h2`）から中見出し（`h3`）に変更し、それに合わせて `css/style.css` に一回り小さい中見出しスタイル `.portfolio-section-title` を定義して適用しました。
-  - また、各実績セクションに配置されていた赤色の短いラベル（`.section-label`）および赤い下線（`.divider`）をすべて削除し、スッキリとした外観にしました（CTAセクションからも赤ラベルを除去）。
-  - 実績セクションが `h3` になったことに伴い、セクション内部の実績カードの見出しを `h3` から `h4` （`.work-card-title`）へ変更し、正しい見出し階層（Outline）を維持しました。
+  - 各実績セクションの赤ラベルおよび下線を削除し、シンプルな外観にしました。
+  - 実績カード内のタイトルタグを `h4` へと変更し、見出し階層を正しく保ちました。
 
 ---
 
