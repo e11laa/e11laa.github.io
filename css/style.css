@@ -732,15 +732,15 @@ section {
   }
 
   html[lang="ja"] .commission-table td:nth-child(1)::before {
-    content: "萓晞ｼ遞ｮ蛻･";
+    content: "依頼種別";
   }
 
   html[lang="ja"] .commission-table td:nth-child(2)::before {
-    content: "譁咎≡逶ｮ螳・;
+    content: "料金目安";
   }
 
   html[lang="ja"] .commission-table td:nth-child(3)::before {
-    content: "讎りｦ・;
+    content: "備考";
   }
 
   html[lang="en"] .commission-table td:nth-child(1)::before {
