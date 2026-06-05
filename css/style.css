@@ -861,7 +861,7 @@ section {
 .portfolio-intro {
   font-size: 1.05rem;
   color: var(--text-muted);
-  max-width: 760px;
+  max-width: none;
   margin-bottom: 2.5rem;
   line-height: 1.8;
 }

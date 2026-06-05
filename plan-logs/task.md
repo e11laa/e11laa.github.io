@@ -33,3 +33,7 @@
   - [x] css/style.css に `a.work-card` 用のホバースタイル等を追加
   - [x] portfolio.html の What I Do カードをアンカーリンク（`a` タグ）に変更
   - [x] 動作確認とアーカイブの再コピー
+- [x] 段落改行位置の修正（max-width の無効化とクラス調整）
+  - [x] css/style.css で `.portfolio-intro` の `max-width` を `none` に変更
+  - [x] portfolio.html のご依頼・ご相談の段落に `.portfolio-intro` クラスを適用
+  - [x] 動作確認とアーカイブ・リモートリポジトリへのプッシュ
