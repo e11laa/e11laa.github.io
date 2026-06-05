@@ -56,3 +56,7 @@
 - [x] ナビゲーションテキストの完全小文字（lowercase）化対応
   - [x] css/style.css の `.nav-links a` に `text-transform: lowercase;` を指定
   - [x] 動作確認とアーカイブ・リモートリポジトリへのプッシュ
+- [x] ナビゲーションへの Outfit フォントの適用
+  - [x] index.html, commission.html, portfolio.html で Google Fonts から Outfit をロード
+  - [x] css/style.css の `.nav-links a` に `font-family: 'Outfit'` を設定
+  - [x] 動作確認とアーカイブ・リモートリポジトリへのプッシュ

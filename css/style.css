@@ -143,6 +143,7 @@ ul {
 }
 
 .nav-links a {
+  font-family: 'Outfit', sans-serif;
   color: var(--text-muted);
   font-size: 0.9rem;
   letter-spacing: 0.04em;
