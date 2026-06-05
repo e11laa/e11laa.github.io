@@ -9,7 +9,7 @@
 - **[NEW]** [portfolio.html](file:///c:/Users/affog/e11laa.github.io/portfolio.html) : 新規追加されたスキルおよび実績一覧（ポートフォリオ）ページ。
 - **[MODIFY]** [index.html](file:///c:/Users/affog/e11laa.github.io/index.html) : ナビゲーションメニューおよびセクション見出しの「作品」表記を「代表作」に変更し、ナビゲーション全体を英語表記に統一の上、`portfolio.html` へのリンクを追加。
 - **[MODIFY]** [commission.html](file:///c:/Users/affog/e11laa.github.io/commission.html) : ナビゲーションメニュー全体を英語表記に統一の上、`portfolio.html` へのリンクを追加。
-- **[MODIFY]** [css/style.css](file:///c:/Users/affog/e11laa.github.io/css/style.css) : カード用メタデータ表示スタイル、縦長感を解消するための余白・横幅スタイルの追加、カードのリンク化に対応するホバースタイル、中見出し（`h3`）用のスタイル定義、ナビゲーションテキストを完全に小文字化（`lowercase`）するスタイルの修正、およびナビゲーションフォントを Outfit に設定するスタイルの適用。
+- **[MODIFY]** [css/style.css](file:///c:/Users/affog/e11laa.github.io/css/style.css) : カード用メタデータ表示スタイル、縦長感を解消するための余白・横幅スタイルの追加、カードのリンク化に対応するホバースタイル、中見出し（`h3`）用のスタイル定義、およびナビゲーションリンクのケース調整（`lowercase`）と字間（`letter-spacing: 0.08em`）の微調整。
 
 ---
 
@@ -28,7 +28,7 @@
 - **SEO & アクセシビリティ**: 
   - `CollectionPage` スキーマ（Structured Data）を記述。
   - 適切な Heading Order（`h1` -> `h2` -> `h3` -> `h4`）を維持。
-  - 暗い背景のプレースホルダー要素には `aria-hidden="true"` を指定し、スクリーンリーダーでの冗長な読み上げを防止。
+  - 暗い背景のプレースホルダー要素には `aria-hidden="true"` 指定し、スクリーンリーダーでの冗長な読み上げを防止。
   - Skip Link および noscript 警告を既存ページと同一のコードで設置。
 
 ### 2. ナビゲーションメニューの英語統一とラベル調整
@@ -43,20 +43,15 @@
   - `Commission` (commission.html)
   - `Contact` (index contact section)
 
-### 3. ナビゲーションのフォント変更（Outfitの導入）
-- ナビゲーションテキストのフォントをより幾何学的でエレガントなモダンサンセリフフォントである **`Outfit`** に変更しました。
-- `index.html`、`commission.html`、`portfolio.html` の Google Fonts リンクを更新し、Outfit（ウェイト: 400, 500, 600）を読み込むようにしました。
-- `css/style.css` の `.nav-links a` に `font-family: 'Outfit', sans-serif;` を追加しました。
+### 3. ナビゲーションの文字ケースと字間調整（lowercase & letter-spacing）
+- ナビゲーションメニューを完全に小文字（`about`, `works` 等）で表示するため、CSSで `text-transform: lowercase;` を指定しました。
+- 小文字化に伴って詰まって見えやすくなった文字間隔を調整するため、`.nav-links a` の `letter-spacing` を `0.04em` から **`0.08em`** へと少し広げました。これにより、余白と抜け感が生まれ、視認性と洗練されたトーンが両立しました。
 
-### 4. ナビゲーションテキストの完全小文字（lowercase）化対応
-- ヘッダーナビゲーションメニューの表示を、すべて小文字（例: `about`, `works` 等）で統一するため、CSSの `.nav-links a` に `text-transform: lowercase;` を指定しました。
-- これにより、HTML上の表記に関わらず、ブラウザでは自動的にすべて小文字（`about`, `discography`, `works`, `achievements`, `commission`, `contact`）として均一に美しく表示されるようになりました。
-
-### 5. 多言語対応 (`js/main.js` との連携)
+### 4. 多言語対応 (`js/main.js` との連携)
 - 各見出しや説明文、リンク属性に至るまで、`data-ja` / `data-en` / `data-aria-ja` / `data-aria-en` を漏れなく付与しています。これにより、既存の `js/main.js` による動的な日英切り替えが `portfolio.html` 上でも完全に機能します。
 - `<title>` 要素にも `data-ja` と `data-en` を付与することで、言語トグル時にブラウザのタブタイトルも連動して切り替わります。
 
-### 6. フィードバックに基づくレイアウト・内容の改善
+### 5. フィードバックに基づくレイアウト・内容の改善
 - **縦長感の緩和と余白調整**:
   - `portfolio.html` の `<body>` に `portfolio-page` クラスを付与し、セクション間の padding を `3rem 0` （通常は `6rem 0`）に縮小するスタイルを `style.css` に追加しました。これによりセクション同士が近接し、間の巨大な空白が解消されました。
 - **Hero説明文とCTA説明文の改行位置改善**:
