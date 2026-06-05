@@ -1,9 +1,9 @@
 /* ============================================================
-   style.css — elli mia personal portfolio
+   style.css 窶・elli mia personal portfolio
    Light elegant theme, mobile-first, no external dependencies
    ============================================================ */
 
-/* ── Variables ─────────────────────────────────────────────── */
+/* 笏笏 Variables 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 :root {
   --bg: #fafafa;
   /* Off-white background */
@@ -26,7 +26,7 @@
   --transition: 0.3s ease;
 }
 
-/* ── Reset & Base ───────────────────────────────────────────── */
+/* 笏笏 Reset & Base 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 *,
 *::before,
 *::after {
@@ -93,7 +93,7 @@ ul {
   list-style: none;
 }
 
-/* ── Skip-to-content (accessibility) ───────────────────────── */
+/* 笏笏 Skip-to-content (accessibility) 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 .skip-link {
   position: absolute;
   top: -3rem;
@@ -110,7 +110,7 @@ ul {
   top: 0;
 }
 
-/* ── Navigation ─────────────────────────────────────────────── */
+/* 笏笏 Navigation 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 .site-header {
   position: fixed;
   top: 0;
@@ -156,6 +156,10 @@ ul {
   color: var(--accent);
 }
 
+.nav-links a.nav-active {
+  color: var(--accent);
+}
+
 /* Hamburger button */
 .nav-toggle {
   display: none;
@@ -191,7 +195,7 @@ ul {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ── Layout helpers ─────────────────────────────────────────── */
+/* 笏笏 Layout helpers 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 .container {
   width: 100%;
   max-width: 1100px;
@@ -227,7 +231,7 @@ section {
   margin-bottom: 2.5rem;
 }
 
-/* ── Hero ───────────────────────────────────────────────────── */
+/* 笏笏 Hero 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 #hero {
   min-height: 100svh;
   display: flex;
@@ -275,6 +279,21 @@ section {
   line-height: 1.8;
 }
 
+.commission-return-link {
+  margin: 0 0 1.25rem;
+}
+
+.commission-return-link a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.commission-return-link a:hover,
+.commission-return-link a:focus-visible {
+  color: var(--accent);
+}
+
+
 .btn {
   display: inline-block;
   padding: 0.85rem 2rem;
@@ -294,7 +313,7 @@ section {
   color: var(--bg);
 }
 
-/* ── About ──────────────────────────────────────────────────── */
+/* 笏笏 About 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 #about {
   border-top: 1px solid var(--border);
 }
@@ -328,7 +347,7 @@ section {
   margin-bottom: 0;
 }
 
-/* ── Works / Discography ────────────────────────────────────── */
+/* 笏笏 Works / Discography 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 #works {
   border-top: 1px solid var(--border);
 }
@@ -433,7 +452,7 @@ section {
   border-color: var(--accent);
 }
 
-/* ── Achievements / Career ──────────────────────────────────── */
+/* 笏笏 Achievements / Career 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 #achievements {
   border-top: 1px solid var(--border);
 }
@@ -494,7 +513,7 @@ section {
   line-height: 1.7;
 }
 
-/* ── Contact ────────────────────────────────────────────────── */
+/* 笏笏 Contact 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 #contact {
   border-top: 1px solid var(--border);
 }
@@ -550,7 +569,7 @@ section {
   border-color: var(--accent-dim);
 }
 
-/* ── Footer ─────────────────────────────────────────────────── */
+/* 笏笏 Footer 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 2rem 0;
@@ -563,7 +582,7 @@ section {
   letter-spacing: 0.04em;
 }
 
-/* ── Profile image ──────────────────────────────────────────── */
+/* 笏笏 Profile image 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 .about-profile-img {
   display: block;
   width: 100%;
@@ -573,7 +592,7 @@ section {
   object-fit: cover;
 }
 
-/* ── Work card cover images ─────────────────────────────────── */
+/* 笏笏 Work card cover images 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 .work-card-image img {
   width: 100%;
   height: 100%;
@@ -582,7 +601,7 @@ section {
   display: block;
 }
 
-/* ── Language toggle button ─────────────────────────────────── */
+/* 笏笏 Language toggle button 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 .lang-toggle {
   background: none;
   border: 1px solid var(--border);
@@ -605,7 +624,7 @@ section {
   outline: none;
 }
 
-/* ── Responsive — Tablet ────────────────────────────────────── */
+/* 笏笏 Responsive 窶・Tablet 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 @media (min-width: 640px) {
   .about-grid {
     grid-template-columns: auto 1fr;
@@ -613,7 +632,7 @@ section {
   }
 }
 
-/* ── Responsive — Mobile nav ────────────────────────────────── */
+/* 笏笏 Responsive 窶・Mobile nav 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 @media (max-width: 767px) {
   .nav-toggle {
     display: flex;
@@ -713,15 +732,15 @@ section {
   }
 
   html[lang="ja"] .commission-table td:nth-child(1)::before {
-    content: "依頼種別";
+    content: "萓晞ｼ遞ｮ蛻･";
   }
 
   html[lang="ja"] .commission-table td:nth-child(2)::before {
-    content: "料金目安";
+    content: "譁咎≡逶ｮ螳・;
   }
 
   html[lang="ja"] .commission-table td:nth-child(3)::before {
-    content: "概要";
+    content: "讎りｦ・;
   }
 
   html[lang="en"] .commission-table td:nth-child(1)::before {
@@ -737,7 +756,7 @@ section {
   }
 }
 
-/* ── Reduced motion ─────────────────────────────────────────── */
+/* 笏笏 Reduced motion 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 @media (prefers-reduced-motion: reduce) {
 
   *,
@@ -752,7 +771,7 @@ section {
   }
 }
 
-/* ── Commission page ────────────────────────────────────────── */
+/* 笏笏 Commission page 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 #commission {
   border-top: 1px solid var(--border);
 }
@@ -840,12 +859,12 @@ section {
   text-align: center;
 }
 
-/* ── Commission CTA section (index.html) ────────────────────── */
+/* 笏笏 Commission CTA section (index.html) 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 #commission-cta {
   border-top: 1px solid var(--border);
 }
 
-/* ── Portfolio Page Styles ─────────────────────────────────── */
+/* 笏笏 Portfolio Page Styles 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 .work-card-meta {
   font-size: 0.8rem;
   color: var(--text-muted);
@@ -863,7 +882,7 @@ section {
   box-shadow: 0 4px 12px rgba(230, 0, 0, 0.04);
 }
 
-/* ── Portfolio Page Custom Spacing & Intro ─────────────────── */
+/* 笏笏 Portfolio Page Custom Spacing & Intro 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 .portfolio-page section {
   padding: 3rem 0;
 }
@@ -872,15 +891,19 @@ section {
   padding-top: 5rem;
 }
 
+.portfolio-page main section + section {
+  border-top: 1px solid var(--border);
+}
+
 .portfolio-intro {
   font-size: 1.05rem;
   color: var(--text-muted);
-  max-width: none;
+  max-width: 820px;
   margin-bottom: 2.5rem;
   line-height: 1.8;
 }
 
-/* ── Skill Summary Link Cards ──────────────────────────────── */
+/* 笏笏 Skill Summary Link Cards 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 a.work-card {
   color: inherit;
   display: block;
@@ -894,7 +917,7 @@ a.work-card:hover .work-card-title {
   color: var(--accent);
 }
 
-/* ── Portfolio Section Title (Medium heading) ──────────────── */
+/* 笏笏 Portfolio Section Title (Medium heading) 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
 .portfolio-section-title {
   font-size: clamp(1.3rem, 2.5vw, 1.6rem);
   font-weight: 700;
