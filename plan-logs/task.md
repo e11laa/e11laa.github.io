@@ -24,7 +24,7 @@
   - [x] 縦長感の緩和（`.portfolio-page` によるセクション余白の調整、CSS追加）
   - [x] Hero説明文の改行位置改善（`.portfolio-intro` 定義と max-width 緩和）
   - [x] 「スキル概要」の説明文をプレースホルダーに変更
-  - [x] 動作再確認と plan-logs アーカイブ of 再保存
+  - [x] 動作再確認と plan-logs アーカイブの再保存
 - [x] スキル概要カードの等幅化調整
   - [x] portfolio.html の Songs / Vocal Works カードから featured クラス等の削除
   - [x] css/style.css から `.featured-skill` スタイルの削除
@@ -61,4 +61,9 @@
   - [x] 動作確認とアーカイブ・リモートリポジトリへのプッシュ
 - [x] プロフィール画像の背景枠の削除
   - [x] css/style.css の `.about-image-wrap` から `border: 1px solid var(--border);` を削除
+  - [x] 動作確認とアーカイブ・リモートリポジトリへのプッシュ
+- [x] ナビゲーションメニューの簡素化（DiscographyとAchievementsを削除）
+  - [x] index.html のナビゲーションから Discography と Achievements リンクを削除
+  - [x] commission.html のナビゲーションから Discography と Achievements リンクを削除
+  - [x] portfolio.html のナビゲーションから Discography と Achievements リンクを削除
   - [x] 動作確認とアーカイブ・リモートリポジトリへのプッシュ

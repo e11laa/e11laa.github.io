@@ -7,8 +7,8 @@
 ## 変更されたファイル一覧
 
 - **[NEW]** [portfolio.html](file:///c:/Users/affog/e11laa.github.io/portfolio.html) : 新規追加されたスキルおよび実績一覧（ポートフォリオ）ページ。
-- **[MODIFY]** [index.html](file:///c:/Users/affog/e11laa.github.io/index.html) : ナビゲーションメニューおよびセクション見出しの「作品」表記を「代表作」に変更し、ナビゲーション全体を英語表記に統一の上、`portfolio.html` へのリンクを追加。
-- **[MODIFY]** [commission.html](file:///c:/Users/affog/e11laa.github.io/commission.html) : ナビゲーションメニュー全体を英語表記に統一の上、`portfolio.html` へのリンクを追加。
+- **[MODIFY]** [index.html](file:///c:/Users/affog/e11laa.github.io/index.html) : ナビゲーションメニューおよびセクション見出しの「作品」表記を「代表作」に変更し、ナビゲーションメニューから `Discography` と `Achievements` のアンカーリンクを削除して簡素化の上、`portfolio.html` へのリンクを追加。
+- **[MODIFY]** [commission.html](file:///c:/Users/affog/e11laa.github.io/commission.html) : ナビゲーションメニューから `Discography` と `Achievements` のアンカーリンクを削除して簡素化の上、`portfolio.html` へのリンクを追加。
 - **[MODIFY]** [css/style.css](file:///c:/Users/affog/e11laa.github.io/css/style.css) : カード用メタデータ表示スタイル、縦長感を解消するための余白・横幅スタイルの追加、カードのリンク化に対応するホバースタイル、中見出し（`h3`）用のスタイル定義、ナビゲーションリンクのケース調整（`lowercase`）と字間の微調整、およびプロフィール画像の枠線（ボーダー）の削除。
 
 ---
@@ -31,17 +31,15 @@
   - 暗い背景のプレースホルダー要素には `aria-hidden="true"` を指定し、スクリーンリーダーでの冗長な読み上げを防止。
   - Skip Link および noscript 警告を既存ページと同一のコードで設置。
 
-### 2. ナビゲーションメニューの英語統一とラベル調整
+### 2. ナビゲーションメニューの英語統一と簡素化
 - ヘッダーのナビゲーション（リンク名）を、言語切替に関わらず常に英語表記で統一するよう更新しました（`data-ja` と `data-en` の双方に同じ英語名を設定）。
 - これまで `Portfolio` と呼んでいたポートフォリオページ（`portfolio.html`）へのリンク名を **`Works`** に変更しました。
-- それに伴い、重複を避けるためトップページ（`index.html#works`）の実績セクション（日本語の見出しは「代表作」）へのリンク名を **`Discography`** に変更しました。
-- **統一後のナビゲーション構成**:
-  - `About` (about section)
-  - `Discography` (index works section)
-  - `Works` (portfolio.html)
-  - `Achievements` (index achievements section)
-  - `Commission` (commission.html)
-  - `Contact` (index contact section)
+- ナビゲーションの項目をより整理して見やすくするため、トップページの特定のセクションへのリンクであった `Discography`（旧代表作リンク）および `Achievements`（旧経歴リンク）をメニューから完全に削除しました。
+- **統一・簡素化後のナビゲーション構成**:
+  - `about` (about section)
+  - `works` (portfolio.html)
+  - `commission` (commission.html)
+  - `contact` (index contact section)
 
 ### 3. ナビゲーションの文字ケースと字間調整（lowercase & letter-spacing）
 - ナビゲーションメニューを完全に小文字（`about`, `works` 等）で表示するため、CSSで `text-transform: lowercase;` を指定しました。
