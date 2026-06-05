@@ -29,7 +29,7 @@
   - [x] portfolio.html の Songs / Vocal Works カードから featured クラス等の削除
   - [x] css/style.css から `.featured-skill` スタイルの削除
   - [x] 動作確認とアーカイブの再コピー
-- [x] スキル概要カードのリンク化（ページ内ジャンプ）
+- [x] スキル概要カード of リンク化（ページ内ジャンプ）
   - [x] css/style.css に `a.work-card` 用のホバースタイル等を追加
   - [x] portfolio.html の What I Do カードをアンカーリンク（`a` タグ）に変更
   - [x] 動作確認とアーカイブの再コピー
@@ -49,4 +49,7 @@
   - [x] index.html のナビゲーションメニューの全ラベルを英語に統一（ポートフォリオ→Works、代表作→Discography）
   - [x] commission.html のナビゲーションメニューの全ラベルを英語に統一
   - [x] portfolio.html のナビゲーションメニューの全ラベルを英語に統一
+  - [x] 動作確認とアーカイブ・リモートリポジトリへのプッシュ
+- [x] ナビゲーションテキストの大文字変換の解除
+  - [x] css/style.css の `.nav-links a` から `text-transform: uppercase;` を削除
   - [x] 動作確認とアーカイブ・リモートリポジトリへのプッシュ

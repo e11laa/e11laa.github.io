@@ -9,7 +9,7 @@
 - **[NEW]** [portfolio.html](file:///c:/Users/affog/e11laa.github.io/portfolio.html) : 新規追加されたスキルおよび実績一覧（ポートフォリオ）ページ。
 - **[MODIFY]** [index.html](file:///c:/Users/affog/e11laa.github.io/index.html) : ナビゲーションメニューおよびセクション見出しの「作品」表記を「代表作」に変更し、ナビゲーション全体を英語表記に統一の上、`portfolio.html` へのリンクを追加。
 - **[MODIFY]** [commission.html](file:///c:/Users/affog/e11laa.github.io/commission.html) : ナビゲーションメニュー全体を英語表記に統一の上、`portfolio.html` へのリンクを追加。
-- **[MODIFY]** [css/style.css](file:///c:/Users/affog/e11laa.github.io/css/style.css) : カード用メタデータ表示スタイル、縦長感を解消するための余白・横幅スタイルの追加、カードのリンク化に対応するホバースタイル、および中見出し（`h3`）用のスタイル定義。
+- **[MODIFY]** [css/style.css](file:///c:/Users/affog/e11laa.github.io/css/style.css) : カード用メタデータ表示スタイル、縦長感を解消するための余白・横幅スタイルの追加、カードのリンク化に対応するホバースタイル、中見出し（`h3`）用のスタイル定義、およびナビゲーションテキストの大文字強制を解除するスタイルの修正。
 
 ---
 
@@ -34,7 +34,7 @@
 ### 2. ナビゲーションメニューの英語統一とラベル調整
 - ヘッダーのナビゲーション（リンク名）を、言語切替に関わらず常に英語表記で統一するよう更新しました（`data-ja` と `data-en` の双方に同じ英語名を設定）。
 - これまで `Portfolio` と呼んでいたポートフォリオページ（`portfolio.html`）へのリンク名を **`Works`** に変更しました。
-- それに伴い、競合を避けるためトップページ（`index.html#works`）の実績セクション（日本語の見出しは「代表作」）へのリンク名を **`Discography`** に変更しました。
+- それに伴い、重複を避けるためトップページ（`index.html#works`）の実績セクション（日本語の見出しは「代表作」）へのリンク名を **`Discography`** に変更しました。
 - **統一後のナビゲーション構成**:
   - `About` (about section)
   - `Discography` (index works section)
@@ -43,11 +43,15 @@
   - `Commission` (commission.html)
   - `Contact` (index contact section)
 
-### 3. 多言語対応 (`js/main.js` との連携)
+### 3. ナビゲーションテキストの小文字（大文字強制解除）対応
+- ヘッダーナビゲーションメニューのテキストが、CSSの `text-transform: uppercase;` の指定によりすべて大文字（`ABOUT` や `WORKS` 等）で表示されていたものを、小文字を含んだ自然な表記にするため大文字変換の設定を削除しました。
+- これにより、HTML上に記述された表記の通り、頭文字のみ大文字のスタイル（`About`, `Discography`, `Works` 等）で美しく表示されるようになりました。
+
+### 4. 多言語対応 (`js/main.js` との連携)
 - 各見出しや説明文、リンク属性に至るまで、`data-ja` / `data-en` / `data-aria-ja` / `data-aria-en` を漏れなく付与しています。これにより、既存の `js/main.js` による動的な日英切り替えが `portfolio.html` 上でも完全に機能します。
 - `<title>` 要素にも `data-ja` と `data-en` を付与することで、言語トグル時にブラウザのタブタイトルも連動して切り替わります。
 
-### 4. フィードバックに基づくレイアウト・内容の改善
+### 5. フィードバックに基づくレイアウト・内容の改善
 - **縦長感の緩和と余白調整**:
   - `portfolio.html` の `<body>` に `portfolio-page` クラスを付与し、セクション間の padding を `3rem 0` （通常は `6rem 0`）に縮小するスタイルを `style.css` に追加しました。これによりセクション同士が近接し、間の巨大な空白が解消されました。
 - **Hero説明文とCTA説明文の改行位置改善**:
