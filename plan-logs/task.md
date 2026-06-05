@@ -1,0 +1,35 @@
+# ポートフォリオページ追加 タスクリスト
+
+- [x] css/style.css の変更
+  - [x] 実績カード用の追加スタイル（メタデータ表示用）の定義
+  - [x] 「What I Do」の featured スタイルの定義
+- [x] index.html の変更
+  - [x] ナビゲーションリンクへの `portfolio.html` の追加
+- [x] commission.html の変更
+  - [x] ナビゲーションリンクへの `portfolio.html` の追加
+- [x] portfolio.html の新規作成
+  - [x] 既存ページに整合した基本構造（ヘッダー、フッター、noscript等）の作成
+  - [x] Hero / Page Header セクションの実装（多言語対応）
+  - [x] What I Do セクションの実装（Songs / Vocal Works を featured に）
+  - [x] 各スキルに対応した Portfolio セクション（プレースホルダーカード）の実装
+  - [x] CTA（ご依頼、お問い合わせ）セクションの実装
+- [x] 動作確認・検証
+  - [x] ページ間ナビゲーションの動作確認
+  - [x] 多言語切替（日英）の動作確認
+  - [x] モバイルメニューの動作確認
+  - [x] HTML構文・アクセシビリティ確認（Alt, rel="noopener noreferrer" 等）
+- [x] アーカイブの保存
+  - [x] implementation_plan.md, task.md, walkthrough.md のコピーを `/plan-logs/` に保存
+- [x] フィードバックに基づくレイアウト改善・テキスト調整
+  - [x] 縦長感の緩和（`.portfolio-page` によるセクション余白の調整、CSS追加）
+  - [x] Hero説明文の改行位置改善（`.portfolio-intro` 定義と max-width 緩和）
+  - [x] 「スキル概要」の説明文をプレースホルダーに変更
+  - [x] 動作再確認と plan-logs アーカイブの再保存
+- [x] スキル概要カードの等幅化調整
+  - [x] portfolio.html の Songs / Vocal Works カードから featured クラス等の削除
+  - [x] css/style.css から `.featured-skill` スタイルの削除
+  - [x] 動作確認とアーカイブの再コピー
+- [x] スキル概要カードのリンク化（ページ内ジャンプ）
+  - [x] css/style.css に `a.work-card` 用のホバースタイル等を追加
+  - [x] portfolio.html の What I Do カードをアンカーリンク（`a` タグ）に変更
+  - [x] 動作確認とアーカイブの再コピー

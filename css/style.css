@@ -830,3 +830,52 @@ section {
 #commission-cta {
   border-top: 1px solid var(--border);
 }
+
+/* ── Portfolio Page Styles ─────────────────────────────────── */
+.work-card-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.work-card-meta strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.work-card.featured {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(230, 0, 0, 0.04);
+}
+
+/* ── Portfolio Page Custom Spacing & Intro ─────────────────── */
+.portfolio-page section {
+  padding: 3rem 0;
+}
+
+.portfolio-page section:first-of-type {
+  padding-top: 5rem;
+}
+
+.portfolio-intro {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 760px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+/* ── Skill Summary Link Cards ──────────────────────────────── */
+a.work-card {
+  color: inherit;
+  display: block;
+}
+
+a.work-card:hover {
+  color: inherit;
+}
+
+a.work-card:hover .work-card-title {
+  color: var(--accent);
+}
