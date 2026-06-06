@@ -1,0 +1,3883 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.continue/rules/404.html-guide.md
+.continue/rules/commission.html-guide.md
+.continue/rules/index.html-guide.md
+.continue/rules/main.js-guide.md
+.continue/rules/style.css-guide.md
+.gitignore
+.serena/.gitignore
+.serena/project.yml
+404.html
+CNAME
+cockoo-clock.html
+commission.html
+css/style.css
+favicon.ico
+images/.gitkeep
+images/404.webp
+images/abzu-jacket.webp
+images/animacy_jacket.webp
+images/another-jacket.webp
+images/ellimia-background_new.webp
+images/exonorm-jacket.webp
+images/profile.png
+improvement plan.txt
+index.html
+js/main.js
+manifest.json
+plan-logs/2026-03-09_UI_Style_Refinement_And_Task_Management.md
+plan-logs/2026-03-10_Refining_Navigation_and_Commissions.md
+plan-logs/2026-03-27_Add_Utility_Link_to_404.md
+plan-logs/git_history.md
+plan-logs/implementation_plan.md
+plan-logs/task.md
+plan-logs/walkthrough.md
+portfolio.html
+README.md
+robots.txt
+script.js
+sitemap.xml
+style.css
+tmp_translate_aria.py
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".continue/rules/404.html-guide.md">
+# 404.html 構造ガイド
+
+このファイルは、存在しないページにアクセスされた際に表示される404エラーページのHTMLです。
+
+## 行ごとの概要
+- **L1-L2**: DOCTYPE宣言とHTMLタグ（言語は日本語 `ja`）。
+- **L4-L38**: `<head>` セクション
+  - **L5-L7**: 文字コード、ビューポート設定、ページタイトル。
+  - **L8-L12**: ファビコン、Google Fonts（Noto Sans JP）、およびメインのCSSファイル（`css/style.css`）の読み込み。
+  - **L13-L37**: ページ固有のインラインCSS（`.error-page`, `.error-code`, `.error-message`）。画面中央にエラーメッセージを配置し、レスポンシブなフォントサイズを指定。
+- **L40-L48**: `<body>` セクション
+  - **L41-L47**: エラーページのメインコンテンツを囲むコンテナ（`.error-page`）。
+  - **L43-L45**: 「404」のエラーコード（英語・日本語併記のエラーメッセージ）と、トップページへ戻るリンクボタン（`.btn` クラス使用）。
+- **L49-L50**: HTMLタグの終了。
+</file>
+
+<file path=".continue/rules/commission.html-guide.md">
+# commission.html 構造ガイド
+
+このファイルは、リミックスや作編曲、DJ出演などの依頼（Commission）に関する詳細情報や料金表を掲載したHTMLページです。
+
+## 行ごとの概要
+- **L1-L2**: DOCTYPE宣言とHTMLタグ（言語は日本語 `ja`）。
+- **L4-L29**: `<head>` セクション
+  - メタデータ、SEOタグ、OGPタグ（Open Graph / Twitter Card）、ファビコン、Google Fonts、メインCSS（`css/style.css`）の読み込み。
+- **L31-L221**: `<body>` セクション
+  - **L33-L34**: アクセシビリティのためのスキップリンク。
+  - **L36-L42**: JavaScriptが無効な環境向けのフォールバックメッセージ（`<noscript>`）。
+  - **L44-L67**: `<header>` / ナビゲーションメニュー
+    - モバイル用のハンバーガーボタン、ページ内リンクと `commission.html` へのリンク（多言語対応のための `data-en`, `data-ja` 属性付き）。
+    - 英語・日本語切り替えボタン（`.lang-toggle`）。
+  - **L69-L210**: `<main>` (メインコンテンツ)
+    - **L72-L208**: `#commission` セクション
+      - ページタイトルと導入文。
+      - **L84-L138**: 料金表（`<table>` クラス `.commission-table`）。各種依頼（リミックス、作編曲、DJ、執筆、動画編集など）の目安料金を記載。
+      - **L140-L200**: 各依頼種別の詳細説明（`<dl>` クラス `.commission-details`）。
+      - **L202-L205**: お問い合わせセクション（`index.html#contact`）へのコールトゥアクションボタン。
+  - **L212-L218**: `<footer>` セクション (コピーライト表記)。
+  - **L220**: JavaScriptファイル（`js/main.js`）の読み込み。
+- **L222-L223**: HTMLタグの終了。
+</file>
+
+<file path=".continue/rules/index.html-guide.md">
+# index.html 構造ガイド
+
+このファイルは、ポートフォリオサイトのトップページ（シングルページ構成＋別ページへのリンク）のHTMLです。
+
+## 行ごとの概要
+- **L1-L2**: DOCTYPE宣言とHTMLタグ（言語は日本語 `ja`）。
+- **L4-L51**: `<head>` セクション
+  - メタデータ、OGPタグ、Twitter Card、ファビコン、Google Fonts、メインCSS（`css/style.css`）の読み込み。
+  - **L32-L50**: 構造化データ（JSON-LD）による著者のプロフィール定義。
+- **L53-L460**: `<body>` セクション
+  - **L55-L64**: スキップリンクとJavaScript無効時の `<noscript>` 警告。
+  - **L66-L89**: `<header>` / ナビゲーションメニュー
+    - ハンバーガーメニュー、各セクション（#about, #works, #achievements, commission.html, #contact）へのリンク（`data-en`, `data-ja` 属性持ち）、言語切り替えボタン。
+  - **L91-L449**: `<main>` (メインコンテンツ)
+    - **L94-L109**: `#hero` セクション（ヒーローエリア）。肩書き、名前、キャッチコピーと「音楽を聴く」ボタン。
+    - **L111-L144**: `#about` セクション（プロフィール）。プロフィール画像と多言語化対応の経歴紹介文。
+    - **L146-L252**: `#works` セクション（ディスコグラフィー）。
+      - **L154-L249**: 各作品（exonorm, animacy ep, another, Florallax - abzu）のカード型要素（`.work-card`）。アートワーク画像、リリース年、タイトル、概要文、各種ストリーミング・動画サイトへのリンク群。
+    - **L254-L308**: `#achievements` セクション（経歴）。
+      - タイムライン形式（`.timeline`）で2022年から2026年までの主要な活動実績（DJ開始、EPリリース、コラボレーション、アルバムリリース）を記述。
+    - **L310-L324**: `#commission-cta` セクション（ご依頼・コラボレーションへの誘導）。`commission.html` へのリンクボタン。
+    - **L326-L447**: `#contact` セクション（お問い合わせ）。
+      - JavaScriptによる「メールアドレスを表示する」ボタン（スパム対策）、および各種SNS（X, Instagram, YouTube, Spotify, SoundCloud, マシュマロ）へのリンク（アイコンSVG付き）。
+  - **L451-L457**: `<footer>` セクション（コピーライト表記）。
+  - **L459**: JavaScriptファイル（`js/main.js`）の読み込み。
+- **L461-L462**: HTMLタグの終了。
+</file>
+
+<file path=".continue/rules/main.js-guide.md">
+# main.js 構造ガイド
+
+このファイルは、サイト全体の動作を制御するフロントエンドのVanilla JavaScriptファイルです。
+
+## 行ごとの概要
+- **L1-L4**: ファイル構造と概要を示すヘッダーコメント。
+- **L6-L66**: 即時実行関数 (IIFE) 1: ナビゲーションの制御とスクロール連動
+  - **L9-L36**: モバイルナビゲーション（ハンバーガーメニュー）の開閉処理。クリックイベントやEscキー押下時、あるいはリンククリック時にメニューを閉じる動作を定義。
+  - **L38-L65**: スクロールに応じたナビゲーションリンクのアクティブ状態の切り替え機能。`IntersectionObserver` を使用して現在画面にあるセクション（#about, #worksなど）を判別し、ナビゲーションの文字色を変更する。
+- **L68-L83**: 即時実行関数 (IIFE) 2: スパム対策を施したメールアドレス表示機能
+  - お問い合わせ（Contact）セクションの「メールアドレスを表示」ボタンがクリックされたときに、分割された文字列（メールユーザー名とドメイン）を結合し、画面へ表示して `mailto:` リンクを有効化する処理。
+- **L85-L142**: 即時実行関数 (IIFE) 3: 多言語対応（日本語 / 英語 切り替え）機能
+  - **L90-L93**: 翻訳対象となる要素（`data-en`、`data-ja` 属性付きと、HTMLタグを含められる `data-i18n-html` 属性付き）の取得。
+  - **L95-L122**: `applyLang` 関数。指定された言語に応じてテキストやHTMLを書き換え、該当言語が空文字の場合は非表示（`hidden`）にし、`<html>` の `lang` 属性も更新。ユーザー設定を `localStorage` に保存する。
+  - **L124-L127**: 言語切り替えボタンクリック時に、現在の状況を反転させるイベントリスナー。
+  - **L129-L141**: ロード時の初期化処理。`localStorage`に言語設定があればそれを優先し、なければブラウザの言語設定（`navigator.language`）を判定して初期言語を決定する。
+</file>
+
+<file path=".continue/rules/style.css-guide.md">
+# style.css 構造ガイド
+
+このファイルは、サイト全体のスタイリングを行うメインのCSSファイルです。外部フレームワークに依存せずVanilla CSSで記述されています。
+
+## 行ごとの概要
+- **L1-L4**: CSSファイルのヘッダーコメントと概要。
+- **L6-L27**: `:root` 変数宣言。サイト全体のカラーパレット（背景、テキスト、アクセントなど）、スペース（navの高さ等）、トランジションの設定。
+- **L29-L76**: リセットCSSおよびベーススタイル。スクロールの滑らかさ、フォント設定（日本語/英語）、リンクのデフォルトスタイル。
+- **L78-L93**: アクセシビリティ用スキップリンクのスタイル（`.skip-link`）。
+- **L95-L175**: ナビゲーションバーのスタイル（`.site-header`, `.nav-inner`, `.nav-links` 等）。ハンバーガーメニューのアニメーション（`.nav-toggle`）を含む。
+- **L177-L210**: 全体的なレイアウトのヘルパー（`.container`, `section`, セクション見出し等の共通デザイン）。
+- **L212-L275**: `#hero` セクションのスタイル。ヒーローエリアのグラデーション背景やタイポグラフィー、`.btn`（ボタン）のアニメーションデザイン。
+- **L277-L311**: `#about` セクション。プロフィール画像の表示（CSS Gridを活用）とテキスト要素のスタイリング。
+- **L313-L397**: `#works` セクション（ディスコグラフィー）。カード型UI（`.work-card`）のグリッドレイアウトやホバーエフェクト。
+- **L399-L458**: `#achievements` セクション。タイムライン風レイアウトの左線と丸印などのデザイン。
+- **L460-L514**: `#contact` セクションとSNSリンク集のスタイル（Flexboxによるアイコン配置やホバー効果）。
+- **L516-L528**: `<footer>` セクションのスタイル。
+- **L530-L537**: プロフィール画像固有のスタイル修正。
+- **L539-L546**: ワークカード画像固有のスタイル修正。
+- **L548-L569**: 言語切り替えボタン（`.lang-toggle`）のスタイル。
+- **L571-L617**: レスポンシブデザインのメディアクエリ（タブレット、モバイル向けナビゲーションやカラム変更等のオーバーライド）。
+- **L619-L632**: アクセシビリティ機能（アニメーション削減の設定）。
+- **L634-L723**: `commission.html` 専用のスタイル。
+  - **L639-L685**: 料金表テーブル（`.commission-table`）の詳細デザイン。
+  - **L687-L718**: 依頼詳細リスト（`.commission-details`, `.commission-item`）のデザイン。
+  - **L720-L723**: CTAセクションのスタイル。
+</file>
+
+<file path=".gitignore">
+node_modules/
+.DS_Store
+.env
+*.log
+</file>
+
+<file path=".serena/.gitignore">
+/cache
+/project.local.yml
+</file>
+
+<file path=".serena/project.yml">
+# the name by which the project can be referenced within Serena
+project_name: "e11laa.github.io"
+
+
+# list of languages for which language servers are started; choose from:
+#   al                  angular             ansible             bash                clojure
+#   cpp                 cpp_ccls            crystal             csharp              csharp_omnisharp
+#   dart                elixir              elm                 erlang              fortran
+#   fsharp              go                  groovy              haskell             haxe
+#   hlsl                html                java                json                julia
+#   kotlin              lean4               lua                 luau                markdown
+#   matlab              msl                 nix                 ocaml               pascal
+#   perl                php                 php_phpactor        powershell          python
+#   python_jedi         python_ty           r                   rego                ruby
+#   ruby_solargraph     rust                scala               scss                solidity
+#   svelte              swift               systemverilog       terraform           toml
+#   typescript          typescript_vts      vue                 yaml                zig
+#   (This list may be outdated. For the current list, see values of Language enum here:
+#   https://github.com/oraios/serena/blob/main/src/solidlsp/ls_config.py
+#   For some languages, there are alternative language servers, e.g. csharp_omnisharp, ruby_solargraph.)
+# Note:
+#   - For C, use cpp
+#   - For JavaScript, use typescript
+#   - For Angular projects, use angular (subsumes typescript+html; requires `npm install` in the project root)
+#   - For Svelte projects, use svelte (subsumes typescript/javascript for .svelte projects; requires npm)
+#   - For SCSS / Sass / plain CSS, use scss (some-sass-language-server handles all three)
+#   - For Free Pascal/Lazarus, use pascal
+# Special requirements:
+#   Some languages require additional setup/installations.
+#   See here for details: https://oraios.github.io/serena/01-about/020_programming-languages.html#language-servers
+# When using multiple languages, the first language server that supports a given file will be used for that file.
+# The first language is the default language and the respective language server will be used as a fallback.
+# Note that when using the JetBrains backend, language servers are not used and this list is correspondingly ignored.
+languages:
+- typescript
+
+# the encoding used by text files in the project
+# For a list of possible encodings, see https://docs.python.org/3.11/library/codecs.html#standard-encodings
+encoding: "utf-8"
+
+# line ending convention to use when writing source files.
+# Possible values: unset (use global setting), "lf", "crlf", or "native" (platform default)
+# This does not affect Serena's own files (e.g. memories and configuration files), which always use native line endings.
+line_ending:
+
+# The language backend to use for this project.
+# If not set, the global setting from serena_config.yml is used.
+# Valid values: LSP, JetBrains
+# Note: the backend is fixed at startup. If a project with a different backend
+# is activated post-init, an error will be returned.
+language_backend:
+
+# whether to use project's .gitignore files to ignore files
+ignore_all_files_in_gitignore: true
+
+# advanced configuration option allowing to configure language server-specific options.
+# Maps the language key to the options.
+# Have a look at the docstring of the constructors of the LS implementations within solidlsp (e.g., for C# or PHP) to see which options are available.
+# No documentation on options means no options are available.
+ls_specific_settings: {}
+
+# list of additional workspace folder paths for cross-package reference support (e.g. in monorepos).
+# Paths can be absolute or relative to the project root.
+# Each folder is registered as an LSP workspace folder, enabling language servers to discover
+# symbols and references across package boundaries.
+# Currently supported for: TypeScript.
+# Example:
+#   additional_workspace_folders:
+#     - ../sibling-package
+#     - ../shared-lib
+additional_workspace_folders: []
+
+# list of additional paths to ignore in this project.
+# Same syntax as gitignore, so you can use * and **.
+# Note: global ignored_paths from serena_config.yml are also applied additively.
+ignored_paths: []
+
+# whether the project is in read-only mode
+# If set to true, all editing tools will be disabled and attempts to use them will result in an error
+# Added on 2025-04-18
+read_only: false
+
+# list of tool names to exclude.
+# This extends the existing exclusions (e.g. from the global configuration)
+# Find the list of tools here: https://oraios.github.io/serena/01-about/035_tools.html
+excluded_tools: []
+
+# list of tools to include that would otherwise be disabled (particularly optional tools that are disabled by default).
+# This extends the existing inclusions (e.g. from the global configuration).
+# Find the list of tools here: https://oraios.github.io/serena/01-about/035_tools.html
+included_optional_tools: []
+
+# fixed set of tools to use as the base tool set (if non-empty), replacing Serena's default set of tools.
+# This cannot be combined with non-empty excluded_tools or included_optional_tools.
+# Find the list of tools here: https://oraios.github.io/serena/01-about/035_tools.html
+fixed_tools: []
+
+# list of mode names that are to be activated by default, overriding the setting in the global configuration.
+# The full set of modes to be activated is base_modes (from global config) + default_modes + added_modes.
+# If the setting is undefined/empty, the default_modes from the global configuration (serena_config.yml) apply.
+# Otherwise, this overrides the setting from the global configuration (serena_config.yml).
+# Therefore, you can set this to [] if you do not want the default modes defined in the global config to apply
+# for this project.
+# This setting can, in turn, be overridden by CLI parameters (--mode).
+# See https://oraios.github.io/serena/02-usage/050_configuration.html#modes
+default_modes:
+
+# list of mode names to be activated additionally for this project, e.g. ["query-projects"]
+# The full set of modes to be activated is base_modes (from global config) + default_modes + added_modes.
+# See https://oraios.github.io/serena/02-usage/050_configuration.html#modes
+added_modes:
+
+# initial prompt for the project. It will always be given to the LLM upon activating the project
+# (contrary to the memories, which are loaded on demand).
+initial_prompt: ""
+
+# time budget (seconds) per tool call for the retrieval of additional symbol information
+# such as docstrings or parameter information.
+# This overrides the corresponding setting in the global configuration; see the documentation there.
+# If null or missing, use the setting from the global configuration.
+symbol_info_budget:
+
+# list of regex patterns which, when matched, mark a memory entry as read‑only.
+# Extends the list from the global configuration, merging the two lists.
+read_only_memory_patterns: []
+
+# list of regex patterns for memories to completely ignore.
+# Matching memories will not appear in list_memories or activate_project output
+# and cannot be accessed via read_memory or write_memory.
+# To access ignored memory files, use the read_file tool on the raw file path.
+# Extends the list from the global configuration, merging the two lists.
+# Example: ["_archive/.*", "_episodes/.*"]
+ignored_memory_patterns: []
+</file>
+
+<file path="cockoo-clock.html">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鳩時計</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="font-family: 'MS Gothic', sans-serif; text-align: center;">鳩時計</h1>
+    <div class="container">
+        <div id="clock"></div>
+        <div id="cuckooClock">
+            <div id="cuckoo"></div>
+        </div>
+        <button id="testCuckooBtn">ネタバレ</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+</file>
+
+<file path="images/.gitkeep">
+
+</file>
+
+<file path="improvement plan.txt">
+1. SEO（検索エンジン最適化）における課題と改善点
+① 多言語対応（i18n）のSEO上の弱点（重要）
+
+現状: 英語と日本語の表示切り替えを js/main.js にて行い、各要素の data-en と data-ja 属性を利用してテキストを書き換える実装になっています。
+
+問題点: Googlebotなどの検索エンジンクローラーは、ユーザーのように「言語切り替えボタンをクリックする」動作を行いません。そのため、DOM上に初期表示されていない英語テキスト（data-enの中身）は認識されにくく、英語での検索流入を逃す可能性が高いです。
+
+対策: 海外からの検索流入も重要視する場合は、英語用のHTMLファイル（例: /en/index.html）を物理的に分けた上で、HTMLの <head> に <link rel="alternate" hreflang="en" href="https://ellimia.net/en/" /> のように明示する一般的な多言語SEO対応をおすすめします。
+
+② sitemap.xml の更新漏れ
+
+現状: 2026-03-10の作業ログには「sitemap.xml に新ページを追加」と記載されていますが、実際の sitemap.xml にはトップページ（https://ellimia.net/）しか記述されていません。
+
+対策: 新設されたご依頼ページが素早くインデックスされるよう、sitemap.xml に <url><loc>https://ellimia.net/commission.html</loc></url> のブロックを追記してください。
+
+③ 404エラーページのインデックス制御
+
+現状: 404.html は存在していますが、検索エンジンに対する明示的なインデックス拒否が含まれていません。
+
+対策: ソフト404エラーなどを防ぎ、このページが誤って検索結果に表示されないように、404.html の <head> セクション内に <meta name="robots" content="noindex"> を追加してください。
+
+2. セキュリティにおける評価と改善点
+① 既存の優れたセキュリティ対策（現状の評価）
+
+Tabnabbing攻撃への対策: target="_blank" を指定した外部リンクに対して、rel="noopener noreferrer" が徹底されており、安全性が確保されています。
+
+スパム対策: メールアドレスをそのままHTMLに記述せず、JavaScriptで分割された文字列を結合し、クリック時に有効化する実装は、スパムボットによるアドレス収集対策として非常に効果的です。
+
+ゼロ・ディペンデンシー: 外部のJavaScriptライブラリやCDNに依存しない構成であるため、外部ソース改ざんによるサプライチェーン攻撃のリスクが極めて低いです。
+
+② さらなる堅牢化: Content Security Policy (CSP) の導入
+
+完全な静的サイトであるため現状でもリスクはほぼありませんが、意図しない外部スクリプトの読み込み（XSS攻撃など）を未然に防ぐために、HTMLの <head> にCSPメタタグを設定すると完璧です。
+
+実装例（Google Fontsの読み込みを許可しつつ、その他を自ドメインに制限）:
+
+HTML
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self';">
+
+
+1. UX（ユーザー体験）の課題
+① 固定ヘッダーによるページ内リンクのズレ
+
+現状: CSSで --nav-h: 64px; として上部に固定ヘッダー（position: fixed）が配置されています。
+
+問題点: ナビゲーションメニューから「作品（#works）」や「経歴（#achievements）」をクリックしてスクロールした際、移動先のセクションの見出しが固定ヘッダーの下に潜り込んで隠れてしまう可能性が高いです。
+
+対策: style.css の html セレクタ内に、ヘッダーの高さ分のスクロール余白を設ける記述を追加してください。
+
+CSS
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h); /* これを追加 */
+}
+② 多言語対応における画面の「チラつき（FOUC）」
+
+現状: ブラウザ言語の判定やテキストの翻訳処理を行う js/main.js が、HTMLの最後（</body> の直前）で読み込まれ、実行されています。
+
+問題点: 英語圏のユーザーがアクセスした場合、一度ブラウザに「日本語」で画面が描画され、その直後にJavaScriptが走って「英語」に書き換わるため、一瞬テキストが切り替わるチラつき（FOUC: Flash of Unstyled Content に似た現象）が発生する可能性が高いです。
+
+対策: 言語を判定するスクリプトのみを <head> 内に配置するか、JSによる言語判定が完了するまで <body> 要素を CSS（opacity: 0 など）で隠しておく実装が推奨されます。
+
+1. 確実に修正すべきバグ・仕様の不備
+① 404.html のスタイル崩れと画像リンク切れ（重要）
+
+現状: 404.html において、CSSや画像の読み込みパスが相対パス（href="css/style.css", src="images/404.webp"）になっています。
+
+問題点: GitHub Pagesの仕様上、存在しない下層ディレクトリ（例: https://ellimia.net/hoge/fuga/）にアクセスされた場合でもこの 404.html が表示されます。しかし、ブラウザは相対パスを解釈するため https://ellimia.net/hoge/fuga/css/style.css を探しに行き、結果としてCSSが当たらず、404のキャラクター画像も表示されないという状態になります。
+
+対策: アセットのパスを、ドメインのルートから始まる絶対パス（/ 始まり）に変更してください。
+
+HTML
+<link rel="stylesheet" href="/css/style.css" />
+<img src="/images/404.webp" ... />
+
+2. アクセシビリティ（a11y）の高度な盲点
+③ 音声読み上げ用ラベル（aria-label）の多言語対応漏れ
+
+現状: 各種SNSリンクやストリーミングサービスのリンクボタンに、スクリーンリーダー用の aria-label（例: aria-label="Listen to exonorm on Spotify"）が設定されていますが、すべて英語で固定されています。
+
+問題点: 視覚障害を持つ日本人ユーザーがサイトを閲覧した際、サイト本体は日本語（<html lang="ja">）であるにも関わらず、リンクの目的が突然英語で読み上げられてしまい、混乱を招きます。
+
+対策: 日本語ユーザーを主軸とするのであれば aria-label="Spotifyでexonormを聴く" のように日本語ベースにするか、JavaScriptの多言語切り替え機能（data-en / data-ja）の対象に属性値（aria-label）も含めるよう main.js を拡張する必要があります。
+
+④ モバイルメニュー展開時の「フォーカストラップ」欠如
+
+現状: スマホ表示時、ハンバーガーメニュー（#nav-toggle）でメニューを開閉できる実装になっています。
+
+問題点: メニューを開いた状態でキーボードの Tab キーを押すと、フォーカスがメニュー内にとどまらず、背景の隠れているメインコンテンツ（作品のリンクなど）に移動してしまいます。これはキーボード操作やスクリーンリーダーを利用するユーザーにとって深刻な操作性の低下を招きます。
+
+対策: メニュー展開時は、メニュー内のリンク以外にフォーカスが当たらないように制御する「フォーカストラップ（Focus Trap）」を js/main.js に実装するか、メニュー展開中は <main> 要素に inert 属性を付与して背後の操作を無効化する実装が有効です。
+
+3. セキュリティ・運用面でのベストプラクティス
+⑤ Referrer-Policy（リファラ制御）の設定不足
+
+現状: 外部サイト（SNSやストリーミングサイトなど）へのリンクが多く存在しますが、リファラの制御が明示されていません。
+
+改善案: ユーザーのプライバシー保護とセキュリティの観点から、<head> 内に以下のメタタグを追加し、外部サイトへ遷移する際に自サイトのURL情報（特にパラメータ等）が不必要に渡らないようにするベストプラクティスを導入してください。
+
+HTML
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+1. パフォーマンスとSEO（Core Web Vitals）の最適化
+① ヒーロー画像のプリロード（LCP改善）
+
+現状: トップページで一番最初に目に入る大きな背景画像（ellimia-background_new.webp）は、CSSファイル（style.css）の background プロパティとして指定されています。
+
+問題点: ブラウザはHTMLを読み込み、次にCSSを読み込み、CSSを解析し終わって初めて「背景画像が必要だ」と気づきます。そのため、画像が表示されるまでの時間（LCP: Largest Contentful Paint）が遅れ、Googleの表示速度評価に悪影響を与える可能性があります。
+
+対策: index.html の <head> 内に以下を追記し、ブラウザに最優先でこの画像をダウンロードさせてください。
+
+HTML
+<link rel="preload" as="image" href="images/ellimia-background_new.webp">
+② モバイルSEO: タップ領域のサイズ不足（サーチコンソール警告リスク）
+
+現状: #works セクションの各作品カードにある「Spotify」「Apple Music」等のリンクボタン（.work-card-links a）は、CSSで padding: 0.25rem 0.6rem;、フォントサイズが 0.75rem に設定されています。
+
+問題点: スマートフォンで表示した際、このボタンの高さが24px前後となり、Googleが推奨するタップ領域（48×48px以上）を下回ります。これにより、Google Search Consoleで**「クリックできる要素同士が近すぎます」というモバイルユーザビリティエラー**が発生し、モバイル検索順位が低下する要因になり得ます。
+
+対策: style.css にて、リンク要素に対して最低限の min-height（44px程度）を設けるか、上下の margin や padding を増やしてタップ判定領域を広げてください。
+
+2. モバイルUXとブラウザ・OS連携の強化
+③ iOSホーム画面アイコン（Apple Touch Icon）の欠落
+
+現状: 通常のファビコン（favicon.ico）は設定されていますが、スマートフォン（特にiPhone）用の設定がありません。
+
+問題点: ファンがサイトをiPhoneの「ホーム画面に追加」した際、サイトのスクリーンショットが縮小された不格好なアイコンになってしまいます。
+
+対策: <head> 内に以下のタグを追加し、正方形のアイコン（プロフィール画像など）を指定してください。
+
+HTML
+<link rel="apple-touch-icon" href="/images/profile.png">
+④ テーマカラー（Theme Color）の指定
+
+現状: モバイルブラウザのアドレスバー等の色を指定するメタタグがありません。
+
+対策: <meta name="theme-color" content="#fafafa"> を <head> に追加すると、AndroidのChromeなどでアドレスバーがサイトの背景色（#fafafa）と同化し、ネイティブアプリのような洗練されたシームレスな体験を提供できます。
+
+3. 操作性（UI/UX）とHTMLの堅牢性
+⑤ mailto: リンクのUX上の落とし穴
+
+現状: 問い合わせセクションの「メールアドレスを表示」ボタンを押すと、アドレスが画面に表示されると同時に、リンクが mailto:elliprod000@gmail.com に切り替わります。
+
+問題点: ユーザーがPCでこのリンクをクリックした際、OSに標準のメールソフト（OutlookやApple Mail等）が設定されていない場合、エラーが出たり何も起こらなかったりします（近年、ブラウザ版Gmailしか使わないユーザーが増加しているためよく発生します）。
+
+対策: js/main.js にてアドレスを表示する際、単なる mailto: リンクにするだけでなく、「クリップボードにコピーする（navigator.clipboard.writeText）」機能を併装し、コピー完了のメッセージ（「コピーしました」）を表示してあげると、ユーザーにとって非常に親切です。
+
+⑥ <button> 要素の type 属性漏れによる潜在的バグ
+
+現状: index.html 内の言語切り替えボタンには type="button" が付与されていますが、ハンバーガーメニューの開閉ボタン（<button class="nav-toggle" ...>）には type 属性がありません。
+
+問題点: HTMLの仕様上、<button> のデフォルトのタイプは submit（送信）です。現状はフォーム内に存在しないため実害はありませんが、将来的にヘッダー内に検索フォームなどを追加した際、メニューを開こうとして誤ってページがリロード（送信）される厄介なバグの原因になります。
+対策: <button class="nav-toggle" id="nav-toggle" type="button" ...> のように、明示的に type="button" を追加して堅牢にしてください。
+
+
+① Google Fontsの利用による「ゼロ依存・プライバシー保護」の破綻
+
+現状: README.md には、サイトの大きな特徴として「zero external dependencies（外部依存なし）」および「Privacy-first: no tracking tools, no external CDNs（追跡ツール・外部CDNなし）」と明記されています。しかし実際のHTMLでは、Google Fonts（fonts.googleapis.com および fonts.gstatic.com）からフォントを読み込んでいます。
+
+問題点: Google Fontsの利用は、ユーザーのIPアドレス等がGoogle側のサーバーに送信されることを意味するため、欧州のGDPRなどの厳密なプライバシー基準では「事前同意なきIP送信」として警告対象になるケースがあります。これはREADMEの宣言と完全に矛盾します。
+
+対策: Noto Sans JP などのフォントファイルをwoff2形式等でダウンロードし、サイトのディレクトリ内（例: /fonts/）に配置して、自サーバーから配信（セルフホスト）する設定に変更してください。
+
+② 「赤と黒のソリッド」テーマが白背景で実装されている
+
+現状: AIエージェント（Copilot）の作業ログ（2026-03-09_UI_Style_Refinement...md）を見ると、アーティストの音楽性（leftfield bass等）に合わせるため、「背景を純黒（#000000）、カードを暗いグレー（#0a0a0a）にする」という "Red & Black Solid" の計画が立てられています。しかし、直後のAIのアウトプットで謎の方向転換が起き、「Light Theme（背景色: #fafafa）」としてCSSが出力・実装されてしまっています。
+
+問題点: AIの解釈ブレにより、当初意図していた「アングラ・エクスペリメンタルな世界観（ダークテーマ）」が損なわれています。
+
+対策: アーティストのブランディングとしてどちらが適切か判断し、本来のダークテーマに戻す場合は style.css の :root 変数を計画通り（--bg: #000000;, --text: #ffffff; 等）に修正してください。
+
+3. セマンティックHTMLとアクセシビリティの奥義
+③ モバイル版「料金表テーブル」のアクセシビリティ破壊
+
+現状: commission.html の料金表は、モバイル表示時（画面幅767px以下）にCSSのメディアクエリで <table class="commission-table"> 以下の要素を強制的に display: block; に上書きし、さらに表の見出し（thead）を display: none; で消し去っています。
+
+問題点: <table> 要素に display: block; や display: flex; を適用すると、Webkit系などのブラウザで**「テーブル（表）としての意味論」がアクセシビリティツリーから消失**します。これにより、スクリーンリーダーを利用するユーザーには「ただのテキストの羅列」として読み上げられ、項目と料金の関係性が全く理解できなくなります。
+
+対策: スマホ表示用の display: block; を削除し、親要素である .commission-table-wrap の overflow-x: auto; に任せて「横スクロール可能なテーブル」にするのが最も美しく安全なアプローチです。
+
+④ マシンリーダビリティ向上のための <time> タグ欠如
+
+現状: #works（作品）や #achievements（経歴）における「2022」「2026」といった年号が、すべて <p class="work-card-year">2026</p> のような段落（パラグラフ）タグでマークアップされています。
+
+改善案: これらを <time datetime="2026">2026</time> のように <time> タグで囲むことで、検索エンジンやブラウザの翻訳・カレンダー機能が「これは日付/年号である」と明確に解釈できるようになり、SEO上の文脈理解（セマンティック・ウェブ）が一段と強化されます。
+
+4. クローラー対策のアップデート
+⑤ 最新AIクローラーのブロック漏れ
+
+現状: robots.txt にて GPTBot や ClaudeBot などを丁寧にブロックしていますが、昨今のAI事情において重要なクローラーが一部抜けています。
+
+改善案: Apple Intelligenceの学習データ収集用クローラーである Applebot-Extended や、MetaのAI学習用クローラーなどを Disallow: / のリストに追加することで、無断学習対策をより強固なものにできます。
+
+2. 次世代のSEO・アイデンティティ証明
+② 分散型SNSに向けた rel="me" の欠落
+
+現状: コンタクトセクションに X (Twitter)、Instagram、YouTube等のリンクが配置されていますが、属性は rel="noopener noreferrer" のみです。
+
+改善案: 近年、Mastodon（マストドン）やMisskeyなどの分散型SNS（Fediverse）において、自分の公式サイトからのリンクに rel="me" を付与することで、「このサイトの所有者と、このSNSアカウントの所有者は同一人物である」という**本人証明（公式マークの付与など）**が行われる仕様が標準化されています。
+
+対策: 各種SNSへのリンクに rel="me" を追加してください（例: rel="me noopener noreferrer"）。将来的に分散型プラットフォームへ移行・展開する際、このアイデンティティ証明が非常に役立ちます。
+
+3. パフォーマンス（LCP）のアンチパターン
+③ ファーストビュー（画面上部）の画像に対する loading="lazy" の誤用
+
+現状: 404.html のメイン画像に対して、<img src="images/404.webp" ... loading="lazy" /> が設定されています。
+
+問題点: loading="lazy" は「画面外にある画像」の読み込みを後回しにするための素晴らしい機能です。しかし、404エラーページのように**「開いて最初に目に入る画像（ファーストビュー）」に設定してしまうと、ブラウザが意図的に画像の読み込みを遅延させてしまい**、表示速度（LCP）が悪化するアンチパターンとなります。
+
+対策: 404.html の <img> タグから loading="lazy" を削除するか、loading="eager" に変更してください。同様に、もし今後トップページの最上部に画像を置く場合は、そこにも lazy を使わないよう注意が必要です。
+
+4. 究極のアクセシビリティ（a11y）
+④ 外部リンク（target="_blank"）のスクリーンリーダーへの文脈不足
+
+現状: 外部のストリーミングサイトへのリンクなどに target="_blank"（別タブで開く）が使われており、セキュリティ対策の rel="noopener noreferrer" も完璧に設定されています。
+
+問題点: 視覚障害を持つ方がスクリーンリーダーを使用している場合、リンクをクリックしていきなり「新しいタブ（ウィンドウ）」が開くと、ブラウザの「戻る」ボタンが使えなくなり、元のページに戻れず迷子になるパニックを引き起こすことがあります。
+
+対策: 視覚的には見えないが音声読み上げソフトだけが読み取るテキスト（Screen Reader Onlyテキスト）を追加し、新しいタブで開くことを事前に警告するのが世界基準のアクセシビリティです。
+
+4. SEO（構造化データの拡張）
+④ commission.html へのパンくずリスト（BreadcrumbList）の導入
+
+現状: トップページから commission.html へ遷移する構成ですが、検索エンジンにサイトの階層構造を伝える「パンくずリスト」のマークアップがありません。
+
+改善案: ユーザー向けの画面上に見えるUIとしてのパンくずリストは不要ですが、SEO対策として commission.html の <head> 内にJSON-LDで BreadcrumbList を追加すると、Google検索結果での表示が最適化されます。
+
+HTML
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://ellimia.net/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Commission",
+    "item": "https://ellimia.net/commission.html"
+  }]
+}
+</script>
+
+1. 描画パフォーマンスの極み
+① 画像の非同期デコード（decoding="async"）の追加
+
+現状: 各画像には loading="lazy" が正しく設定されており、通信量は最適化されています。
+
+改善案: 画像データを受信した後、ブラウザがそれを画面に描画（デコード）する処理は、通常メインスレッドで行われます。重い画像が連続すると、このデコード処理が原因でスクロールが一瞬カクつく（ジャンクする）ことがあります。
+
+対策: <img> タグに decoding="async" を追加すると、ブラウザがデコード処理を別スレッドで行うようになり、スクロールが絹のように滑らかになります。
+
+HTML
+<img src="images/exonorm-jacket.webp" ... loading="lazy" decoding="async" />
+2. レガシー環境への配慮（堅牢性）
+② CSS clamp() 関数のフォールバック
+
+現状: #hero セクションのタイトルや、404.html のエラーコードの文字サイズに font-size: clamp(3rem, 10vw, 6rem); というモダンで素晴らしいレスポンシブ指定が使われています。
+
+改善案: clamp() 関数は比較的最近のCSS機能であるため、数年前の古いスマートフォン等のブラウザでは解釈されず、文字が小さすぎる（または大きすぎる）デフォルトサイズで表示されてしまうリスクがあります。
+
+対策: clamp() の直前に、安全な固定値のフォールバックを記述してください。古いブラウザは上の行を読み、モダンブラウザは下の行で上書きします。
+
+CSS
+.hero-title {
+  font-size: 4rem; /* 古いブラウザ用フォールバック */
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+}
+3. JavaScriptコードの美しさと安全性
+③ グローバルスコープ汚染の完全防止
+
+現状: js/main.js は大きく3つのブロックに分かれています。「ナビゲーション制御」のブロックは (function () { "use strict"; ... })(); という即時実行関数（IIFE）で囲まれて安全に保護されていますが、後半の「メールアドレス表示」と「言語切り替え」のブロックは、IIFEで囲まれているものの "use strict";（厳格モード）の宣言が抜けています。
+
+対策: ファイル全体を一つの大きな (function () { "use strict"; ... })(); で囲い直すことで、宣言の漏れを防ぎ、変数（btn, link, nodes など）がグローバル空間に漏れ出すのを完全に防ぐことができます。
+
+4. モバイルアプリのような体験（PWAへの布石）
+④ manifest.json の導入
+
+現状: Webサイトとして十分機能していますが、モバイル端末で「ホーム画面に追加」した際の挙動が通常のブラウザのタブとして開くようになっています。
+
+改善案: manifest.json（Web App Manifest）を作成して <head> で読み込ませると、ユーザーがホーム画面から起動した際に、ブラウザのURLバーや戻るボタンのUIを非表示にした「スタンドアロン（ネイティブアプリのような全画面表示）」でサイトを展開させることが可能になります。音楽アーティストの世界観に没入させる手法として非常に有効です。
+</file>
+
+<file path="manifest.json">
+{
+  "name": "elli mia",
+  "short_name": "elli mia",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#fafafa",
+  "description": "elli mia official website and portfolio",
+  "icons": [
+    {
+      "src": "/images/profile.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/profile.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+</file>
+
+<file path="plan-logs/2026-03-09_UI_Style_Refinement_And_Task_Management.md">
+# Session: UI Style Refinement And Task Management (2026-03-09)
+
+## Implementation Plan
+# UI Style Update: Red & Black Solid
+
+The goal of this task is to update the current "dark elegant" theme (black and gold) to a "red and black solid" aesthetic, which fits well with the "leftfield bass / experimental / electronica" musical style. We will also update the typography to match this strong vibe.
+
+## Proposed Changes
+
+### Configuration / CSS Variables
+We will update the core CSS variables in `style.css` to achieve the desired look:
+
+#### [MODIFY] [style.css](file:///c:/Users/affog/e11laa.github.io/css/style.css)
+- **Colors**:
+  - `--bg`: Change to pure black `#000000` for maximum contrast.
+  - `--bg-card`: Change to a very dark gray `#0a0a0a`.
+  - `--accent`: Change from gold to a striking, solid red (e.g., `#ff2a2a` or `#e60000`).
+  - `--accent-dim`: Darker red (e.g., `#990000`).
+- **Shapes / Vibe**:
+  - `--radius`: Change to `0px` (or `2px`) to give elements (buttons, cards) sharp, solid, flat edges instead of softly rounded corners. This enhances the "solid" and brutalist feel.
+
+### Typography
+To match the solid and energetic vibe, we will introduce modern, strong web fonts from Google Fonts. 
+- **Headings**: `Oswald` (a strong, tall geometric sans-serif, excellent for powerful impact).
+- **Body**: `Inter` (clean, highly readable modern sans-serif).
+
+#### [MODIFY] [index.html](file:///c:/Users/affog/e11laa.github.io/index.html)
+- Add `<link>` tags in the `<head>` to import `Oswald` and `Inter` from Google Fonts.
+
+#### [MODIFY] [style.css](file:///c:/Users/affog/e11laa.github.io/css/style.css)
+- Apply `font-family: 'Inter', sans-serif;` to the `body`.
+- Apply `font-family: 'Oswald', sans-serif;` and `text-transform: uppercase;` to `.hero-title`, `.section-title`, `.nav-logo`, and other prominent headings.
+- Remove the `radial-gradient` from the `#hero` section to keep it purely solid and stark.
+
+## Verification Plan
+
+### Manual Verification
+1. Open `index.html` in the browser locally (or serve via a local python server).
+2. Verify that the overall color scheme is now predominantly pure black with solid red accents.
+3. Check that the new fonts (Oswald and Inter) are loading properly and applied to the text.
+4. Verify that buttons, cards, and images have the new sharp-edged styling (`--radius: 0px`).
+
+
+## Task
+# UI Style Update: Red & Black Solid
+
+- [x] Plan UI style changes (colors, fonts, layout adjustments)
+- [x] Update `index.html` to include new font links (e.g., Google Fonts)
+- [x] Update `css/style.css` with new color palette and typography
+- [x] Review changes and ensure the new aesthetic is applied correctly
+- [x] Transition to a Light Theme (white background, dark grey text, red accents)
+- [x] Remove the top-left 'elli mia' navigation logo text
+
+## Remaining Project Tasks
+
+### High Priority
+- [ ] **Work Card 4**: Replace placeholder for the 2022 actual work or remove it if none exists.
+- [ ] **`og:image` setup**: Add `<meta property='og:image' content='https://ellimia.net/images/exonorm-jacket.jpg' />` to `<head>`.
+
+### Medium Priority
+- [ ] **Favicon**: Add a `<link rel='icon'>` tag (requires generating or assigning an image first).
+- [ ] **Image Optimization**: Optimize `exonorm-jacket.jpg` and `animacy_jacket.png` by compressing them or converting them to WebP format.
+- [ ] **`robots.txt` update**: Block modern scraping bots (e.g., PerplexityBot, Bytespider, ImagesiftBot, Amazonbot).
+- [ ] **`README.md` update**: Replace the initial template with information on the site's Vanilla JS/CSS architecture.
+
+### Low Priority
+- [ ] **Work Card 3**: Add an image for `utumiyqcom — another` if applicable to replace the SVG placeholder.
+
+
+## Walkthrough
+# UI Style Update: Red & Black Solid
+
+The UI has been successfully updated to match the requested "Red & Black Solid" aesthetic, perfectly complementing the leftfield bass / experimental electronica vibe.
+
+## Changes Completed
+
+- **Color Palette Update (Light Theme):**
+  - Background color changed to pure off-white (`#fafafa`).
+  - Card background colors set to pure white (`#ffffff`).
+  - Text color changed to an highly readable dark gray (`#1a1a1a`).
+  - Accents maintained as a striking red (`#e60000`).
+
+- **Typography:**
+  - Standard system fonts are maintained (`system-ui`, `-apple-system`, etc.) for high readability and a clean native feel, while integrating with the solid red/black themes perfectly.
+
+- **Solid Edges & Atmosphere:**
+  - Removed all `border-radius` (set to `0px`), replacing soft curves with sharp, brutalist, and solid edges across buttons and cards.
+  - Removed the previously active radial gradient behind the hero section; it is now a pure black void, making the red accent colors and white text strike with greater contrast.
+  - Increased button border thickness to `2px`.
+
+## Verification Details
+Verification was conducted successfully using an automated browser agent locally:
+
+1. **Local Server Setup:** Launched a `python -m http.server 8080` instance.
+2. **Visual Inspection:** The browser navigated to the site, capturing the final appearance. Custom CSS rules appropriately overridden the elements, showing a pure black background, strong tall typography on the hero title, and the solid red-bordered call to action button.
+3. No console errors found. Typography loaded naturally from the system.
+
+### Look at the Revised Styling!
+![Light Theme UI Verification](C:/Users/affog/.gemini/antigravity/brain/891bd44e-e7ea-47c2-b174-1c1adfd170e8/portfolio_visual_verification_1773079384542.png)
+</file>
+
+<file path="plan-logs/2026-03-10_Refining_Navigation_and_Commissions.md">
+# Session: Refining Navigation and Commissions (2026-03-10)
+
+## Implementation Plan
+# Portfolio 残タスクの実装計画
+
+ユーザーより提供された現在の状況と課題リストをもとに、以下の更新を提案します。
+
+## User Review Required
+> [!IMPORTANT]
+> **1. Work Card 4 (2022年の枠) の削除について**
+> 現在のステータスに新しい2022年の作品が含まれていないため、このプレースホルダー枠（Card 4）はHTMLから**削除**することを提案します。もし追加予定の作品情報があれば教えてください。
+> 
+> **2. Faviconの画像について**
+> 現在 `favicon` 用の画像が存在しないため、ひとまず `<link rel="icon" href="images/profile.png">` としてプロフィール画像をアイコンとして設定することを提案します。別の画像を用意する場合はお知らせください。
+
+## Proposed Changes
+
+### `index.html`
+- **[MODIFY]** `index.html`
+  - `<head>` に `og:image` を追加 (`https://ellimia.net/images/exonorm-jacket.jpg`)
+  - `<head>` に ファビコンを追加 (`<link rel="icon" href="images/profile.png">`)
+  - Work Card 1 と 2 の画像参照を `jpg/png` から、ディレクトリ内に既に存在している軽量な `webp` (`exonorm-jacket.webp`, `animacy_jacket.webp`) に変更
+  - Work Card 4 の `<article>` ブロックを削除（※承認いただいた場合）
+
+### `robots.txt`
+- **[MODIFY]** `robots.txt`
+  - 新世代AIクローラー（PerplexityBot, Bytespider, ImagesiftBot, Amazonbot）をブロック対象として追加。
+
+### `README.md`
+- **[MODIFY]** `README.md`
+  - 初期テンプレートの案内書きを削除し、実際のアーティスト（elli mia様）のポートフォリオ用リポジトリとして適切な内容に整理。
+
+## Verification Plan
+### Automated Tests
+- ブラウザにてローカルサーバーをあてて `index.html` を開き、メタタグ、画像パス、表示レイアウトの正確性を検証します。
+### Manual Verification
+- ユーザーによる最終プレビュー確認を実施。
+
+
+## Task
+# ご依頼ページ作成タスク
+
+## 実施項目
+- [x] 1. `commission.html` を作成（料金表・サービス説明・バイリンガル対応）
+- [x] 2. `index.html` のナビゲーションに「ご依頼」リンクを追加（順序を本文と同期済み）
+- [x] 3. `index.html` の本文にサービス紹介セクション＋リンクを追加
+- [x] 4. `sitemap.xml` に新ページを追加
+
+
+## Walkthrough
+# 作業完了の報告
+
+High & Medium Priority のタスクをすべて完了しました。
+
+## 変更内容
+1. **メタタグとファビコンの追加 (`index.html`)**
+   - `og:image` に `exonorm-jacket.jpg` の絶対URLを設定。
+   - ファビコンとして `<link rel="icon" href="images/profile.png">` を追加。
+2. **画像の最適化 (`index.html`)**
+   - Work Card 1 と 2 の画像を、リポジトリ内に存在していた軽量な `.webp` ファイルに差し替えました。
+3. **不要なカードの削除 (`index.html`)**
+   - 新しい情報がなかったため、2022年のプレースホルダーだった Card 4 枠を削除し、レイアウトをスッキリさせました。
+4. **クローラーのブロック強化 (`robots.txt`)**
+   - 次世代AIクローラー（PerplexityBot, Bytespider, ImagesiftBot, Amazonbot）を新たにブロックリストへ追加しました。
+5. **ドキュメントの更新 (`README.md`)**
+   - テンプレート状態だったテキストを削除し、実際のプロジェクトに合わせた正確な構成・手順のドキュメントに書き換えました。
+
+## 動作確認 (Validation Results)
+ソースコードの編集結果をレビューし、`index.html` の構造崩れがないこと、および指定されたファイルパスやメタタグが意図通りに実装されていることを確認しました。
+
+> [!NOTE]
+> - Work Card 3 (`utumiyqcom — another`) 用の画像はディレクトリ内に見当たらなかったため、一旦プレースホルダー状態を維持しています。後日画像を追加される場合は適宜 `index.html` を更新してください。
+> - Low Priority の残タスクである Cloudflare のプロキシ切り替えや Bot Fight Mode の有効化は、Cloudflare のダッシュボード側からの外部設定となりますので、お手隙の際にご対応ください。
+</file>
+
+<file path="plan-logs/2026-03-27_Add_Utility_Link_to_404.md">
+# 作業ログ: 404ページへの「便利ツール」リンク追加・配置変更 (2026-03-27)
+
+## 1. タスク概要
+404.htmlに「便利ツール」というリンクを追加し、cockoo-clock.htmlへ遷移できるように実装しました。
+初期の隅への固定配置から、ユーザーの要望に基づき「トップページに戻る」ボタンの直下へと配置を変更しました。
+
+## 2. 実施タスク (task.md)
+- [x] `task.md` の作成
+- [x] `implementation_plan.md` の作成
+- [x] `404.html` の編集（リンクの追加とスタイリング）
+- [x] リンクパスの修正とスタイルの調整（相対パス化など）
+- [x] リンク配置の変更（ボタン下へ移動）
+- [x] 完了後のアーカイブ保存
+
+## 3. 実装・修正内容
+
+### 配置の変更
+- リンクを `body` 末尾の固定配置 (`position: fixed`) から、`.error-text-wrap` 内の「トップページに戻る」ボタンの直後に移動しました。
+- これにより、ページのメインコンテンツの一部として自然に表示されるようになりました。
+
+### スタイルの調整
+- `display: inline-block` と `margin-top: 1rem` を設定し、ボタンとの間隔を確保しました。
+- ホバー時に `color: var(--accent)` (赤色) に変化し、下線が表示されるように演出を強化しました。
+- 非ホバー時の不透明度は `0.7` とし、控えめながらも視認できるバランスに調整しました。
+
+## 4. 最終的なコード (walkthrough.md より抜粋)
+
+### 変更箇所 (CSS)
+```css
+        .utility-link {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .utility-link:hover {
+            opacity: 1;
+            text-decoration: underline;
+            color: var(--accent);
+        }
+```
+
+### 変更箇所 (HTML 構造)
+```html
+<div class="error-text-wrap">
+    ...
+    <a class="btn" href="/">トップページに戻る / Back</a>
+    <a href="cockoo-clock.html" class="utility-link">便利ツール</a>
+</div>
+```
+
+## 5. 検証結果
+- 「トップページに戻る」ボタンの真下にリンクが正しく表示されることを確認。
+- 相対パス設定により、ローカル環境でもリンクが機能することを確認。
+- ホバー時のインタラクション（色変化・アンダーライン）が意図通り動作することを確認。
+</file>
+
+<file path="plan-logs/git_history.md">
+# Git Commit History (2026-03-09 to 2026-03-10)
+
+以下はリポジトリのこれまでの修正履歴（Gitコミットログ）です。
+
+* **2b728e9** - Update content on the main and commission pages. (2026-03-10) <e11laa>
+* **126532e** - Merge pull request #10 from e11laa/copilot/add-commission-page-link (2026-03-10) <elli mia>
+* **9dce0e8** - Add commission.html, commission-cta section, nav link, and CSS styles (2026-03-10) <copilot-swe-agent[bot]>
+* **08e66a8** - Initial plan (2026-03-10) <copilot-swe-agent[bot]>
+* **17b5ac2** - Update main page content and layout in index.html. (2026-03-10) <e11laa>
+* **9796cbf** - docs: Update README to include 404.html, sitemap.xml, and refine image asset descriptions. (2026-03-10) <e11laa>
+* **201ca50** - feat: Introduce a 404 error page, enhance SEO with structured data and social media meta tags, and add automatic language detection. (2026-03-10) <e11laa>
+* **5ddec4c** - docs: Update content and structure of index.html. (2026-03-10) <e11laa>
+* **406e661** - Merge pull request #9 from e11laa/copilot/add-twitter-card-support (2026-03-10) <elli mia>
+* **7a5681f** - Add Twitter/X Card meta tags and auto browser-language detection (2026-03-10) <copilot-swe-agent[bot]>
+* **b124254** - Initial plan (2026-03-10) <copilot-swe-agent[bot]>
+* **458b755** - Please provide the diff for `c:\Users\affog\e11laa.github.io\index.html` to generate an accurate commit message. (2026-03-10) <e11laa>
+* **48db70e** - Merge branch 'main' of https://github.com/e11laa/e11laa.github.io (2026-03-10) <e11laa>
+* **b0ee756** - feat: Add new styling with `style.css` and update bot access policies in `README.md`. (2026-03-10) <e11laa>
+* **d79103c** - Merge pull request #8 from e11laa/copilot/update-seo-in-index-html (2026-03-10) <elli mia>
+* **15d5261** - Apply SEO improvements: meta description, canonical, favicon, JSON-LD, sitemap, robots.txt (2026-03-10) <copilot-swe-agent[bot]>
+* **a12458b** - feat: Add `abzu-jacket.png` and update `index.html`. (2026-03-10) <e11laa>
+* **c4a476d** - Initial plan (2026-03-10) <copilot-swe-agent[bot]>
+* **b4f08a0** - feat: add new jacket image and update homepage. (2026-03-10) <e11laa>
+* **81e36e1** - feat: Add new `style.css` and `ellimia-background_new.png` to update the homepage design. (2026-03-10) <e11laa>
+* **bb3e1bf** - feat: Refine AI crawler directives in `robots.txt` to distinguish between search and training bots, update `README.md` with project details and features, and introduce `css/style.css`. (2026-03-10) <e11laa>
+* **de3c5a9** - feat: Add favicon and album cover images, expand `robots.txt` bot disallows, and simplify `README.md` setup instructions. (2026-03-10) <e11laa>
+* **eed8d08** - feat: Apply initial page styling. (2026-03-10) <e11laa>
+* **1c71b2c** - Please provide the diff for `c:\Users\affog\e11laa.github.io\index.html` to generate a summary. (2026-03-10) <e11laa>
+* **86df9f7** - I cannot generate a specific commit message without knowing the actual changes made to `c:\Users\affog\e11laa.github.io\index.html`. (2026-03-10) <e11laa>
+* **0913907** - Update `index.html`. (2026-03-10) <e11laa>
+* **b449b69** - I cannot generate a commit message without the actual code changes or diff for `index.html`. (2026-03-10) <e11laa>
+* **09bc800** - feat: Add new CSS stylesheet and link it in index.html. (2026-03-10) <e11laa>
+* **e8ced40** - colorchange (2026-03-10) <e11laa>
+* **8bce44f** - Fix navigation links for achievements and contact (2026-03-10) <elli mia>
+* **7367cce** - Update index.html (2026-03-10) <elli mia>
+* **1a89acb** - Merge pull request #6 from e11laa/copilot/update-lang-toggle-button (2026-03-10) <elli mia>
+* **6a3da15** - Apply all 10 content/UI corrections to index.html and js/main.js (2026-03-09) <copilot-swe-agent[bot]>
+* **b4096a7** - Initial plan (2026-03-09) <copilot-swe-agent[bot]>
+* **608d84f** - Merge pull request #5 from e11laa/copilot/fix-index-html-js-main (2026-03-10) <elli mia>
+* **d327732** - Apply 10 targeted corrections to index.html and js/main.js (2026-03-09) <copilot-swe-agent[bot]>
+* **9843ab9** - Initial plan (2026-03-09) <copilot-swe-agent[bot]>
+* **28fcbeb** - Merge pull request #4 from e11laa/copilot/update-index-html-images-translations (2026-03-10) <elli mia>
+* **5cd6764** - Phase 1-3: Replace SVGs with images, add Japanese translations, add language toggle (2026-03-09) <copilot-swe-agent[bot]>
+* **49958ce** - Initial plan (2026-03-09) <copilot-swe-agent[bot]>
+* **482e314** - Add files via upload (2026-03-10) <elli mia>
+* **be82cc4** - Add files via upload (2026-03-10) <elli mia>
+* **b58826e** - Merge pull request #3 from e11laa/copilot/update-index-html-and-main-js (2026-03-10) <elli mia>
+* **d88fc2b** - Fix pronouns, tagline (VOCALOIDs), timeline order, email reveal (hidden attr), and content (2026-03-09) <copilot-swe-agent[bot]>
+* **67dcce3** - Initial plan (2026-03-09) <copilot-swe-agent[bot]>
+* **342802d** - Merge pull request #2 from e11laa/copilot/update-index-html-content (2026-03-10) <elli mia>
+* **737c1d4** - feat: replace placeholder content with real elli mia portfolio data (2026-03-09) <copilot-swe-agent[bot]>
+* **7bf9990** - Initial plan (2026-03-09) <copilot-swe-agent[bot]>
+* **104bb77** - Rename robots.txt.old to robots.txt (2026-03-09) <elli mia>
+* **639b9c9** - Create CNAME (2026-03-09) <elli mia>
+* **32e4010** - Delete CNAME (2026-03-09) <elli mia>
+* **6d751d0** - Rename robots.txt to robots.txt.old (2026-03-09) <elli mia>
+* **421eb74** - Merge pull request #1 from e11laa/copilot/add-personal-portfolio-website (2026-03-09) <elli mia>
+* **d5f5926** - Add complete personal portfolio website for elli mia (2026-03-09) <copilot-swe-agent[bot]>
+* **ecd0613** - Initial plan (2026-03-09) <copilot-swe-agent[bot]>
+* **c65a4ff** - Initial commit (2026-03-09) <elli mia>
+</file>
+
+<file path="script.js">
+document.addEventListener('DOMContentLoaded', function() {
+    const todoInput = document.getElementById('todoInput');
+    const addBtn = document.getElementById('addBtn');
+    const todoList = document.getElementById('todoList');
+    const clock = document.getElementById('clock');
+    const cuckoo = document.getElementById('cuckoo');
+
+    // 時計機能
+    function updateClock() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('ja-JP', { hour12: false });
+        clock.textContent = timeString;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    // 鳩時計機能
+    function playCuckoo() {
+        cuckoo.textContent = 'カッコー';
+        cuckoo.style.display = 'block';
+        setTimeout(() => {
+            cuckoo.style.display = 'none';
+        }, 3000); // 鳩が3秒間表示される
+    }
+
+    function checkCuckooTime() {
+        const now = new Date();
+        if (now.getMinutes() === 0 && now.getSeconds() === 0) {
+            playCuckoo();
+        }
+    }
+
+    setInterval(checkCuckooTime, 1000);
+
+    // テスト用ボタンで鳩を表示
+    const testCuckooBtn = document.getElementById('testCuckooBtn');
+    testCuckooBtn.addEventListener('click', playCuckoo);
+
+    // Todo追加処理
+    function addTodo(text) {
+        const li = document.createElement('li');
+        li.textContent = text;
+        li.className = 'todo-item';
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = '削除';
+        deleteBtn.className = 'delete-btn';
+        deleteBtn.addEventListener('click', function() {
+            todoList.removeChild(li);
+            saveTodos();
+        });
+
+        li.appendChild(deleteBtn);
+        todoList.appendChild(li);
+    }
+
+    // ストレージ保存
+    function saveTodos() {
+        const todos = [];
+        document.querySelectorAll('.todo-item').forEach(li => {
+            todos.push({ text: li.firstChild.textContent });
+        });
+        localStorage.setItem('todos', JSON.stringify(todos));
+    }
+
+    // 追加ボタンクリック
+    addBtn.addEventListener('click', function() {
+        const text = todoInput.value.trim();
+        if (text !== '') {
+            addTodo(text);
+            saveTodos();
+            todoInput.value = '';
+        }
+    });
+
+    // Enterキーでも追加
+    todoInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            addBtn.click();
+        }
+    });
+
+    // 初期読み込み
+    const savedTodos = JSON.parse(localStorage.getItem('todos') || '[]');
+    savedTodos.forEach(todo => {
+        addTodo(todo.text);
+    });
+});
+</file>
+
+<file path="style.css">
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+#clock {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#cuckooClock {
+    position: relative;
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    background: #8B4513;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cuckoo {
+    display: none;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#todoInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#addBtn {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background: #218838;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-weight: bold;
+}
+</file>
+
+<file path="tmp_translate_aria.py">
+import re
+
+html_files = [r'c:\Users\affog\e11laa.github.io\index.html', r'c:\Users\affog\e11laa.github.io\commission.html']
+
+translations = {
+    "Main navigation": "メインナビゲーション",
+    "Open navigation menu": "ナビゲーションメニューを開く",
+    "Switch to English": "", # Skip
+    "Listen to exonorm on Spotify": "Spotifyでexonormを聴く",
+    "Listen to exonorm on Apple Music": "Apple Musicでexonormを聴く",
+    "Listen to exonorm on streaming platforms": "各ストリーミングサービスでexonormを聴く",
+    "Listen to animacy ep on Spotify": "Spotifyでanimacy epを聴く",
+    "Listen to animacy ep on Apple Music": "Apple Musicでanimacy epを聴く",
+    "Listen to animacy ep on streaming platforms": "各ストリーミングサービスでanimacy epを聴く",
+    "Listen to utumiyqcom - another on Spotify": "Spotifyでutumiyqcom - anotherを聴く",
+    "Listen to utumiyqcom - another on Apple Music": "Apple Musicでutumiyqcom - anotherを聴く",
+    "Listen to utumiyqcom - another on streaming platforms": "各ストリーミングサービスでutumiyqcom - anotherを聴く",
+    "Watch Florallax - abzu on YouTube": "YouTubeでFlorallax - abzuを観る",
+    "Career timeline": "実績のタイムライン",
+    "Show email address": "メールアドレスを表示",
+    "Send an email to elli mia": "elli miaにメールを送る",
+    "Social media links": "各種ソーシャルリンク",
+    "Follow elli mia on X (Twitter)": "X (Twitter)でelli miaをフォロー",
+    "Follow elli mia on Instagram": "Instagramでelli miaをフォロー",
+    "Follow elli mia on YouTube": "YouTubeでelli miaをチャンネル登録",
+    "Listen to elli mia on Spotify": "Spotifyでelli miaを聴く",
+    "Listen to elli mia on SoundCloud": "SoundCloudでelli miaを聴く",
+    "Send anonymous messages via Marshmallow": "マシュマロで匿名メッセージを送る"
+}
+
+def replace_aria(match):
+    original_label = match.group(1)
+    if original_label in translations and translations[original_label] != "":
+        ja_label = translations[original_label]
+        # Replace the `aria-label="X"` with `aria-label="ja_label" data-aria-en="X" data-aria-ja="ja_label"`
+        return f'aria-label="{ja_label}" data-aria-en="{original_label}" data-aria-ja="{ja_label}"'
+    return match.group(0)
+
+for file in html_files:
+    try:
+        with open(file, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Make sure not to duplicate data-aria attributes if already run
+        if 'data-aria-en' not in content:
+            new_content = re.sub(r'aria-label="([^"]+)"', replace_aria, content)
+            
+            with open(file, 'w', encoding='utf-8') as f:
+                f.write(new_content)
+            print(f"Updated {file}")
+        else:
+            print(f"File {file} already contains data-aria-en, skipping to avoid duplicates.")
+    except Exception as e:
+        print(f"Failed processing {file}: {e}")
+</file>
+
+<file path="plan-logs/implementation_plan.md">
+# ご依頼・コラボレーションとお問い合わせの改行幅修正の実装計画
+
+「ご依頼・コラボレーション」（`index.html` および `commission.html`）および「お問い合わせ」（`index.html`）セクションに配置されている紹介文（`.contact-intro`）について、ウィンドウ幅が広い場合でも早い段階で自動改行されてしまう問題を修正します。
+
+## ユーザーレビューが必要な点
+
+> [!NOTE]
+> 既存の `style.css` で `.contact-intro` に設定されている `max-width: 520px;` を `max-width: none;` に変更（または削除）し、以前ポートフォリオ導入文（`.portfolio-intro`）に施した修正と同様に、ウィンドウ幅に合わせてテキスト幅が広がるようにします。
+
+## 提案される変更点
+
+### スタイルシートの修正
+
+#### [MODIFY] [style.css](file:///c:/Users/affog/e11laa.github.io/css/style.css)
+- `.contact-intro` クラスに設定されている `max-width: 520px;` を `max-width: none;` に変更し、テキスト幅の制限を解除します。
+
+```diff
+ .contact-intro {
+   font-size: 1.05rem;
+   color: var(--text-muted);
+-  max-width: 520px;
++  max-width: none;
+   margin-bottom: 2.5rem;
+   line-height: 1.8;
+ }
+```
+
+---
+
+## 検証プラン
+
+### 手動検証
+- ブラウザで `index.html` と `commission.html` を開き、以下のテキストの折り返し（改行）幅を確認します。
+  - `index.html` の「ご依頼・コラボレーション」の紹介文
+  - `index.html` の「お問い合わせ」の紹介文
+  - `commission.html` の「ご依頼・コラボレーション」の紹介文
+- ウィンドウ幅を広げた際に、520pxで固定されて折り返されるのではなく、コンテナの最大幅（`1100px`）まで自然にテキストが広がることを確認します。
+</file>
+
+<file path="sitemap.xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ellimia.net/</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ellimia.net/commission.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+</file>
+
+<file path="CNAME">
+ellimia.net
+</file>
+
+<file path="404.html">
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found — elli mia</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+
+        .error-page {
+            min-height: 100svh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background-color: #ffffff;
+        }
+
+        .error-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            max-width: 600px;
+        }
+
+        .error-image {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            border-radius: var(--radius);
+        }
+
+        .error-text-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .error-code {
+            font-size: 4rem;
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .error-message {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        @media (min-width: 640px) {
+            .error-content {
+                flex-direction: row;
+                text-align: left;
+                gap: 3rem;
+            }
+            .error-text-wrap {
+                align-items: flex-start;
+            }
+        }
+
+        .utility-link {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .utility-link:hover {
+            opacity: 1;
+            text-decoration: underline;
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error-page">
+        <div class="error-content">
+            <img src="/images/404.webp" alt="404 Not Found Character" class="error-image" loading="eager" decoding="async" />
+            <div class="error-text-wrap">
+                <p class="error-code">404</p>
+                <p class="error-message">
+                    お探しのページが見つかりませんでした。<br>
+                    The page you're looking for doesn't exist.
+                </p>
+                <a class="btn" href="/">トップページに戻る / Back</a>
+                <a href="cockoo-clock.html" class="utility-link">便利ツール</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+</file>
+
+<file path="robots.txt">
+# robots.txt for ellimia.net
+
+User-agent: *
+Allow: /
+
+# --------------------------------------------------
+# Allow search & user-assist bots (AI検索でのヒットを許可)
+# --------------------------------------------------
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# --------------------------------------------------
+# Disallow AI training/scraping crawlers (モデル学習用収集を拒否)
+# --------------------------------------------------
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+Sitemap: https://ellimia.net/sitemap.xml
+</file>
+
+<file path="README.md">
+# elli mia — Official Portfolio Website
+
+Official portfolio website for **elli mia**, electronic music producer, DJ, and artist based in Tsukuba, Ibaraki.
+Hosted on GitHub Pages at [ellimia.net](https://ellimia.net).
+
+## Features
+
+- Single-page layout with smooth-scroll navigation.
+- Built with pure HTML, CSS, and vanilla JS — zero frameworks, zero external dependencies.
+- Fully responsive and accessible design.
+- Built-in Language Toggle (English / Japanese) persisting via `localStorage`.
+- Automatic language detection: non-Japanese browsers default to English on first visit.
+- **PWA Ready**: Includes `manifest.json`, `theme-color`, and Apple Touch Icon for a native app-like experience when added to the home screen.
+- **Advanced Accessibility (a11y)**:
+  - Dynamically translated `aria-label` attributes for screen readers.
+  - Native `inert` focus trap mapping for the mobile navigation menu.
+  - Screen-reader only (`.sr-only`) warnings for external links opening in new tabs.
+  - Horizontally scrollable commission pricing table that maintains semantic structure on mobile.
+- **Performance & SEO**:
+  - `decoding="async"` for smoother image rendering and LCP preloading for the hero image.
+  - Semantic `<time>` tags for dates and `rel="me"` on social links for decentralized identity verification.
+  - JSON-LD structured data and XML Sitemap mapping for improved search engine understanding.
+- Privacy-first: no tracking tools, no external CDNs, JS-protected email reveal (with auto-copy to clipboard feature), and strict Referrer-Policy.
+- AI blocks: `robots.txt` configured to explicitly deny access to major AI dataset training crawlers (`GPTBot`, `Applebot-Extended`, `FacebookBot`, etc) while allowing real-time AI search bots (`ChatGPT-User`, `PerplexityBot`).
+
+## File Structure
+
+```
+/
+├── index.html          # Main single-page site
+├── commission.html     # Services and pricing page
+├── 404.html            # Custom 404 error page (noindex)
+├── css/
+│   └── style.css       # All responsive & accessibility styles
+├── js/
+│   └── main.js         # Navigation, language toggle, email reveal, focus trap
+├── images/             # Optimized assets (WebP)
+├── manifest.json       # Web App Manifest for PWA
+├── sitemap.xml         # XML Sitemap for search engines
+├── robots.txt          # Disallows AI training crawlers
+├── CNAME               # Custom domain: ellimia.net
+├── .gitignore
+└── README.md
+```
+
+## Running Locally
+
+No build step required. Simply open `index.html` in a web browser.
+To test full functionality (like `localStorage` in some browsers), run a simple HTTP server:
+```bash
+python3 -m http.server
+# or
+npx serve
+```
+
+## Privacy & Robots
+
+`robots.txt` explicitly disallows the following AI training and scraping agents:
+`GPTBot`, `CCBot`, `Google-Extended`, `anthropic-ai`, `ClaudeBot`, `Bytespider`, `ImagesiftBot`, `Amazonbot`.
+
+The following user-assisting search bots are explicitly allowed to help users discover the site via AI search:
+`OAI-SearchBot`, `ChatGPT-User`, `Claude-Web`, `PerplexityBot`.
+
+## License
+
+All rights reserved. © 2026 elli mia.
+</file>
+
+<file path="js/main.js">
+/* ============================================================
+   main.js — elli mia personal portfolio
+   Vanilla JS: mobile nav toggle, smooth scroll, active nav link
+   ============================================================ */
+
+(function () {
+  "use strict";
+
+  /* ── Mobile nav toggle / Focus trap ───────────────────────── */
+  const navToggle = document.getElementById("nav-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  if (navToggle && navLinks) {
+    const mainContent = document.getElementById("main-content");
+    const footer = document.querySelector(".site-footer");
+
+    function setMenuState(open) {
+      navToggle.setAttribute("aria-expanded", String(open));
+      navLinks.classList.toggle("open", open);
+      
+      /* Focus trap via inert and scroll lock */
+      if (mainContent) mainContent.inert = open;
+      if (footer) footer.inert = open;
+      document.body.style.overflow = open ? "hidden" : "";
+    }
+
+    navToggle.addEventListener("click", function () {
+      const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+      setMenuState(!isExpanded);
+    });
+
+    /* Close mobile menu when a link is clicked */
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        setMenuState(false);
+      });
+    });
+
+    /* Close mobile menu on Escape key */
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && navLinks.classList.contains("open")) {
+        setMenuState(false);
+        navToggle.focus();
+      }
+    });
+  }
+
+  /* ── Active nav link on scroll ────────────────────────────── */
+  const sections = document.querySelectorAll("main section[id]");
+  const navItems = document.querySelectorAll("#nav-links a[href^='#']");
+
+  if (sections.length && navItems.length) {
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navItems.forEach(function (a) {
+              a.classList.toggle(
+                "active",
+                a.getAttribute("href") === "#" + id
+              );
+            });
+          }
+        });
+      },
+      {
+        rootMargin: "-40% 0px -55% 0px",
+      }
+    );
+
+    sections.forEach(function (section) {
+      observer.observe(section);
+    });
+  }
+
+  /* ── Reveal email on click ──────────────────────────────────── */
+  var emailBtn = document.getElementById('reveal-email-btn');
+  var emailLink = document.getElementById('contact-email-link');
+  var emailText = document.getElementById('contact-email-text');
+  
+  if (emailBtn && emailLink && emailText) {
+    emailBtn.addEventListener('click', function () {
+      var user = 'elliprod000';
+      var domain = 'gmail.com';
+      var address = user + '@' + domain;
+      emailText.textContent = address;
+      emailLink.href = 'mailto:' + address;
+      emailLink.removeAttribute('hidden');
+      emailBtn.setAttribute('hidden', '');
+
+      // Copy to clipboard safely
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(address).then(function() {
+          emailText.textContent = 'コピーしました / Copied!';
+          setTimeout(function() {
+            emailText.textContent = address;
+          }, 2000);
+        }).catch(function() { /* Ignore */ });
+      }
+    });
+  }
+
+  /* ── Language toggle ────────────────────────────────────────── */
+  var langBtn = document.getElementById('lang-toggle');
+  
+  if (langBtn) {
+    /* Inject sr-only warning for external links BEFORE collecting translatable nodes */
+    var extLinks = document.querySelectorAll('a[target="_blank"]');
+    extLinks.forEach(function(link) {
+      // Don't inject if already exists (e.g., dynamically re-run)
+      if (link.querySelector('.sr-only')) return;
+      var span = document.createElement('span');
+      span.className = 'sr-only';
+      span.setAttribute('data-en', ' (opens in a new window)');
+      span.setAttribute('data-ja', ' (新しいタブで開く)');
+      span.textContent = ' (新しいタブで開く)';
+      link.appendChild(span);
+    });
+
+    /* All elements with both data-en and data-ja */
+    var nodes = document.querySelectorAll('[data-en][data-ja]');
+    /* Elements that contain child HTML tags (em, strong, etc.) */
+    var htmlNodes = document.querySelectorAll('[data-i18n-html="true"]');
+
+    function applyLang(lang) {
+      /* Plain-text nodes */
+      nodes.forEach(function (el) {
+        if (el.getAttribute('data-i18n-html') !== 'true') {
+          el.textContent = el.getAttribute('data-' + lang);
+        }
+      });
+      /* Rich-HTML nodes */
+      htmlNodes.forEach(function (el) {
+        el.innerHTML = el.getAttribute('data-' + lang);
+      });
+      /* ARIA label nodes */
+      var ariaNodes = document.querySelectorAll('[data-aria-en][data-aria-ja]');
+      ariaNodes.forEach(function (el) {
+        el.setAttribute('aria-label', el.getAttribute('data-aria-' + lang));
+      });
+      /* Hide elements whose data-ja is empty string */
+      document.querySelectorAll('[data-ja=""]').forEach(function (el) {
+        if (lang === 'ja') {
+          el.setAttribute('hidden', '');
+        } else {
+          el.removeAttribute('hidden');
+        }
+      });
+      /* Sync html[lang] for screen readers / SEO */
+      document.documentElement.lang = lang;
+      /* Update button label */
+      langBtn.textContent = lang === 'en' ? 'JAPANESE' : 'ENGLISH';
+      langBtn.setAttribute('aria-label', lang === 'en' ? 'Switch to Japanese' : 'Switch to English');
+      langBtn.setAttribute('data-current-lang', lang);
+      /* Persist preference */
+      try { localStorage.setItem('ellimia_lang', lang); } catch (e) { }
+    }
+
+    langBtn.addEventListener('click', function () {
+      var current = langBtn.getAttribute('data-current-lang');
+      applyLang(current === 'en' ? 'ja' : 'en');
+    });
+
+    /* On load: restore saved preference; or auto-detect from browser language */
+    var saved = (function () { try { return localStorage.getItem('ellimia_lang'); } catch (e) { return null; } }());
+    if (saved === 'en') {
+      applyLang('en');
+    } else if (saved === 'ja') {
+      applyLang('ja');
+    } else {
+      /* No manual preference saved — detect browser language */
+      var browserLang = (navigator.language || navigator.userLanguage || 'ja').toLowerCase();
+      if (!browserLang.startsWith('ja')) {
+        applyLang('en');
+      }
+    }
+  }
+})();
+</file>
+
+<file path="plan-logs/task.md">
+# タスク管理表：ご依頼・コラボレーションとお問い合わせの改行幅修正
+
+- [x] `css/style.css` 内の `.contact-intro` の `max-width: 520px;` を `max-width: none;` に修正する
+- [x] 手動検証：`index.html` および `commission.html` で折り返し幅が正常であることを確認する
+- [x] 成果物（`implementation_plan.md`、`task.md`、`walkthrough.md`）のコピーを `plan-logs/` に保存する
+</file>
+
+<file path="plan-logs/walkthrough.md">
+# 変更内容のウォークスルー
+
+「ご依頼・コラボレーション」（`index.html` および `commission.html`）および「お問い合わせ」（`index.html`）セクションの導入文において、文章がウィンドウに対して早い段階で自動改行されていた問題を修正しました。
+
+## 実施した変更
+
+### スタイルシートの修正
+
+#### [MODIFY] [style.css](file:///c:/Users/affog/e11laa.github.io/css/style.css)
+- `.contact-intro` クラスの `max-width` プロパティを `520px` から `none` に変更しました。
+
+```css
+.contact-intro {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: none; /* 520px から none に変更 */
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+```
+
+これにより、以下のHTML要素に適用される最大幅の制限が解除され、コンテナ幅（最大 `1100px`）に合わせて自然な幅で折り返されるようになります。
+
+1. **[index.html](file:///c:/Users/affog/e11laa.github.io/index.html) (324行目)**: 「ご依頼・コラボレーション」の紹介文
+2. **[index.html](file:///c:/Users/affog/e11laa.github.io/index.html) (339行目)**: 「お問い合わせ」の紹介文
+3. **[commission.html](file:///c:/Users/affog/e11laa.github.io/commission.html) (99行目)**: 「ご依頼・コラボレーション」の紹介文
+
+---
+
+## 検証結果
+
+- **レイアウト検証**:
+  - `style.css` の `.contact-intro` において、`max-width: none;` が指定され、他の CSS 定義による競合がないことを確認しました。
+  - 上記の各 HTML ファイルで `.contact-intro` クラスが正しく使用されているため、すべての対象セクションでテキスト幅の制限が解除され、広い画面幅でも読みやすく適切な位置で折り返される状態になりました。
+</file>
+
+<file path="portfolio.html">
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="elli miaの商業向けポートフォリオ。ボーカル楽曲、キャラクター企画、ゲーム、映像作品、電子音楽文脈に向けた作編曲・サウンドプロデュースの実績を紹介。" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio | elli mia" />
+  <meta property="og:description"
+    content="elli miaの商業向けポートフォリオ。作編曲・サウンドプロデュースを中心に、リミックス、映像制作、DTM講座まで短く紹介。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ellimia.net/portfolio.html" />
+  <meta property="og:image" content="https://ellimia.net/images/exonorm-jacket.webp" />
+  <meta property="og:image:alt" content="exonorm cover art" />
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ellimia_" />
+  <meta name="twitter:title" content="Portfolio | elli mia" />
+  <meta name="twitter:description"
+    content="elli miaの商業向けポートフォリオ。作編曲・サウンドプロデュースを中心に、リミックス、映像制作、DTM講座まで短く紹介。" />
+  <meta name="twitter:image" content="https://ellimia.net/images/exonorm-jacket.webp" />
+  <meta name="twitter:image:alt" content="exonorm cover art" />
+  <link rel="canonical" href="https://ellimia.net/portfolio.html" />
+  <title data-en="Portfolio | elli mia" data-ja="Portfolio | elli mia">Portfolio | elli mia</title>
+  <meta name="theme-color" content="#fafafa">
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/profile.png" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Portfolio / Works | elli mia",
+    "description": "Commercial portfolio for elli mia, covering composition, arrangement, sound production, remixes, video production, and lessons.",
+    "url": "https://ellimia.net/portfolio.html",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ellimia.net/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Portfolio",
+        "item": "https://ellimia.net/portfolio.html"
+      }]
+    }
+  }
+  </script>
+</head>
+
+<body class="portfolio-page">
+
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Fallback for JavaScript-disabled browsers -->
+  <noscript>
+    <div style="background:#fff3cd;color:#856404;text-align:center;padding:0.75rem 1rem;font-size:0.875rem;">
+      このサイトの一部機能 (言語切替・メールアドレス表示) にはJavaScriptが必要です。<br>
+      Some features (language toggle, email reveal) require JavaScript.
+    </div>
+  </noscript>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" aria-label="メインナビゲーション" data-aria-en="Main navigation" data-aria-ja="メインナビゲーション">
+      <!-- Mobile hamburger -->
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false"
+        aria-label="ナビゲーションメニューを開く" data-aria-en="Open navigation menu" data-aria-ja="ナビゲーションメニューを開く">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <!-- Navigation links -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html#about" data-en="About" data-ja="About">About</a></li>
+        <li><a href="portfolio.html" data-en="Works" data-ja="Works" class="nav-active">Works</a></li>
+        <li><a href="commission.html" data-en="Commission" data-ja="Commission">Commission</a></li>
+        <li><a href="index.html#contact" data-en="Contact" data-ja="Contact">Contact</a></li>
+      </ul>
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch to English" type="button" data-current-lang="ja">
+        ENGLISH
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- Hero / Page Header -->
+    <section id="portfolio-hero" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <span class="section-label" data-en="Portfolio" data-ja="Portfolio">Portfolio</span>
+        <h1 class="section-title" id="portfolio-heading" data-en="Portfolio / Works" data-ja="Portfolio / Works">Portfolio / Works</h1>
+        <span class="divider" aria-hidden="true"></span>
+        <p class="portfolio-intro" data-i18n-html="true"
+          data-en="I provide composition, arrangement, and sound production for vocal works, character projects, games, visual works, and electronic music contexts.<br>&bull; Character and theme production: Read original characters, worlds, and request themes, then rebuild them as finished works.<br>&bull; Album production: Build composition, sound image, and narrative as one system.<br>&bull; Vocal collaboration and commissioned work: Support outside vocalists, co-writing, and commissioned production contexts."
+          data-ja="ボーカル楽曲、キャラクター企画、ゲーム、映像作品、電子音楽文脈に向けた作編曲・サウンドプロデュースを行っています。<br>・キャラクター・テーマ制作: オリジナルキャラクターや世界観、依頼テーマを読み取り、作品として再構成。<br>・アルバム総合制作: 作編曲、音像設計、ナラティブを一貫して構築。<br>・ボーカル共作・受託制作: 他者ボーカル、共作、受託制作の文脈に対応。">
+          ボーカル楽曲、キャラクター企画、ゲーム、映像作品、電子音楽文脈に向けた作編曲・サウンドプロデュースを行っています。<br>・キャラクター・テーマ制作: オリジナルキャラクターや世界観、依頼テーマを読み取り、作品として再構成。<br>・アルバム総合制作: 作編曲、音像設計、ナラティブを一貫して構築。<br>・ボーカル共作・受託制作: 他者ボーカル、共作、受託制作の文脈に対応。
+        </p>
+      </div>
+    </section>
+
+    <!-- What I Do / Skill Summary -->
+    <section id="what-i-do" aria-labelledby="what-i-do-heading">
+      <div class="container">
+        <span class="section-label" data-en="What I Do" data-ja="What I Do">What I Do</span>
+        <h2 class="section-title" id="what-i-do-heading" data-en="What I Do" data-ja="対応領域">対応領域</h2>
+        <span class="divider" aria-hidden="true"></span>
+
+        <div class="works-grid">
+          <!-- Songs / Vocal Works -->
+          <a class="work-card" href="#portfolio-songs" aria-labelledby="skill-songs-title">
+            <div class="work-card-body">
+              <h3 class="work-card-title" id="skill-songs-title" data-en="Songs / Vocal Works" data-ja="Songs / Vocal Works">Songs / Vocal Works</h3>
+              <p class="work-card-desc"
+                data-en="Composition, arrangement, and sound production for vocal-centered works including VTubers, idols, VOCALOID, Vsingers, and character songs."
+                data-ja="VTuber、アイドル、VOCALOID、Vsinger、キャラクターソングなど、声を中心にした楽曲の作編曲・サウンドプロデュース。">
+                VTuber、アイドル、VOCALOID、Vsinger、キャラクターソングなど、声を中心にした楽曲の作編曲・サウンドプロデュース。
+              </p>
+            </div>
+          </a>
+
+          <!-- Soundtrack / Game / Visual -->
+          <a class="work-card" href="#portfolio-soundtracks" aria-labelledby="skill-soundtrack-title">
+            <div class="work-card-body">
+              <h3 class="work-card-title" id="skill-soundtrack-title" data-en="Soundtrack / Game / Visual" data-ja="Soundtrack / Game / Visual">Soundtrack / Game / Visual</h3>
+              <p class="work-card-desc"
+                data-en="BGM, score, and theme music based on characters, worldbuilding, and scene design."
+                data-ja="キャラクター、世界観、シーン設計をもとにしたBGM・劇伴・テーマ楽曲制作。">
+                キャラクター、世界観、シーン設計をもとにしたBGM・劇伴・テーマ楽曲制作。
+              </p>
+            </div>
+          </a>
+
+          <!-- Remix / Rearrangement -->
+          <a class="work-card" href="#portfolio-remixes" aria-labelledby="skill-remix-title">
+            <div class="work-card-body">
+              <h3 class="work-card-title" id="skill-remix-title" data-en="Remix / Rearrangement" data-ja="Remix / Rearrangement">Remix / Rearrangement</h3>
+              <p class="work-card-desc"
+                data-en="Reconstruction of original songs through electronic music, club music, and alternate genre contexts while preserving their core appeal."
+                data-ja="原曲の魅力を読み取り、電子音楽・クラブミュージック・別ジャンルの文脈で再構築。">
+                原曲の魅力を読み取り、電子音楽・クラブミュージック・別ジャンルの文脈で再構築。
+              </p>
+            </div>
+          </a>
+
+          <!-- Video / Visual Production -->
+          <a class="work-card" href="#portfolio-video" aria-labelledby="skill-video-title">
+            <div class="work-card-body">
+              <h3 class="work-card-title" id="skill-video-title" data-en="Video / Visual Production" data-ja="Video / Visual Production">Video / Visual Production</h3>
+              <p class="work-card-desc"
+                data-en="Structure, editing, and direction for music videos, announcement videos, and short-form visual pieces that understand the intent of the music."
+                data-ja="音楽作品の意図を理解したMV、告知映像、短尺映像の構成・編集・ディレクション。">
+                音楽作品の意図を理解したMV、告知映像、短尺映像の構成・編集・ディレクション。
+              </p>
+            </div>
+          </a>
+
+          <!-- Lessons / Consultation -->
+          <a class="work-card" href="#portfolio-lessons" aria-labelledby="skill-lessons-title">
+            <div class="work-card-body">
+              <h3 class="work-card-title" id="skill-lessons-title" data-en="Lessons / Consultation" data-ja="Lessons / Consultation">Lessons / Consultation</h3>
+              <p class="work-card-desc"
+                data-en="Private lessons, feedback, and consultation for composition, arrangement, sound design, mixing, and production workflow."
+                data-ja="作編曲、音作り、ミックス、制作ワークフローの個別講座・添削・相談。">
+                作編曲、音作り、ミックス、制作ワークフローの個別講座・添削・相談。
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- 1. Songs / Vocal Works -->
+    <section id="portfolio-songs" aria-labelledby="songs-heading">
+      <div class="container">
+        <h2 class="portfolio-section-title" id="songs-heading" data-en="Songs / Vocal Works" data-ja="Songs / Vocal Works">Songs / Vocal Works</h2>
+
+        <div class="works-grid">
+          <article class="work-card" aria-label="exonorm">
+            <div class="work-card-image">
+              <img src="images/exonorm-jacket.webp" alt="exonorm cover art" width="300" height="300" loading="lazy" decoding="async" />
+            </div>
+            <div class="work-card-body">
+              <time datetime="2026" class="work-card-year">2026</time>
+              <h3 class="work-card-title" data-en="exonorm" data-ja="exonorm">exonorm</h3>
+              <p class="work-card-meta"><span data-en="Use case:" data-ja="用途:">用途:</span> <strong data-en="Vocal Works / Concept Album / Bass Music / Narrative Music" data-ja="ボーカル作品・コンセプトアルバム・ベースミュージック・物語音楽">ボーカル作品・コンセプトアルバム・ベースミュージック・物語音楽</strong></p>
+              <p class="work-card-meta"><span data-en="Role:" data-ja="担当:">担当:</span> <strong data-en="Composition / Arrangement / Lyrics / Sound Production / Vocal Processing / Mix" data-ja="作編曲・作詞・サウンドプロデュース・ボーカル処理・ミックス等">作編曲・作詞・サウンドプロデュース・ボーカル処理・ミックス等</strong></p>
+              <p class="work-card-desc"
+                data-en="A first album built consistently across composition, arrangement, sound image, vocal processing, and narrative, centered on bass music."
+                data-ja="ベースミュージックを軸に、作編曲・音像設計・ボーカル処理・ナラティブを一貫して構築した1st album。">
+                ベースミュージックを軸に、作編曲・音像設計・ボーカル処理・ナラティブを一貫して構築した1st album。
+              </p>
+              <div class="work-card-links">
+                <a href="https://linkco.re/8gCd3fB0" aria-label="exonormを配信サービスで聴く" data-aria-en="Listen to exonorm on streaming platforms" data-aria-ja="exonormを配信サービスで聴く" data-en="Listen" data-ja="聴く" rel="noopener noreferrer" target="_blank">聴く</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card" aria-label="utumiyqcom - another">
+            <div class="work-card-image">
+              <img src="images/another-jacket.webp" alt="utumiyqcom - another cover art" width="300" height="300" loading="lazy" decoding="async" />
+            </div>
+            <div class="work-card-body">
+              <time datetime="2024" class="work-card-year">2024</time>
+              <h3 class="work-card-title" data-en="utumiyqcom - another" data-ja="utumiyqcom - another">utumiyqcom - another</h3>
+              <p class="work-card-meta"><span data-en="Use case:" data-ja="用途:">用途:</span> <strong data-en="Vocal Works / Pop / Beat Production / Collaboration" data-ja="ボーカル作品・ポップス・ビートプロダクション・コラボレーション">ボーカル作品・ポップス・ビートプロダクション・コラボレーション</strong></p>
+              <p class="work-card-meta"><span data-en="Role:" data-ja="担当:">担当:</span> <strong data-en="Composition / Arrangement / Production" data-ja="作編曲・プロデュース">作編曲・プロデュース</strong></p>
+              <p class="work-card-desc"
+                data-en="A collaboration built around an outside topline, supporting pop directness with electronic beat production and sound image."
+                data-ja="他者トップラインを受け、ポップス的な素直さと電子音楽的なビート/音像で支えたコラボレーション作品。">
+                他者トップラインを受け、ポップス的な素直さと電子音楽的なビート/音像で支えたコラボレーション作品。
+              </p>
+              <div class="work-card-links">
+                <a href="https://linkco.re/V1qEdmSc?lang=ja" aria-label="utumiyqcom - anotherを配信サービスで聴く" data-aria-en="Listen to utumiyqcom - another on streaming platforms" data-aria-ja="utumiyqcom - anotherを配信サービスで聴く" data-en="Listen" data-ja="聴く" rel="noopener noreferrer" target="_blank">聴く</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card" aria-label="Florallax - abzu">
+            <div class="work-card-image">
+              <img src="images/abzu-jacket.webp" alt="Florallax - abzu cover art" width="300" height="300" loading="lazy" decoding="async" />
+            </div>
+            <div class="work-card-body">
+              <time datetime="2025" class="work-card-year">2025</time>
+              <h3 class="work-card-title" data-en="Florallax - abzu" data-ja="Florallax - abzu">Florallax - abzu</h3>
+              <p class="work-card-meta"><span data-en="Use case:" data-ja="用途:">用途:</span> <strong data-en="Vocal Works / Collaboration / VocaDuo" data-ja="ボーカル作品・コラボレーション・VocaDuo">ボーカル作品・コラボレーション・VocaDuo</strong></p>
+              <p class="work-card-meta"><span data-en="Role:" data-ja="担当:">担当:</span> <strong data-en="Composition / Arrangement / Production" data-ja="作編曲・プロダクション">作編曲・プロダクション</strong></p>
+              <p class="work-card-desc"
+                data-en="A collaboration with viviα, kataware, and Sato Daisei, led through arrangement and sound design to support an epic world."
+                data-ja="viviα, kataware, Sato Daiseiとの合作を主導。叙事的な世界観を支える作編曲・音像設計を担当した共作。">
+                viviα, kataware, Sato Daiseiとの合作を主導。叙事的な世界観を支える作編曲・音像設計を担当した共作。
+              </p>
+              <div class="work-card-links">
+                <a href="https://www.youtube.com/watch?v=cW3B8-HhOlM" aria-label="YouTubeでFlorallax - abzuを観る" data-aria-en="Watch Florallax - abzu on YouTube" data-aria-ja="YouTubeでFlorallax - abzuを観る" data-en="YouTube" data-ja="YouTube" rel="noopener noreferrer" target="_blank">YouTube</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card" aria-label="animacy ep">
+            <div class="work-card-image">
+              <img src="images/animacy_jacket.webp" alt="animacy ep cover art" width="300" height="300" loading="lazy" decoding="async" />
+            </div>
+            <div class="work-card-body">
+              <time datetime="2023" class="work-card-year">2023</time>
+              <h3 class="work-card-title" data-en="animacy ep" data-ja="animacy ep">animacy ep</h3>
+              <p class="work-card-meta"><span data-en="Use case:" data-ja="用途:">用途:</span> <strong data-en="VOCALOID / EP / Early Vocal Works" data-ja="VOCALOID・EP・初期ボーカル作品">VOCALOID・EP・初期ボーカル作品</strong></p>
+              <p class="work-card-meta"><span data-en="Role:" data-ja="担当:">担当:</span> <strong data-en="Composition / Arrangement / Lyrics / Sound Production / Mix" data-ja="作編曲・作詞・サウンドプロデュース・ミックス等">作編曲・作詞・サウンドプロデュース・ミックス等</strong></p>
+              <p class="work-card-desc"
+                data-en="A debut EP using Hatsune Miku, showing early strength in composition and arrangement within a VOCALOID context."
+                data-ja="初音ミクを用いたデビューEPとして、VOCALOID文脈での基礎力と初期からの作編曲力を示す作品。">
+                初音ミクを用いたデビューEPとして、VOCALOID文脈での基礎力と初期からの作編曲力を示す作品。
+              </p>
+              <div class="work-card-links">
+                <a href="https://linkco.re/QbRPX1Mz?lang=ja" aria-label="animacy epを配信サービスで聴く" data-aria-en="Listen to animacy ep on streaming platforms" data-aria-ja="animacy epを配信サービスで聴く" data-en="Listen" data-ja="聴く" rel="noopener noreferrer" target="_blank">聴く</a>
+              </div>
+            </div>
+          </article>
+          <article class="work-card" aria-label="stargaze">
+            <div class="work-card-image">
+              <img src="https://i1.sndcdn.com/artworks-12abgjKi01dWwUYu-mp5HbA-t500x500.jpg" alt="stargaze cover art" width="300" height="300" loading="lazy" decoding="async" />
+            </div>
+            <div class="work-card-body">
+              <time datetime="2023" class="work-card-year">2023</time>
+              <h3 class="work-card-title" data-en="stargaze" data-ja="stargaze">stargaze</h3>
+              <p class="work-card-meta"><span data-en="Use case:" data-ja="用途:">用途:</span> <strong data-en="Vocal Work / Co-writing / Collaborative Production" data-ja="ボーカル楽曲 / 共作 / コラボレーション制作">ボーカル楽曲 / 共作 / コラボレーション制作</strong></p>
+              <p class="work-card-meta"><span data-en="Role:" data-ja="担当:">担当:</span> <strong data-en="Co-composition / Co-arrangement" data-ja="作編曲(共同)">作編曲(共同)</strong></p>
+              <p class="work-card-desc"
+                data-en="An early collaboration with iga and Kianna. I handled part of the production flow and co-composition/arrangement."
+                data-ja="iga, Kianna両氏との初期のコラボ作。制作進行・作編曲の一部を担った。">
+                iga, Kianna両氏との初期のコラボ作。制作進行・作編曲の一部を担った。
+              </p>
+              <div class="work-card-links">
+                <a href="https://soundcloud.com/eli2k3/stargaze-ft-iga-kianna" aria-label="Open stargaze on SoundCloud" data-aria-en="Open stargaze on SoundCloud" data-aria-ja="SoundCloudでstargazeを開く" data-en="SoundCloud" data-ja="SoundCloud" rel="noopener noreferrer" target="_blank">SoundCloud</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Soundtrack / Game / Visual -->
+    <section id="portfolio-soundtracks" aria-labelledby="soundtracks-heading">
+      <div class="container">
+        <h2 class="portfolio-section-title" id="soundtracks-heading" data-en="Soundtrack / Game / Visual" data-ja="Soundtrack / Game / Visual">Soundtrack / Game / Visual</h2>
+
+        <div class="works-grid">
+          <article class="work-card featured" aria-label="Character / Theme-based Commission Works">
+            <div class="work-card-body">
+              <span class="work-card-year">2023-</span>
+              <h3 class="work-card-title" data-en="Character / Theme-based Commission Works" data-ja="Character / Theme-based Commission Works">Character / Theme-based Commission Works</h3>
+              <p class="work-card-meta"><span data-en="Use case:" data-ja="用途:">用途:</span> <strong data-en="Character Theme / Game / Visual / Commission" data-ja="キャラクターテーマ・ゲーム・映像・コミッション">キャラクターテーマ・ゲーム・映像・コミッション</strong></p>
+              <p class="work-card-desc"
+                data-en="Commission work that reads original characters, worldbuilding, and request themes, then restructures them into music. 11 of 14 works are publicly shareable; most are character- or worldbuilding-based."
+                data-ja="オリジナルキャラクターや世界観、依頼テーマを読み取り、楽曲として再構成するコミッションワーク。公開可能作品11/14件で、大半がキャラクター/世界観ベース。">
+                オリジナルキャラクターや世界観、依頼テーマを読み取り、楽曲として再構成するコミッションワーク。公開可能作品11/14件で、大半がキャラクター/世界観ベース。
+              </p>
+              <div class="work-card-links">
+                <a href="https://skeb.jp/@e11laa" aria-label="SkebでCharacter / Theme-based Commission Worksを見る" data-aria-en="See Character / Theme-based Commission Works on Skeb" data-aria-ja="SkebでCharacter / Theme-based Commission Worksを見る" data-en="Skeb" data-ja="Skeb" rel="noopener noreferrer" target="_blank">Skeb</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card" aria-label="Skeb commission: TRPG character theme">
+            <div class="work-card-body">
+              <time datetime="2025" class="work-card-year">2025 / Skeb</time>
+              <p class="work-card-meta"><span data-en="Use case:" data-ja="用途:">用途:</span> <strong data-en="Character Music / Narrative Music" data-ja="キャラクター楽曲・物語音楽">キャラクター楽曲・物語音楽</strong></p>
+              <p class="work-card-desc"
+                data-en="A character theme based on the relationship and story settings of two original TRPG characters, incorporating unease, confinement, and Japanese nuances."
+                data-ja="TRPGのオリジナルキャラクター2名の関係性と物語設定をもとに、不穏さ、閉塞感、和風のニュアンスを織り込んで制作したキャラクターテーマ楽曲。">
+                TRPGのオリジナルキャラクター2名の関係性と物語設定をもとに、不穏さ、閉塞感、和風のニュアンスを織り込んで制作したキャラクターテーマ楽曲。
+              </p>
+              <p class="work-card-meta"><span data-en="Client feedback:" data-ja="感想:">感想:</span> 「イメージにピッタリ」「焦燥感と諦念が漂う曲」とのご感想を頂きました。</p>
+              <div class="work-card-links">
+                <a href="https://skeb.jp/@e11laa/works/4" aria-label="Skebでキャラクターテーマ楽曲を見る" data-aria-en="See this character theme commission on Skeb" data-aria-ja="Skebでキャラクターテーマ楽曲を見る" data-en="Skeb" data-ja="Skeb" rel="noopener noreferrer" target="_blank">Skeb</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card" aria-label="Skeb commission: looping BGM for VTuber stream">
+            <div class="work-card-body">
+              <time datetime="2026" class="work-card-year">2026 / Skeb</time>
+              <p class="work-card-meta"><span data-en="Use case:" data-ja="用途:">用途:</span> <strong data-en="Streaming BGM / Work BGM / Loop Music" data-ja="配信用BGM・作業用BGM・ループ楽曲">配信用BGM・作業用BGM・ループ楽曲</strong></p>
+              <p class="work-card-desc"
+                data-en="A quiet looping BGM commission for readings and streams, based on the world of individual VTuber 一匹兎之夜."
+                data-ja="個人VTuber・一匹兎之夜様の世界観をもとに、朗読動画や配信で使用できる静かなループBGMとして制作したコミッション楽曲。">
+                個人VTuber・一匹兎之夜様の世界観をもとに、朗読動画や配信で使用できる静かなループBGMとして制作したコミッション楽曲。
+              </p>
+              <p class="work-card-meta"><span data-en="Client note:" data-ja="補足:">補足:</span> 過去制作楽曲を気に入っていただき、同クライアント様から再度ご依頼頂いて制作しました。</p>
+              <div class="work-card-links">
+                <a href="https://skeb.jp/requests/3538436" aria-label="Skebで配信用BGMの依頼を見る" data-aria-en="See this streaming BGM commission on Skeb" data-aria-ja="Skebで配信用BGMの依頼を見る" data-en="Skeb" data-ja="Skeb" rel="noopener noreferrer" target="_blank">Skeb</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card" aria-label="Skeb commission: logic and Eureka drum and bass">
+            <div class="work-card-body">
+              <time datetime="2025" class="work-card-year">2025 / Skeb</time>
+              <p class="work-card-meta"><span data-en="Use case:" data-ja="用途:">用途:</span> <strong data-en="Character Music / Drum and Bass" data-ja="キャラクター楽曲・ドラムンベース">キャラクター楽曲・ドラムンベース</strong></p>
+              <p class="work-card-desc"
+                data-en="A commission based on an OC themed around logic, mathematics, and deduction, using development, tempo changes, and tone design to depict the path toward a Eureka moment."
+                data-ja="論理・数学・推理をテーマにしたOCの設定をもとに、研究と発見の積み重ねから“Eureka”の瞬間へ至る物語を、展開・テンポ変化・音色設計で表現したコミッション楽曲。">
+                論理・数学・推理をテーマにしたOCの設定をもとに、研究と発見の積み重ねから“Eureka”の瞬間へ至る物語を、展開・テンポ変化・音色設計で表現したコミッション楽曲。
+              </p>
+              <div class="work-card-links">
+                <a href="https://skeb.jp/requests/2974661" aria-label="Skebでキャラクター楽曲の依頼を見る" data-aria-en="See this character music commission on Skeb" data-aria-ja="Skebでキャラクター楽曲の依頼を見る" data-en="Skeb" data-ja="Skeb" rel="noopener noreferrer" target="_blank">Skeb</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Remix / Rearrangement -->
+    <section id="portfolio-remixes" aria-labelledby="remixes-heading">
+      <div class="container">
+        <h2 class="portfolio-section-title" id="remixes-heading" data-en="Remix / Rearrangement" data-ja="Remix / Rearrangement">Remix / Rearrangement</h2>
+
+        <div class="works-grid">
+          <article class="work-card" aria-label="CULT P - prʌ́ʃən (elli mia Remix)">
+            <div class="work-card-body">
+              <time datetime="2025" class="work-card-year">2025</time>
+              <h3 class="work-card-title" data-en="CULT P - prʌ́ʃən (elli mia Remix)" data-ja="CULT P - prʌ́ʃən (elli mia Remix)">CULT P - prʌ́ʃən (elli mia Remix)</h3>
+              <p class="work-card-meta"><span data-en="Use case:" data-ja="用途:">用途:</span> <strong data-en="Official Remix / Dubstep" data-ja="公式リミックス・Dubstep">公式リミックス・Dubstep</strong></p>
+              <p class="work-card-desc"
+                data-en="An official commissioned remix that reads structural gaps in the original and rebuilds the track to strengthen its appeal. The public link is an XFD because the full remix is on a physical release."
+                data-ja="公式依頼リミックスとして、原曲の構造的なギャップを読み取り、魅力を強化した再構築作品。フィジカル収録のため、公開リンクはXFDのみ。">
+                公式依頼リミックスとして、原曲の構造的なギャップを読み取り、魅力を強化した再構築作品。フィジカル収録のため、公開リンクはXFDのみ。
+              </p>
+              <div class="work-card-links">
+                <a href="https://www.nicovideo.jp/watch/sm44887400" aria-label="ニコニコ動画でCULT P - prʌ́ʃən (elli mia Remix)のXFDを聴く" data-aria-en="Listen to the XFD for CULT P - prʌ́ʃən (elli mia Remix) on Niconico" data-aria-ja="ニコニコ動画でCULT P - prʌ́ʃən (elli mia Remix)のXFDを聴く" data-en="XFD" data-ja="XFD" rel="noopener noreferrer" target="_blank">XFD</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card" aria-label="templime + 星宮とと - umino nioi (elli mia Remix)">
+            <div class="work-card-image">
+              <img src="https://i1.sndcdn.com/artworks-ifbz55fRZg2fVzsc-xSIiQw-t500x500.jpg" alt="umino nioi remix cover art" width="300" height="300" loading="lazy" decoding="async" />
+            </div>
+            <div class="work-card-body">
+              <time datetime="2023" class="work-card-year">2023</time>
+              <h3 class="work-card-title" data-en="templime + 星宮とと - umino nioi (elli mia Remix)" data-ja="templime + 星宮とと - umino nioi (elli mia Remix)">templime + 星宮とと - umino nioi (elli mia Remix)</h3>
+              <p class="work-card-meta"><span data-en="Use case:" data-ja="用途:">用途:</span> <strong data-en="Remix / Future Garage" data-ja="リミックス・Future Garage">リミックス・Future Garage</strong></p>
+              <p class="work-card-desc"
+                data-en="A reinterpretation of the original toward future garage and electronic music, showing transparency and direct listenability."
+                data-ja="原曲をfuture garage / 電子音楽寄りに再解釈し、透明感と素直な聴きやすさを見せるリミックス。">
+                原曲をfuture garage / 電子音楽寄りに再解釈し、透明感と素直な聴きやすさを見せるリミックス。
+              </p>
+              <div class="work-card-links">
+                <a href="https://soundcloud.com/eli2k3/ocean" aria-label="SoundCloudでumino nioi (elli mia Remix)を聴く" data-aria-en="Listen to umino nioi (elli mia Remix) on SoundCloud" data-aria-ja="SoundCloudでumino nioi (elli mia Remix)を聴く" data-en="SoundCloud" data-ja="SoundCloud" rel="noopener noreferrer" target="_blank">SoundCloud</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Video / Visual Production -->
+    <section id="portfolio-video" aria-labelledby="video-heading">
+      <div class="container">
+        <h2 class="portfolio-section-title" id="video-heading" data-en="Video / Visual Production" data-ja="Video / Visual Production">Video / Visual Production</h2>
+
+        <div class="works-grid">
+          <article class="work-card" aria-label="urotas - 虚空">
+            <div class="work-card-body">
+              <time datetime="2025" class="work-card-year">2025</time>
+              <h3 class="work-card-title" data-en="urotas - 虚空" data-ja="urotas - 虚空">urotas - 虚空</h3>
+              <p class="work-card-meta"><span data-en="Use case:" data-ja="用途:">用途:</span> <strong data-en="Music Video" data-ja="ミュージックビデオ">ミュージックビデオ</strong></p>
+              <p class="work-card-desc"
+                data-en="A music video production where I handled structure, editing, and direction by reading the structure and development of the music."
+                data-ja="音楽作品の構造や展開を読み取り、MVとしての構成・編集・ディレクションを担当した映像制作実績。">
+                音楽作品の構造や展開を読み取り、MVとしての構成・編集・ディレクションを担当した映像制作実績。
+              </p>
+              <div class="work-card-links">
+                <a href="https://youtu.be/7E6w2hHPq5k?si=a_ZvPCD5R1cbOsJM" aria-label="YouTubeでurotas - 虚空を観る" data-aria-en="Watch urotas - 虚空 on YouTube" data-aria-ja="YouTubeでurotas - 虚空を観る" data-en="YouTube" data-ja="YouTube" rel="noopener noreferrer" target="_blank">YouTube</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card" aria-label="Music Video / Promotion Video Works">
+            <div class="work-card-body">
+              <span class="work-card-year">2018-</span>
+              <h3 class="work-card-title" data-en="Music Video / Promotion Video Works" data-ja="Music Video / Promotion Video Works">Music Video / Promotion Video Works</h3>
+              <p class="work-card-meta"><span data-en="Use case:" data-ja="用途:">用途:</span> <strong data-en="Music Video / Promotion Video / Short-form Visual" data-ja="MV・告知映像・短尺映像">MV・告知映像・短尺映像</strong></p>
+              <p class="work-card-desc"
+                data-en="Multiple commissioned videos, mainly music videos and promotion videos, built with attention to the intent of the music."
+                data-ja="MV・告知映像を中心に、依頼案件として多数制作。音楽作品の意図を理解した映像設計に対応。">
+                MV・告知映像を中心に、依頼案件として多数制作。音楽作品の意図を理解した映像設計に対応。
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Lessons / Consultation -->
+    <section id="portfolio-lessons" aria-labelledby="lessons-heading">
+      <div class="container">
+        <h2 class="portfolio-section-title" id="lessons-heading" data-en="Lessons / Consultation" data-ja="Lessons / Consultation">Lessons / Consultation</h2>
+
+        <div class="works-grid">
+          <article class="work-card" aria-label="DTM / Composition Consultation">
+            <div class="work-card-body">
+              <span class="work-card-year">Ongoing</span>
+              <h3 class="work-card-title" data-en="DTM / Composition Consultation" data-ja="DTM / Composition Consultation">DTM / Composition Consultation</h3>
+              <p class="work-card-meta"><span data-en="Use case:" data-ja="用途:">用途:</span> <strong data-en="Private Lesson / Feedback / Consultation" data-ja="個別講座・添削・相談">個別講座・添削・相談</strong></p>
+              <p class="work-card-desc"
+                data-en="Instruction for around twenty people inside and outside circles, covering composition, arrangement, sound design, mixing, research, and project walkthroughs."
+                data-ja="サークル内外で約20名に指導。中級者を中心に、作編曲、音作り、ミックス、情報収集、プロジェクト解説などを個別講座・単発相談で指導。">
+                サークル内外で約20名に指導。中級者を中心に、作編曲、音作り、ミックス、情報収集、プロジェクト解説などを個別講座・単発相談で指導。
+              </p>
+              <div class="work-card-links">
+                <a href="commission.html" aria-label="DTM / Composition Consultationの依頼詳細を見る" data-aria-en="See DTM / Composition Consultation details" data-aria-ja="DTM / Composition Consultationの依頼詳細を見る" data-en="Details" data-ja="詳細">詳細</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / Navigation Link to Commission & Contact -->
+    <section id="portfolio-cta" aria-labelledby="portfolio-cta-heading">
+      <div class="container">
+        <h2 class="section-title" id="portfolio-cta-heading" data-en="Start a Project" data-ja="ご依頼・ご相談">ご依頼・ご相談</h2>
+        <span class="divider" aria-hidden="true"></span>
+        <p class="portfolio-intro"
+          data-en="For composition, arrangement, remix, visual production, or lesson requests, please see the service details or contact me directly."
+          data-ja="作編曲、リミックス、映像制作、講座などのご依頼は、詳細ページまたはお問い合わせからご相談ください。">
+          作編曲、リミックス、映像制作、講座などのご依頼は、詳細ページまたはお問い合わせからご相談ください。
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a class="btn" href="commission.html" data-en="See details &amp; pricing" data-ja="依頼詳細・料金を見る">依頼詳細・料金を見る</a>
+          <a class="btn" href="index.html#contact" data-en="Contact" data-ja="お問い合わせ">お問い合わせ</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p data-en="© 2026 elli mia. All rights reserved." data-ja="© 2026 elli mia. All rights reserved.">&#169; 2026
+        elli mia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
+</file>
+
+<file path="commission.html">
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="elli mia へのご依頼・コラボレーションのご案内。リミックス・作編曲・DJ出演・翻訳・動画編集・DTM講座など。" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="ご依頼など | elli mia" />
+  <meta property="og:description" content="リミックス・作編曲・DJ出演・翻訳・動画編集・DTM講座など、各種ご依頼を受け付けています。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ellimia.net/commission.html" />
+  <meta property="og:image" content="https://ellimia.net/images/exonorm-jacket.webp" />
+  <meta property="og:image:alt" content="exonorm cover art" />
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ellimia_" />
+  <meta name="twitter:title" content="ご依頼など | elli mia" />
+  <meta name="twitter:description" content="リミックス・作編曲・DJ出演・翻訳・動画編集・DTM講座など、各種ご依頼を受け付けています。" />
+  <meta name="twitter:image" content="https://ellimia.net/images/exonorm-jacket.webp" />
+  <meta name="twitter:image:alt" content="exonorm cover art" />
+  <link rel="canonical" href="https://ellimia.net/commission.html" />
+  <title>ご依頼など | elli mia</title>
+  <meta name="theme-color" content="#fafafa">
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/profile.png" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ellimia.net/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Commission",
+      "item": "https://ellimia.net/commission.html"
+    }]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Fallback for JavaScript-disabled browsers -->
+  <noscript>
+    <div style="background:#fff3cd;color:#856404;text-align:center;padding:0.75rem 1rem;font-size:0.875rem;">
+      このサイトの一部の機能 (言語切替・メールアドレス表示) にはJavaScriptが必要です。<br>
+      Some features (language toggle, email reveal) require JavaScript.
+    </div>
+  </noscript>
+
+  <!-- ── Header / Navigation ─────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" aria-label="メインナビゲーション" data-aria-en="Main navigation" data-aria-ja="メインナビゲーション">
+      <!-- Mobile hamburger -->
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false"
+        aria-label="ナビゲーションメニューを開く" data-aria-en="Open navigation menu" data-aria-ja="ナビゲーションメニューを開く">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <!-- Navigation links -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html#about" data-en="About" data-ja="About">About</a></li>
+        <li><a href="portfolio.html" data-en="Works" data-ja="Works">Works</a></li>
+        <li><a href="commission.html" data-en="Commission" data-ja="Commission" class="nav-active">Commission</a></li>
+        <li><a href="index.html#contact" data-en="Contact" data-ja="Contact">Contact</a></li>
+      </ul>
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch to English" type="button" data-current-lang="ja">
+        ENGLISH
+      </button>
+    </nav>
+  </header>
+
+  <!-- ── Main content ────────────────────────────────────────── -->
+  <main id="main-content" tabindex="-1">
+
+    <section id="commission" aria-labelledby="commission-heading">
+      <div class="container">
+        <span class="section-label" data-en="Commission" data-ja="ご依頼など">ご依頼など</span>
+        <h1 class="section-title" id="commission-heading" data-en="Commission &amp; Bookings" data-ja="ご依頼・コラボレーション">
+          ご依頼・コラボレーション</h1>
+        <span class="divider" aria-hidden="true"></span>
+        <p class="commission-return-link">
+          <a href="portfolio.html" data-en="← Back to Portfolio / Works" data-ja="← Portfolio / Works">← Portfolio / Works</a>
+        </p>
+        <p class="contact-intro" data-i18n-html="true"
+          data-en="Open to a wide range of commissions and collaborations. For enquiries, feel free to reach out via X DM or email. Pricing below is a guide — details and retakes are always open for discussion."
+          data-ja="幅広いご依頼・コラボレーションをお受けしています。お問い合わせはX (旧Twitter) のDMまたはメールにてお気軽にどうぞ。以下の料金はあくまで目安です。内容・リテイクなどはご相談ください。">
+          幅広いご依頼・コラボレーションをお受けしています。お問い合わせはX (旧Twitter) のDMまたはメールにてお気軽にどうぞ。以下の料金はあくまで目安です。内容・リテイクなどはご相談ください。
+        </p>
+
+        <!-- 料金表テーブル -->
+        <div class="commission-table-wrap">
+          <table class="commission-table">
+            <thead>
+              <tr>
+                <th data-en="Type" data-ja="依頼種別">依頼種別</th>
+                <th data-en="Price (guide)" data-ja="料金目安">料金目安</th>
+                <th data-en="Notes" data-ja="備考">備考</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-en="Remix" data-ja="リミックス">リミックス</td>
+                <td data-en="¥2,000–¥6,000" data-ja="¥2,000〜¥6,000">¥2,000〜¥6,000</td>
+                <td data-en="Varies by content and timing" data-ja="時期・内容により変動">時期・内容により変動</td>
+              </tr>
+              <tr>
+                <td data-en="Composition / Arrangement / Vocal Mix" data-ja="作編曲・ボーカルミックス等">作編曲・ボーカルミックス等</td>
+                <td data-en="From ¥8,000 (Est. hours × ¥1,000)" data-ja="¥8,000〜目安(見込み作業時間×¥1,000)">
+                  ¥8,000〜目安(見込み作業時間×¥1,000)</td>
+                <td data-en="Retakes and details negotiable" data-ja="リテイク・詳細はご相談">リテイク・詳細はご相談</td>
+              </tr>
+              <tr>
+                <td data-en="DJ Booking" data-ja="DJ出演">DJ出演</td>
+                <td data-en="¥3,000–¥10,000 + travel" data-ja="¥3,000〜¥10,000 (+ 交通費)">¥3,000〜¥10,000 (+ 交通費)</td>
+                <td data-en="Based in Tsukuba. VRChat / online also available." data-ja="つくば市在住。VRChatやオンライン出演も可。">
+                  つくば市在住。VRChat・オンライン出演も可</td>
+              </tr>
+              <tr>
+                <td data-en="Writing / Translation" data-ja="執筆・翻訳等">執筆・翻訳等</td>
+                <td data-en="From ¥1/character" data-ja="¥1/文字〜">¥1/文字〜</td>
+                <td data-en="Limited experience — please note beforehand. Retakes negotiable."
+                  data-ja="受けたことが少ない旨ご了承の上でご依頼ください。リテイクはご相談。">経験少なめであることをご了承ください</td>
+              </tr>
+              <tr>
+                <td data-en="Video Editing / Design" data-ja="動画編集・デザイン等">動画編集・デザイン等</td>
+                <td data-en="From ¥8,000" data-ja="¥8,000〜">¥8,000〜</td>
+                <td data-en="Not my main field — please note beforehand. Details negotiable."
+                  data-ja="本業ではない旨ご了承ください。詳細はご相談。">本業ではない旨ご了承ください</td>
+              </tr>
+              <tr>
+                <td data-en="DTM / Composition Lesson" data-ja="DTM・作曲講座等">DTM・作曲講座等</td>
+                <td data-en="¥1,000–¥3,000 /h" data-ja="¥1,000〜¥3,000/時">¥1,000〜¥3,000/時</td>
+                <td data-en="Started by request. Varies by preparation and content."
+                  data-ja="要望があったので開始。準備の有無・内容によって変動">要望があったので開始。準備の有無・内容で変動</td>
+              </tr>
+              <tr>
+                <td data-en="Other (events, collabs, etc.)" data-ja="その他 (イベント・共作企画等)">その他 (イベント・共作企画等)</td>
+                <td data-en="Negotiable (unpaid collabs welcome!)" data-ja="応相談 (無償でも歓迎！)">応相談 (無償コラボも歓迎！)</td>
+                <td data-en="Conditions vary — feel free to reach out!" data-ja="内容・時期によって変動。まずはお気軽にどうぞ！">まずはお気軽にどうぞ！
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="commission-cta">
+          <a class="btn" href="index.html#contact" data-en="Go to Contact" data-ja="お問い合わせへ">お問い合わせへ</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p data-en="© 2026 elli mia. All rights reserved." data-ja="© 2026 elli mia. All rights reserved.">&#169; 2026
+        elli mia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
+</file>
+
+<file path="css/style.css">
+/* ============================================================
+   style.css 窶・elli mia personal portfolio
+   Light elegant theme, mobile-first, no external dependencies
+   ============================================================ */
+
+/* 笏笏 Variables 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+:root {
+  --bg: #fafafa;
+  /* Off-white background */
+  --bg-card: #ffffff;
+  /* Pure white for cards */
+  --bg-nav: rgba(250, 250, 250, 0.92);
+  --text: #111111;
+  /* Deepest gray, almost black */
+  --text-muted: #4a4a4a;
+  /* Darker gray for secondary text */
+  --accent: #e60000;
+  /* Red accent */
+  --accent-dim: #b30000;
+  /* Slightly darker red for hovers */
+  --border: #e5e5e5;
+  /* Light gray borders */
+  --nav-h: 64px;
+  --section-gap: 6rem;
+  --radius: 6px;
+  --transition: 0.3s ease;
+}
+
+/* 笏笏 Reset & Base 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+  font-size: 16px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, sans-serif;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+html[lang="ja"] body {
+  font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--text);
+}
+
+ul {
+  list-style: none;
+}
+
+/* 笏笏 Skip-to-content (accessibility) 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  z-index: 9999;
+  transition: top var(--transition);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* 笏笏 Navigation 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-h);
+  background: var(--bg-nav);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.nav-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  transition: color var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.nav-links a.active {
+  color: var(--accent);
+}
+
+.nav-links a.nav-active {
+  color: var(--accent);
+}
+
+/* Hamburger button */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: var(--text);
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-toggle .bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.nav-toggle[aria-expanded="true"] .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* 笏笏 Layout helpers 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: var(--section-gap) 0;
+}
+
+.section-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+}
+
+.divider {
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--accent);
+  margin-bottom: 2.5rem;
+}
+
+/* 笏笏 Hero 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+#hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--nav-h);
+  background:
+    radial-gradient(ellipse at 35% 60%, rgba(250, 250, 250, 0.16) 10%, var(--bg) 80%),
+    url("../images/ellimia-background_new.webp") no-repeat center center;
+  background-size: 80%;
+  background-color: var(--bg);
+}
+
+.hero-content {
+  max-width: 680px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  background-color: rgba(250, 250, 250, 0.85);
+  width: fit-content;
+  padding: 0.1em 0.3em;
+  margin-left: -0.3em;
+  border-radius: 4px;
+}
+
+.hero-tagline {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--text-muted);
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.commission-return-link {
+  margin: 0 0 1.25rem;
+}
+
+.commission-return-link a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.commission-return-link a:hover,
+.commission-return-link a:focus-visible {
+  color: var(--accent);
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background-color: var(--bg);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  transition: background var(--transition), color var(--transition);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* 笏笏 About 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+#about {
+  border-top: 1px solid var(--border);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.about-image-wrap {
+  aspect-ratio: 4 / 5;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 360px;
+}
+
+
+
+.about-text p {
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* 笏笏 Works / Discography 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+#works {
+  border-top: 1px solid var(--border);
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.work-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.work-card:hover {
+  border-color: var(--accent-dim);
+  transform: translateY(-4px);
+}
+
+.work-card-image {
+  aspect-ratio: 1;
+  background: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.work-card-image svg {
+  opacity: 0.3;
+}
+
+.portfolio-placeholder-image {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+}
+
+.portfolio-placeholder-image span {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  padding: 0 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.work-card-body {
+  padding: 1.1rem 1.25rem 1.25rem;
+}
+
+.work-card-year {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+.work-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.work-card-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.work-card-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.work-card-links a {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+  padding: 0.5rem 0.8rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 3px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.work-card-links a:hover,
+.work-card-links a:focus-visible {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+/* 笏笏 Achievements / Career 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+#achievements {
+  border-top: 1px solid var(--border);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  top: 0.6rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateX(calc(-50% + 0.5px));
+}
+
+.timeline-year {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* 笏笏 Contact 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+#contact {
+  border-top: 1px solid var(--border);
+}
+
+.contact-intro {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: none;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 2.5rem;
+  word-break: break-all;
+}
+
+.contact-email svg {
+  flex-shrink: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  transition: color var(--transition);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.social-link svg {
+  flex-shrink: 0;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+
+/* 笏笏 Footer 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.site-footer p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+/* 笏笏 Profile image 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.about-profile-img {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+/* 笏笏 Work card cover images 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.work-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+/* 笏笏 Language toggle button 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-family: inherit;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.65rem;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
+  margin-left: 0.75rem;
+  flex-shrink: 0;
+}
+
+.lang-toggle:hover,
+.lang-toggle:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+  outline: none;
+}
+
+/* 笏笏 Responsive 窶・Tablet 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+@media (min-width: 640px) {
+  .about-grid {
+    grid-template-columns: auto 1fr;
+    align-items: start;
+  }
+}
+
+/* 笏笏 Responsive 窶・Mobile nav 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+@media (max-width: 767px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.85rem 1.5rem;
+    width: 100%;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  #hero {
+    background-size: 160%;
+    background-position: left 20% center;
+  }
+
+  .commission-table-wrap {
+    margin: 1.5rem 0;
+    overflow: visible;
+    border: 0;
+  }
+
+  .commission-table {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    font-size: 0.92rem;
+  }
+
+  .commission-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .commission-table tbody {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .commission-table tr {
+    display: block;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .commission-table td {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem 1.1rem;
+    border-bottom: 1px solid var(--border);
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .commission-table td:last-child {
+    border-bottom: none;
+  }
+
+  .commission-table td::before {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  html[lang="ja"] .commission-table td:nth-child(1)::before {
+    content: "依頼種別";
+  }
+
+  html[lang="ja"] .commission-table td:nth-child(2)::before {
+    content: "料金目安";
+  }
+
+  html[lang="ja"] .commission-table td:nth-child(3)::before {
+    content: "備考";
+  }
+
+  html[lang="en"] .commission-table td:nth-child(1)::before {
+    content: "Type";
+  }
+
+  html[lang="en"] .commission-table td:nth-child(2)::before {
+    content: "Price (guide)";
+  }
+
+  html[lang="en"] .commission-table td:nth-child(3)::before {
+    content: "Notes";
+  }
+}
+
+/* 笏笏 Reduced motion 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* 笏笏 Commission page 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+#commission {
+  border-top: 1px solid var(--border);
+}
+
+.commission-table-wrap {
+  overflow-x: auto;
+  margin: 2rem 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.commission-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  min-width: 540px;
+}
+
+.commission-table th,
+.commission-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.commission-table th {
+  background: var(--bg-card);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.commission-table tr:last-child td {
+  border-bottom: none;
+}
+
+.commission-table td:first-child {
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.commission-table td:nth-child(2) {
+  color: var(--text);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+
+.commission-details {
+  display: grid;
+  gap: 0;
+  margin: 2.5rem 0;
+}
+
+.commission-item {
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 0;
+}
+
+.commission-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.commission-item dt {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.commission-item dd {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.commission-cta {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+/* 笏笏 Commission CTA section (index.html) 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+#commission-cta {
+  border-top: 1px solid var(--border);
+}
+
+/* 笏笏 Portfolio Page Styles 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.work-card-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.work-card-meta strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.work-card.featured {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(230, 0, 0, 0.04);
+}
+
+/* 笏笏 Portfolio Page Custom Spacing & Intro 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.portfolio-page section {
+  padding: 3rem 0;
+}
+
+.portfolio-page section:first-of-type {
+  padding-top: 5rem;
+}
+
+.portfolio-page main section + section {
+  border-top: 1px solid var(--border);
+}
+
+.portfolio-intro {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 820px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+/* 笏笏 Skill Summary Link Cards 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+a.work-card {
+  color: inherit;
+  display: block;
+}
+
+a.work-card:hover {
+  color: inherit;
+}
+
+a.work-card:hover .work-card-title {
+  color: var(--accent);
+}
+
+/* 笏笏 Portfolio Section Title (Medium heading) 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.portfolio-section-title {
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  .portfolio-page #portfolio-songs .works-grid {
+    width: calc(100vw - 3rem);
+    max-width: 1320px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+</file>
+
+<file path="index.html">
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Producer · DJ · Artist — crafting intricate electronic worlds with VOCALOIDs and beyond." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="elli mia" />
+  <meta property="og:description"
+    content="Producer · DJ · Artist — crafting intricate electronic worlds with VOCALOIDs and beyond." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ellimia.net/" />
+  <meta property="og:image" content="https://ellimia.net/images/exonorm-jacket.webp" />
+  <meta property="og:image:alt" content="exonorm cover art" />
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ellimia_" />
+  <meta name="twitter:title" content="elli mia" />
+  <meta name="twitter:description"
+    content="Producer · DJ · Artist — crafting intricate electronic worlds with VOCALOIDs and beyond." />
+  <meta name="twitter:image" content="https://ellimia.net/images/exonorm-jacket.webp" />
+  <meta name="twitter:image:alt" content="exonorm cover art" />
+  <link rel="canonical" href="https://ellimia.net/" />
+  <title>elli mia</title>
+  <meta name="theme-color" content="#fafafa">
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/profile.png" />
+  <link rel="preload" as="image" href="images/ellimia-background_new.webp" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "elli mia",
+    "url": "https://ellimia.net/",
+    "image": "https://ellimia.net/images/profile.png",
+    "jobTitle": "Electronic Music Producer, DJ, Artist",
+    "description": "Producer · DJ · Artist — crafting intricate electronic worlds with VOCALOIDs and beyond.",
+    "sameAs": [
+      "https://www.instagram.com/elix112_/",
+      "https://www.youtube.com/@elli-mia",
+      "https://open.spotify.com/artist/6jZG2yZgv6K8NjivcnTQMj",
+      "https://soundcloud.com/eli2k3",
+      "https://twitter.com/e11laa"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Fallback for JavaScript-disabled browsers -->
+  <noscript>
+    <div style="background:#fff3cd;color:#856404;text-align:center;padding:0.75rem 1rem;font-size:0.875rem;">
+      このサイトの一部の機能 (言語切替・メールアドレス表示) にはJavaScriptが必要です。<br>
+      Some features (language toggle, email reveal) require JavaScript.
+    </div>
+  </noscript>
+
+  <!-- ── Header / Navigation ─────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" aria-label="メインナビゲーション" data-aria-en="Main navigation" data-aria-ja="メインナビゲーション">
+      <!-- Mobile hamburger -->
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false"
+        aria-label="ナビゲーションメニューを開く" data-aria-en="Open navigation menu" data-aria-ja="ナビゲーションメニューを開く">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <!-- Navigation links -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about" data-en="About" data-ja="About">About</a></li>
+        <li><a href="portfolio.html" data-en="Works" data-ja="Works">Works</a></li>
+        <li><a href="commission.html" data-en="Commission" data-ja="Commission">Commission</a></li>
+        <li><a href="#contact" data-en="Contact" data-ja="Contact">Contact</a></li>
+      </ul>
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch to English" type="button" data-current-lang="ja">
+        ENGLISH
+      </button>
+    </nav>
+  </header>
+
+  <!-- ── Main content ────────────────────────────────────────── -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- ── Hero ──────────────────────────────────────────────── -->
+    <section id="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-eyebrow" data-en="Musician · Composer · Artist"
+            data-ja="Musician · Composer · Artist">Musician · Composer · Artist</span>
+          <h1 class="hero-title" id="hero-heading">elli mia</h1>
+          <p class="hero-tagline"
+            data-en="Producer · DJ · Artist — crafting intricate electronic worlds with VOCALOIDs and beyond."
+            data-ja="プロデューサー・DJ・アーティスト。VOCALOID等を用いた、緻密で深遠な電子音楽の世界を構築。" hidden>
+            Producer · DJ · Artist — crafting intricate electronic worlds with VOCALOIDs and beyond.
+          </p>
+          <a class="btn" href="portfolio.html" data-en="Explore My Music" data-ja="音楽を聴く">音楽を聴く</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── About ─────────────────────────────────────────────── -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <span class="section-label" data-en="About" data-ja="私について">私について</span>
+        <h2 class="section-title" id="about-heading" data-en="The Artist" data-ja="プロフィール">プロフィール</h2>
+        <span class="divider" aria-hidden="true"></span>
+        <div class="about-grid">
+          <!-- Profile image -->
+          <div class="about-image-wrap">
+            <img src="images/profile.png" alt="elli mia portrait" width="320" height="320" loading="lazy" decoding="async"
+              class="about-profile-img" />
+          </div>
+          <!-- Biography text -->
+          <div class="about-text">
+            <p data-en="elli mia is a Japanese electronic music producer, DJ, and artist based in Tsukuba, Ibaraki. Drawing from leftfield bass, drum and bass, and experimental electronica, his music blurs the boundaries between the dance floor and the avant-garde — with VOCALOIDs as frequent creative collaborators."
+              data-ja="elli mia(エリエムアイエー)は、茨城県つくば市を拠点とする電子音楽プロデューサー・DJ・アーティスト。レフトフィールドベース、ドラムンベース、実験的エレクトロニカをルーツに、身体性と実験性、形式と経験の境界を縫う表現を試みる。">
+              elli
+              mia(エリエムアイエー)は、茨城県つくば市を拠点とする電子音楽プロデューサー・DJ・アーティスト。レフトフィールドベース、ドラムンベース、実験的エレクトロニカをルーツに、身体性と実験性、形式と経験の境界を縫う表現を試みる。
+            </p>
+            <p data-i18n-html="true"
+              data-en="His debut full-length album <em>exonorm</em> (2026) weaves a cosmic narrative around a civilisation caught in the gravitational pull of a binary star system, featuring dense sound design and poetic lyrics across ten tracks. His earlier EP <em>animacy</em> (2023) fused Vocaloid production with intricate rhythmic textures while posing questions regarding the historical context of the internet scene."
+              data-ja="2023年リリースのEP『animacy』では、VOCALOIDプロダクションと精緻なリズムテクスチャーを融合させ、インターネットシーンが抱える歴史的な問題を提起。1stアルバム『exonorm』(2026年)は、連星系の重力に捕らわれた文明の宇宙的危機を描き、緻密なサウンドデザインと詩的な歌詞が交錯する。">
+              2023年リリースのEP『animacy』では、VOCALOIDプロダクションと精緻なリズムテクスチャーを融合させ、インターネットシーンが抱える歴史的な問題を提起。1stアルバム『exonorm』(2026年)は、連星系の重力に捕らわれた文明の宇宙的危機を描き、緻密なサウンドデザインと詩的な歌詞が交錯する。
+            </p>
+            <p data-i18n-html="true"
+              data-en="Beyond the studio, elli mia is an active DJ and event organiser — co-founding the <em>purewire</em> event and performing at clubs across Japan, including OctBass, CIRCUS TOKYO, and Wall&amp;Wall. He also takes on vocal mixing, arrangement, and commissioned production work."
+              data-ja="DJ・イベントオーガナイザーとしても活動。自身のイベント『purewire』を共催したほか、OctBass・CIRCUS TOKYO・Wall&amp;Wall・Barフェーダーなど日本各地のクラブで出演。ボーカルミックス・アレンジ・楽曲制作のクライアントワークも行う。">
+              DJ・イベントオーガナイザーとしても活動。自身のイベント『purewire』を共催したほか、OctBass・CIRCUS
+              TOKYO・Wall&amp;Wall・Barフェーダーなど日本各地のクラブで出演。ボーカルミックス・アレンジ・楽曲制作のクライアントワークも行う。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Works / Discography ───────────────────────────────── -->
+    <section id="works" aria-labelledby="works-heading">
+      <div class="container">
+        <span class="section-label" data-en="Discography" data-ja="ディスコグラフィー">ディスコグラフィー</span>
+        <h2 class="section-title" id="works-heading" data-en="Works" data-ja="代表作">代表作</h2>
+        <span class="divider" aria-hidden="true"></span>
+        <div class="works-grid">
+
+          <!-- Card 1 -->
+          <article class="work-card" aria-label="exonorm">
+            <div class="work-card-image">
+              <img src="images/exonorm-jacket.webp" alt="exonorm cover art" width="300" height="300" loading="lazy" decoding="async" />
+            </div>
+            <div class="work-card-body">
+              <time datetime="2026" class="work-card-year">2026</time>
+              <h3 class="work-card-title" data-en="exonorm" data-ja="exonorm">exonorm</h3>
+              <p class="work-card-desc" data-i18n-html="true"
+                data-en="A ten-track debut album exploring a civilisation in cosmic crisis — fusing leftfield bass, drum and bass, and Vocaloid production into a dense, mythological soundworld."
+                data-ja="宇宙的危機に瀕した文明の神話から現代の問題を描く1stアルバム。レフトフィールドベース、ドラムンベース、ボカロプロダクションを融合させ、深遠なサウンドスケープを展開する。">
+                宇宙的危機に瀕した文明の神話から現代の問題を描く1stアルバム。レフトフィールドベース、ドラムンベース、ボカロプロダクションを融合させ、深遠なサウンドスケープを展開する。
+              </p>
+              <div class="work-card-links">
+                <a href="https://linkco.re/8gCd3fB0" aria-label="各ストリーミングサービスでexonormを聴く" data-aria-en="Listen to exonorm on streaming platforms" data-aria-ja="各ストリーミングサービスでexonormを聴く"
+                  rel="noopener noreferrer" target="_blank">All Platforms</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="work-card" aria-label="animacy ep">
+            <div class="work-card-image">
+              <img src="images/animacy_jacket.webp" alt="animacy ep cover art" width="300" height="300"
+                loading="lazy" decoding="async" />
+            </div>
+            <div class="work-card-body">
+              <time datetime="2023" class="work-card-year">2023</time>
+              <h3 class="work-card-title" data-en="animacy ep" data-ja="animacy ep">animacy ep</h3>
+              <p class="work-card-desc"
+                data-en="A six-track EP featuring Hatsune Miku, released January 2023 — an early statement of elli mia's distinctive approach to Vocaloid-driven electronic music."
+                data-ja="2023年1月にリリースされた、初音ミクをフィーチャーした6曲入りEP。VOCALOIDを核にした電子音楽への独自アプローチを打ち出した初期の代表作。">
+                初音ミクをフィーチャーした6曲入りEP。VOCALOIDを核にした電子音楽への独自アプローチを打ち出した初期の代表作。
+              </p>
+              <div class="work-card-links">
+                <a href="https://linkco.re/QbRPX1Mz" aria-label="各ストリーミングサービスでanimacy epを聴く" data-aria-en="Listen to animacy ep on streaming platforms" data-aria-ja="各ストリーミングサービスでanimacy epを聴く"
+                  rel="noopener noreferrer" target="_blank">All Platforms</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="work-card" aria-label="utumiyqcom — another">
+            <div class="work-card-image">
+              <img src="images/another-jacket.webp" alt="utumiyqcom — another cover art" width="300" height="300"
+                loading="lazy" decoding="async" />
+            </div>
+            <div class="work-card-body">
+              <time datetime="2024" class="work-card-year">2024</time>
+              <h3 class="work-card-title" data-en="utumiyqcom — another" data-ja="utumiyqcom — another">utumiyqcom —
+                another</h3>
+              <p class="work-card-desc"
+                data-en="A collaboration with utumiyqcom, with elli mia contributing production and arrangement."
+                data-ja="utumiyqcomとのコラボレーション作品。elli miaがプロダクション・アレンジを担当。">
+                utumiyqcomとのコラボレーション作品。elli miaがプロダクション・アレンジを担当。
+              </p>
+              <div class="work-card-links">
+                <a href="https://linkco.re/V1qEdmSc" aria-label="各ストリーミングサービスでutumiyqcom - anotherを聴く" data-aria-en="Listen to utumiyqcom - another on streaming platforms" data-aria-ja="各ストリーミングサービスでutumiyqcom - anotherを聴く"
+                  rel="noopener noreferrer" target="_blank">All Platforms</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="work-card" aria-label="Florallax - abzu">
+            <div class="work-card-image">
+              <img src="images/abzu-jacket.webp" alt="Florallax - abzu cover art" width="300" height="300"
+                loading="lazy" decoding="async" />
+            </div>
+            <div class="work-card-body">
+              <time datetime="2025" class="work-card-year">2025</time>
+              <h3 class="work-card-title" data-en="Florallax - abzu" data-ja="Florallax - abzu">Florallax - abzu</h3>
+              <p class="work-card-desc" data-i18n-html="true"
+                data-en="A collaboration piece for the online event 'VocaDuo' with viviα, Sugar88, and kataware. Exploring the relationship between societal issues and individual existence through epic motifs. Production and arrangement by elli mia."
+                data-ja="viviα、Sugar88、katawareとの、オンラインイベント『ボカデュオ』での合作。社会が抱える問題とそれをうけた個人の在り方を、叙事詩的モチーフとともに描く。elli miaがプロダクション・アレンジを担当。">
+                viviα、Sugar88、katawareとの、オンラインイベント『ボカデュオ』での合作。社会が抱える問題とそれをうけた個人の在り方を、叙事詩的モチーフとともに描く。elli
+                miaがプロダクション・アレンジを担当。
+              </p>
+              <div class="work-card-links">
+                <a href="https://youtu.be/cW3B8-HhOlM" aria-label="YouTubeでFlorallax - abzuを観る" data-aria-en="Watch Florallax - abzu on YouTube" data-aria-ja="YouTubeでFlorallax - abzuを観る"
+                  rel="noopener noreferrer" target="_blank">YouTube</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Achievements / Career ─────────────────────────────── -->
+    <section id="achievements" aria-labelledby="achievements-heading">
+      <div class="container">
+        <span class="section-label" data-en="Career" data-ja="これまでの実績">これまでの実績</span>
+        <h2 class="section-title" id="achievements-heading" data-en="Achievements" data-ja="経歴">経歴</h2>
+        <span class="divider" aria-hidden="true"></span>
+        <ol class="timeline" aria-label="実績のタイムライン" data-aria-en="Career timeline" data-aria-ja="実績のタイムライン">
+
+          <li class="timeline-item">
+            <time datetime="2022" class="timeline-year">2022</time>
+            <h3 class="timeline-title" data-en="Started DJing" data-ja="DJとして活動開始">DJとして活動開始</h3>
+            <p class="timeline-desc"
+              data-en="Began performing as a DJ in December 2022, marking the start of an active presence in Japan's net underground scene."
+              data-ja="2022年12月にDJとしてのキャリアをスタート。日本のネット・アンダーグラウンドシーンへの本格的な参入を果たした。">
+              2022年12月にDJとしてのキャリアをスタート。日本のネット・アンダーグラウンドシーンへの本格的な参入を果たした。
+            </p>
+          </li>
+
+          <li class="timeline-item">
+            <time datetime="2023" class="timeline-year">2023</time>
+            <h3 class="timeline-title" data-i18n-html="true"
+              data-en="EP Release, Active DJ Schedule &amp; purewire Launch"
+              data-ja="EP リリース(2023年1月)、DJ 活動本格化 &amp; purewire 始動">EP リリース(2023年1月)、DJ 活動本格化 &amp; purewire 始動</h3>
+            <p class="timeline-desc" data-i18n-html="true"
+              data-en="Released the <em>animacy</em> EP (January 2023), played over a dozen club nights across Japan — including OctBass, CIRCUS TOKYO, and Wall&amp;Wall — and co-founded the <em>purewire</em> event."
+              data-ja="『animacy』EP(2023年1月)をリリース。OctBass・CIRCUS TOKYO・Wall&amp;Wallを含む日本各地で10数本のクラブナイトに出演。自身のイベント『purewire』を共同設立。">
+              『animacy』EP(2023年1月)をリリース。OctBass・CIRCUS TOKYO・Wall&amp;Wallを含む日本各地で10数本のクラブナイトに出演。自身のイベント『purewire』を共同設立。
+            </p>
+          </li>
+
+          <li class="timeline-item">
+            <time datetime="2024" class="timeline-year">2024</time>
+            <h3 class="timeline-title" data-en="Collaboration: utumiyqcom — another"
+              data-ja="コラボレーション：utumiyqcom — another">コラボレーション：utumiyqcom — another</h3>
+            <p class="timeline-desc" data-i18n-html="true"
+              data-en="Contributed production and arrangement to the track <em>another</em> by utumiyqcom, expanding his work as a collaborative producer beyond solo releases."
+              data-ja="utumiyqcom『another』にプロダクション・アレンジとして参加。ソロ活動を超えたコラボレーターとしての側面を広げた。">
+              utumiyqcom『another』にプロダクション・アレンジとして参加。ソロ活動を超えたコラボレーターとしての側面を広げた。
+            </p>
+          </li>
+
+          <li class="timeline-item">
+            <time datetime="2026" class="timeline-year">2026</time>
+            <h3 class="timeline-title" data-i18n-html="true" data-en="Debut Album <em>exonorm</em> Released"
+              data-ja="デビューアルバム 『exonorm』 リリース">デビューアルバム 『exonorm』 リリース</h3>
+            <p class="timeline-desc" data-i18n-html="true"
+              data-en="Released his debut full-length album <em>exonorm</em> via Lost Frog Productions (February 2026), receiving attention from international electronic music communities."
+              data-ja="Lost Frog Productionsより デビューフルアルバム『exonorm』(2026年2月)をリリース。国際的な電子音楽コミュニティでも注目を集めている。">
+              Lost Frog Productionsより デビューフルアルバム『exonorm』(2026年2月)をリリース。国際的な電子音楽コミュニティでも注目を集めている。
+            </p>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── Commission CTA ─────────────────────────────────────────────── -->
+    <section id="commission-cta" aria-labelledby="commission-cta-heading">
+      <div class="container">
+        <span class="section-label" data-en="Commission" data-ja="ご依頼など">ご依頼など</span>
+        <h2 class="section-title" id="commission-cta-heading" data-en="Commission &amp; Bookings"
+          data-ja="ご依頼・コラボレーション">ご依頼・コラボレーション</h2>
+        <span class="divider" aria-hidden="true"></span>
+        <p class="contact-intro" data-i18n-html="true"
+          data-en="Open to remixes, composition, DJ bookings, writing, video editing, lessons, and more. Rates and conditions vary — feel free to enquire."
+          data-ja="リミックス・作編曲・DJ出演・執筆・動画編集・DTM講座など、幅広いご依頼をお受けしています。料金・条件はご相談ください。">
+          リミックス・作編曲・DJ出演・執筆・動画編集・DTM講座など、幅広いご依頼をお受けしています。料金・条件はご相談ください。
+        </p>
+        <a class="btn" href="commission.html" data-en="See details &amp; pricing" data-ja="詳細・料金を見る">詳細・料金を見る</a>
+      </div>
+    </section>
+
+    <!-- ── Contact ────────────────────────────────────────────── -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <span class="section-label" data-en="Get in Touch" data-ja="コンタクト">コンタクト</span>
+        <h2 class="section-title" id="contact-heading" data-en="Contact" data-ja="お問い合わせ">お問い合わせ</h2>
+        <span class="divider" aria-hidden="true"></span>
+        <p class="contact-intro" data-i18n-html="true"
+          data-en="For bookings, collaborations, commissions, or press enquiries, feel free to reach out. You can also find him on X and Discord as <strong>e11laa</strong>."
+          data-ja="ブッキング、コラボレーション、楽曲制作の依頼、取材などのお問い合わせはお気軽にどうぞ。X・Discordは <strong>e11laa</strong> です。">
+          ブッキング、コラボレーション、楽曲制作の依頼、取材などのお問い合わせはお気軽にどうぞ。X・Discordは <strong>e11laa</strong> です。
+        </p>
+
+        <!-- Email — reveal on click -->
+        <div class="contact-email-wrap">
+          <button class="contact-email btn-reveal-email" id="reveal-email-btn" aria-label="メールアドレスを表示" data-aria-en="Show email address" data-aria-ja="メールアドレスを表示"
+            type="button">
+            <!-- Envelope icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m2 7 10 7 10-7" />
+            </svg>
+            <span data-en="Show email address" data-ja="メールアドレスを表示">メールアドレスを表示</span>
+          </button>
+          <a class="contact-email" id="contact-email-link" href="#" aria-label="elli miaにメールを送る" data-aria-en="Send an email to elli mia" data-aria-ja="elli miaにメールを送る" hidden>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m2 7 10 7 10-7" />
+            </svg>
+            <span id="contact-email-text"></span>
+          </a>
+        </div>
+
+        <!-- Social media links -->
+        <nav aria-label="各種ソーシャルリンク" data-aria-en="Social media links" data-aria-ja="各種ソーシャルリンク">
+          <ul class="social-links" role="list">
+
+            <li>
+              <a class="social-link" href="https://twitter.com/e11laa" aria-label="X (Twitter)でelli miaをフォロー" data-aria-en="Follow elli mia on X (Twitter)" data-aria-ja="X (Twitter)でelli miaをフォロー"
+                rel="me noopener noreferrer" target="_blank">
+                <!-- X (Twitter) icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#000000" aria-hidden="true">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                X
+              </a>
+            </li>
+
+            <li>
+              <a class="social-link" href="https://www.instagram.com/elix112_/"
+                aria-label="Instagramでelli miaをフォロー" data-aria-en="Follow elli mia on Instagram" data-aria-ja="Instagramでelli miaをフォロー" rel="me noopener noreferrer" target="_blank">
+                <!-- Instagram icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E4405F" stroke-width="1.5"
+                  aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="5" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="#E4405F" stroke="none" />
+                </svg>
+                Instagram
+              </a>
+            </li>
+
+            <li>
+              <a class="social-link" href="https://www.youtube.com/@elli-mia" aria-label="YouTubeでelli miaをチャンネル登録" data-aria-en="Follow elli mia on YouTube" data-aria-ja="YouTubeでelli miaをチャンネル登録"
+                rel="me noopener noreferrer" target="_blank">
+                <!-- YouTube icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF0000" stroke-width="1.5"
+                  aria-hidden="true">
+                  <rect x="2" y="5" width="20" height="14" rx="4" />
+                  <polygon points="10,9 16,12 10,15" fill="#FF0000" stroke="none" />
+                </svg>
+                YouTube
+              </a>
+            </li>
+
+            <li>
+              <a class="social-link" href="https://open.spotify.com/artist/6jZG2yZgv6K8NjivcnTQMj"
+                aria-label="Spotifyでelli miaを聴く" data-aria-en="Listen to elli mia on Spotify" data-aria-ja="Spotifyでelli miaを聴く" rel="me noopener noreferrer" target="_blank">
+                <!-- Spotify icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1DB954" stroke-width="1.5"
+                  aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M7 9.5c3 -1 7 -1 10 1" />
+                  <path d="M7 12.5c2.5 -0.8 5.5 -0.8 8 0.5" />
+                  <path d="M7 15.5c2 -0.6 4 -0.6 6 0.2" />
+                </svg>
+                Spotify
+              </a>
+            </li>
+
+            <li>
+              <a class="social-link" href="https://soundcloud.com/eli2k3" aria-label="SoundCloudでelli miaを聴く" data-aria-en="Listen to elli mia on SoundCloud" data-aria-ja="SoundCloudでelli miaを聴く"
+                rel="me noopener noreferrer" target="_blank">
+                <!-- SoundCloud icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="1.5"
+                  aria-hidden="true">
+                  <path
+                    d="M1 14.5c0-1.93 1.57-3.5 3.5-3.5a3.5 3.5 0 0 1 .5.04C5.37 8.77 7.5 7 10 7c2.76 0 5 2.24 5 5h1a3 3 0 1 1 0 6H4.5A3.5 3.5 0 0 1 1 14.5z" />
+                </svg>
+                SoundCloud
+              </a>
+            </li>
+
+            <li>
+              <a class="social-link" href="https://github.com/e11laa" aria-label="GitHubでelli miaをチェック" data-aria-en="Check elli mia on GitHub" data-aria-ja="GitHubでelli miaをチェック"
+                rel="me noopener noreferrer" target="_blank">
+                <!-- GitHub icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  aria-hidden="true">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+                GitHub
+              </a>
+            </li>
+
+            <li>
+              <a class="social-link" href="https://marshmallow-qa.com/ciplaf"
+                aria-label="マシュマロで匿名メッセージを送る" data-aria-en="Send anonymous messages via Marshmallow" data-aria-ja="マシュマロで匿名メッセージを送る" rel="me noopener noreferrer" target="_blank">
+                <!-- Marshmallow icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5A9B8" stroke-width="1.5"
+                  aria-hidden="true">
+                  <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+                <span data-en="Marshmallow" data-ja="マシュマロ">マシュマロ</span>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p data-en="© 2026 elli mia. All rights reserved." data-ja="© 2026 elli mia. All rights reserved.">&#169; 2026
+        elli mia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
+</file>
+
+</files>

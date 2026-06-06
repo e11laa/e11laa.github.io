@@ -1,9 +1,9 @@
 /* ============================================================
-   style.css 窶・elli mia personal portfolio
+   style.css - elli mia personal portfolio
    Light elegant theme, mobile-first, no external dependencies
    ============================================================ */
 
-/* 笏笏 Variables 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Variables */
 :root {
   --bg: #fafafa;
   /* Off-white background */
@@ -26,7 +26,7 @@
   --transition: 0.3s ease;
 }
 
-/* 笏笏 Reset & Base 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Reset and base */
 *,
 *::before,
 *::after {
@@ -93,7 +93,7 @@ ul {
   list-style: none;
 }
 
-/* 笏笏 Skip-to-content (accessibility) 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Skip-to-content accessibility */
 .skip-link {
   position: absolute;
   top: -3rem;
@@ -110,7 +110,7 @@ ul {
   top: 0;
 }
 
-/* 笏笏 Navigation 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Navigation */
 .site-header {
   position: fixed;
   top: 0;
@@ -195,7 +195,7 @@ ul {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* 笏笏 Layout helpers 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Layout helpers */
 .container {
   width: 100%;
   max-width: 1100px;
@@ -231,7 +231,7 @@ section {
   margin-bottom: 2.5rem;
 }
 
-/* 笏笏 Hero 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Hero */
 #hero {
   min-height: 100svh;
   display: flex;
@@ -313,7 +313,7 @@ section {
   color: var(--bg);
 }
 
-/* 笏笏 About 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* About */
 #about {
   border-top: 1px solid var(--border);
 }
@@ -347,7 +347,7 @@ section {
   margin-bottom: 0;
 }
 
-/* 笏笏 Works / Discography 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Works / Discography */
 #works {
   border-top: 1px solid var(--border);
 }
@@ -452,7 +452,7 @@ section {
   border-color: var(--accent);
 }
 
-/* 笏笏 Achievements / Career 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Achievements / Career */
 #achievements {
   border-top: 1px solid var(--border);
 }
@@ -513,7 +513,7 @@ section {
   line-height: 1.7;
 }
 
-/* 笏笏 Contact 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Contact */
 #contact {
   border-top: 1px solid var(--border);
 }
@@ -569,7 +569,7 @@ section {
   border-color: var(--accent-dim);
 }
 
-/* 笏笏 Footer 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Footer */
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 2rem 0;
@@ -582,7 +582,7 @@ section {
   letter-spacing: 0.04em;
 }
 
-/* 笏笏 Profile image 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Profile image */
 .about-profile-img {
   display: block;
   width: 100%;
@@ -592,7 +592,7 @@ section {
   object-fit: cover;
 }
 
-/* 笏笏 Work card cover images 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Work card cover images */
 .work-card-image img {
   width: 100%;
   height: 100%;
@@ -601,7 +601,7 @@ section {
   display: block;
 }
 
-/* 笏笏 Language toggle button 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Language toggle button */
 .lang-toggle {
   background: none;
   border: 1px solid var(--border);
@@ -624,7 +624,7 @@ section {
   outline: none;
 }
 
-/* 笏笏 Responsive 窶・Tablet 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Responsive: tablet */
 @media (min-width: 640px) {
   .about-grid {
     grid-template-columns: auto 1fr;
@@ -632,7 +632,7 @@ section {
   }
 }
 
-/* 笏笏 Responsive 窶・Mobile nav 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Responsive: mobile nav */
 @media (max-width: 767px) {
   .nav-toggle {
     display: flex;
@@ -756,7 +756,7 @@ section {
   }
 }
 
-/* 笏笏 Reduced motion 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
 
   *,
@@ -771,7 +771,7 @@ section {
   }
 }
 
-/* 笏笏 Commission page 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Commission page */
 #commission {
   border-top: 1px solid var(--border);
 }
@@ -859,12 +859,12 @@ section {
   text-align: center;
 }
 
-/* 笏笏 Commission CTA section (index.html) 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Commission CTA section (index.html) */
 #commission-cta {
   border-top: 1px solid var(--border);
 }
 
-/* 笏笏 Portfolio Page Styles 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Portfolio page styles */
 .work-card-meta {
   font-size: 0.8rem;
   color: var(--text-muted);
@@ -882,7 +882,7 @@ section {
   box-shadow: 0 4px 12px rgba(230, 0, 0, 0.04);
 }
 
-/* 笏笏 Portfolio Page Custom Spacing & Intro 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Portfolio page custom spacing and intro */
 .portfolio-page section {
   padding: 3rem 0;
 }
@@ -903,7 +903,7 @@ section {
   line-height: 1.8;
 }
 
-/* 笏笏 Skill Summary Link Cards 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Skill summary link cards */
 a.work-card {
   color: inherit;
   display: block;
@@ -917,7 +917,7 @@ a.work-card:hover .work-card-title {
   color: var(--accent);
 }
 
-/* 笏笏 Portfolio Section Title (Medium heading) 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+/* Portfolio section title (medium heading) */
 .portfolio-section-title {
   font-size: clamp(1.3rem, 2.5vw, 1.6rem);
   font-weight: 700;
@@ -934,3 +934,4 @@ a.work-card:hover .work-card-title {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
+
