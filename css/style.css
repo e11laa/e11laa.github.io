@@ -363,6 +363,8 @@ section {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: border-color var(--transition), transform var(--transition);
 }
 
@@ -403,6 +405,9 @@ section {
 
 .work-card-body {
   padding: 1.1rem 1.25rem 1.25rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
 .work-card-year {
@@ -429,6 +434,7 @@ section {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 
 .work-card-links a {
@@ -903,10 +909,14 @@ section {
   line-height: 1.8;
 }
 
+.portfolio-page #portfolio-hero .portfolio-intro {
+  max-width: 1040px;
+}
+
 /* Skill summary link cards */
 a.work-card {
   color: inherit;
-  display: block;
+  display: flex;
 }
 
 a.work-card:hover {
@@ -927,11 +937,7 @@ a.work-card:hover .work-card-title {
 
 @media (min-width: 1200px) {
   .portfolio-page #portfolio-songs .works-grid {
-    width: calc(100vw - 3rem);
-    max-width: 1320px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
