@@ -283,6 +283,7 @@ main.page{padding-bottom:var(--s6)}
 [data-lk=B] .links{padding-left:1px}
 @media(min-width:720px) and (max-width:1179px){[data-lk=B] .links{column-gap:var(--space-3)}}
 @media(max-width:719px){[data-lk=B] .links{display:grid;grid-template-columns:1fr;row-gap:var(--space-1)}}
+.links li,.links a,.links .nm{line-height:20px}
 .dl{display:block;flex:none;margin-left:auto;font-size:24px;width:calc(var(--lw) / 48 * 1em);height:calc(var(--lh) / 48 * 1em);transform:translateY(calc(var(--ld) / 48 * 1em));background:var(--ink);-webkit-mask:var(--mm) 0 0/100% 100% no-repeat;mask:var(--mm) 0 0/100% 100% no-repeat}
 @media(max-width:719px){.dl{font-size:15px}.sec-h{flex-wrap:wrap;row-gap:var(--space-1)}}
 .sec-h{padding-bottom:10px}
