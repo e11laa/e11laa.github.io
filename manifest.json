@@ -3,8 +3,8 @@
   "short_name": "elli mia",
   "start_url": "/?source=pwa",
   "display": "standalone",
-  "background_color": "#fafafa",
-  "theme_color": "#fafafa",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
   "description": "elli mia（エリエムアイエー）の公式サイト・ポートフォリオ",
   "icons": [
     {

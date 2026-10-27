@@ -1,114 +1,41 @@
-<!DOCTYPE html>
-<html lang="ja">
-
+<!doctype html>
+<html lang="ja" data-theme="dark" data-st="on" data-tl="B" data-lk="B" data-pv="A" data-wl="B" data-ix="stair" data-dc="on">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page Not Found — elli mia</title>
-    <meta name="robots" content="noindex">
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <style>
-        body {
-            background-color: #ffffff;
-        }
-
-        .error-page {
-            min-height: 100svh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            background-color: #ffffff;
-        }
-
-        .error-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-            max-width: 600px;
-        }
-
-        .error-image {
-            width: 100%;
-            max-width: 320px;
-            height: auto;
-            border-radius: var(--radius);
-        }
-
-        .error-text-wrap {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .error-code {
-            font-size: 4rem;
-            font-size: clamp(3rem, 10vw, 6rem);
-            font-weight: 700;
-            color: var(--accent);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-            font-family: 'Oswald', sans-serif;
-            text-transform: uppercase;
-        }
-
-        .error-message {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        @media (min-width: 640px) {
-            .error-content {
-                flex-direction: row;
-                text-align: left;
-                gap: 3rem;
-            }
-            .error-text-wrap {
-                align-items: flex-start;
-            }
-        }
-
-        .utility-link {
-            display: inline-block;
-            margin-top: 1rem;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            opacity: 0.7;
-            transition: opacity 0.2s;
-        }
-
-        .utility-link:hover {
-            opacity: 1;
-            text-decoration: underline;
-            color: var(--accent);
-        }
-    </style>
+<base href="/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f2f2f2" media="(prefers-color-scheme: light)">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/images/profile.png">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>404 | elli mia</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&family=IBM+Plex+Mono:wght@400&family=Zen+Kaku+Gothic+Antique:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=BIZ+UDPGothic:wght@400;700&family=Special+Elite&display=swap">
+<link rel="stylesheet" href="/css/style.css">
 </head>
+<body data-page="404">
 
-<body>
-    <div class="error-page">
-        <div class="error-content">
-            <img src="/images/404.webp" alt="404 Not Found Character" class="error-image" loading="eager" decoding="async" />
-            <div class="error-text-wrap">
-                <p class="error-code">404</p>
-                <p class="error-message">
-                    お探しのページが見つかりませんでした。<br>
-                    The page you're looking for doesn't exist.
-                </p>
-                <a class="btn" href="/">トップページに戻る / Back</a>
-                <a href="cockoo-clock.html" class="utility-link">便利ツール</a>
-            </div>
-        </div>
-    </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="sg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="64"><stop offset="0" style="stop-color:var(--silver-1)"/><stop offset=".34" style="stop-color:var(--silver-2)"/><stop offset=".52" style="stop-color:var(--silver-3)"/><stop offset=".76" style="stop-color:var(--silver-4)"/><stop offset="1" style="stop-color:var(--silver-5)"/></linearGradient>
+<filter id="f3" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency=".42" numOctaves="3" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G" result="d"/><feComponentTransfer in="d" result="core"><feFuncA type="linear" slope="1.35" intercept="-.05"/></feComponentTransfer><feGaussianBlur in="SourceAlpha" stdDeviation=".5" result="wb"/><feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="2" seed="19" result="n3"/><feDisplacementMap in="wb" in2="n3" scale="4" xChannelSelector="G" yChannelSelector="B" result="wd"/><feComponentTransfer in="wd" result="spots"><feFuncA type="linear" slope="8" intercept="-3.9"/></feComponentTransfer><feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="1" seed="3" result="n2"/><feColorMatrix in="n2" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 3.4 -1.3" result="m"/><feComposite in="spots" in2="m" operator="in" result="sp2"/><feFlood flood-color="#b9b9b9" result="fl"/><feComposite in="fl" in2="sp2" operator="in" result="ink"/><feMerge><feMergeNode in="ink"/><feMergeNode in="core"/></feMerge></filter>
+<filter id="f2" x="-8%" y="-8%" width="116%" height="116%"><feGaussianBlur in="SourceGraphic" stdDeviation=".7" result="b"/><feTurbulence type="fractalNoise" baseFrequency=".07" numOctaves="3" seed="5" result="n"/><feDisplacementMap in="b" in2="n" scale="4" result="d"/><feComponentTransfer><feFuncA type="discrete" tableValues="0 1 1 1"/></feComponentTransfer></filter>
+</defs></svg><noscript><div class="nt" role="note"><span class="label muted">Notice</span><p class="body-sm">このサイトの一部の機能(言語切替・メールアドレス表示)にはJavaScriptが必要です。<br>Some features (language toggle, email reveal) require JavaScript.</p></div></noscript>
+<a class="skip label" href="#main">Skip to main content</a>
+<header class="hd" role="banner"><div class="page hd-in">
+ <a  class="home label" href="index.html" data-go="index">elli mia(トップへ)</a>
+ <button id="menu" type="button" hidden aria-hidden="true"></button>
+ <div class="hd-row"><div class="deco" aria-hidden="true"></div><div class="ctl"><button class="btn label" id="th" type="button">Theme: dark</button><button class="btn label" type="button" aria-label="Switch to English">EN</button></div></div>
+ <nav aria-label="メインナビゲーション"><ul class="nv" id="nv" role="list"><li><a  class="label" href="index.html#about" data-go="about"><span class="num label muted" aria-hidden="true">1.1</span><span class="t">About</span></a></li><li><a  class="label" href="portfolio.html" data-go="works"><span class="num label muted" aria-hidden="true">1.2</span><span class="t">Works</span></a></li><li><a  class="label" href="commission.html" data-go="commission"><span class="num label muted" aria-hidden="true">1.3</span><span class="t">Commission</span></a></li><li><a  class="label" href="index.html#contact" data-go="contact"><span class="num label muted" aria-hidden="true">1.4</span><span class="t">Contact</span></a></li></ul></nav>
+</div></header>
+<div class="dec dband dhero" aria-hidden="true" style="--h:300px;--mi:var(--m-hc_x-i);--mr:var(--m-hc_x-r);--mw:1020px;--mh:336px;--py:50%"><div class="dm"><div class="l i"></div><div class="l r"></div></div><div class="dc"><img class="met red" alt="" src="images/deco/red-ribbon-1aa25bc7.png" style="top:calc(66.6667% - 0.7554 * var(--h));height:150%;left:calc(66.6667% - 0.7242 * var(--h));"><span class="pl c-ink " style="left:24px;top:22px;transform:rotate(-4deg);opacity:1;width:34px;height:auto;"><svg class="stp" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><path d="M23.0 15.0L41.0 15.0M27.5 7.2L36.5 22.8M36.5 7.2L27.5 22.8M7.0 45.0L25.0 45.0M11.5 37.2L20.5 52.8M20.5 37.2L11.5 52.8M39.0 45.0L57.0 45.0M43.5 37.2L52.5 52.8M52.5 37.2L43.5 52.8" stroke-width="3.2" stroke-linecap="butt" fill="none"/></svg></span></div></div>
+<main id="main">
+<div class="view page" id="v-404"><section class="top"><p class="label muted">404</p><h1 class="display-lg">Page not found</h1><p class="body lead">お探しのページは見つかりませんでした。<br>The page you are looking for could not be found.</p><p style="margin-top:var(--space-3)"><a  class="bt bt-p label" href="index.html" data-go="index">トップへ戻る / Back to top</a></p></section></div>
+</main>
+<footer class="ft page"><p class="label muted">© 2026 elli mia. All rights reserved.</p></footer>
+<script src="/js/main.js"></script>
 </body>
-
 </html>
