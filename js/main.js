@@ -143,19 +143,24 @@ window.__oa=run;Promise.all(jobs).then(run,run);
 (function(){
 function fit(){
  var s=document.querySelector('.stair'); if(!s||!s.offsetWidth)return;
- var rows=[].slice.call(s.children), n=rows.length-1, R=0.39, MAX=144;
+ var rows=[].slice.call(s.children), n=rows.length-1, R=0.39, MAX=144, LMIN=9, GMIN=8;
  var links=rows.map(function(r){return r.querySelector('.sr-a');});
  var last=rows[n], la=links[n], ll=last.firstElementChild; last.style.marginLeft='0px';
  function rw(){return la.getBoundingClientRect().left-ll.getBoundingClientRect().left+la.scrollWidth;}
- var fs0=parseFloat(getComputedStyle(la).fontSize), aw=la.scrollWidth, lab=rw()-aw;
- var avail=s.clientWidth-fs0*0.017;
- var f=Math.min(MAX,(avail-lab)/(aw/fs0+n*R));
+ var fs0=parseFloat(getComputedStyle(la).fontSize), aw=la.scrollWidth;
+ var lw0=ll.getBoundingClientRect().width, ls0=parseFloat(getComputedStyle(ll).fontSize), g0=parseFloat(getComputedStyle(last).columnGap)||0;
+ function cl(x,a,b){return Math.max(a,Math.min(b,x));}
+ function lab(f){var ls=cl(f*ls0/MAX,LMIN,ls0), g=cl(f*g0/MAX,GMIN,g0); return {ls:ls,g:g,w:lw0*ls/ls0+g};}
+ var avail=s.clientWidth-fs0*0.017, f=MAX, k;
+ for(k=0;k<5;k++){f=Math.min(MAX,(avail-lab(f).w)/(aw/fs0+n*R));}
+ var L=lab(f);
  links.forEach(function(a){a.style.fontSize=f+'px';a.style.lineHeight=(f*0.9)+'px';});
+ rows.forEach(function(r){r.style.gap=L.g+'px';r.firstElementChild.style.fontSize=L.ls+'px';});
  avail=s.clientWidth-f*0.017;
  var w=rw(), step=Math.max(f*R*0.9,(avail-w)/n);
  rows.forEach(function(r,i){r.style.marginLeft=(i*step)+'px';});
 }
-function reset(){document.querySelectorAll('.stair .sr-a').forEach(function(a){a.style.fontSize='';a.style.lineHeight='';});}
+function reset(){document.querySelectorAll('.stair .sr-a').forEach(function(a){a.style.fontSize='';a.style.lineHeight='';});document.querySelectorAll('.stair .sr-row').forEach(function(r){r.style.gap='';var l=r.firstElementChild;if(l)l.style.fontSize='';});}
 function run(){reset();fit();}
 window.__fitStair=run;
 var raf=0,lw=-1;function sched(){if(raf)return;raf=requestAnimationFrame(function(){raf=0;run();});}
