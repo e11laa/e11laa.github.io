@@ -293,6 +293,7 @@ main.page{padding-bottom:var(--s6)}
 @media(min-width:1180px){.about-t p{font-size:17px;line-height:32px}}
 .sr-a{white-space:nowrap;flex:none}
 @media(max-width:719px){.sr-a{font-size:64px;line-height:60px}}
+@media(max-width:719px){[data-st=on] .stair{display:none}}
 #commission-cta>p.body{margin-top:calc(var(--space-3) + var(--space-2))!important}
 #commission-cta .more{margin-top:calc(var(--space-3) + var(--space-2))}
 .contact-in{padding-top:calc(var(--space-3) + var(--space-2))}
