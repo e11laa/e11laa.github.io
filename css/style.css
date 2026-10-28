@@ -284,6 +284,9 @@ main.page{padding-bottom:var(--s6)}
 @media(min-width:720px) and (max-width:1179px){[data-lk=B] .links{column-gap:var(--space-3)}}
 @media(max-width:719px){[data-lk=B] .links{display:grid;grid-template-columns:1fr;row-gap:var(--space-1)}}
 .links li,.links a,.links .nm{line-height:20px}
+main{word-break:auto-phrase;text-wrap:pretty}
+.it .sm-t .wx,.it .ttl .wx,.it h3 .wx{white-space:normal;max-width:calc(100% / 1.06)}
+@media(max-width:719px){.sec-h:has(>.cnt){flex-wrap:nowrap}.sec-h:has(>.cnt)>h2{flex:1 1 0;min-width:0}}
 .dl{display:block;flex:none;margin-left:auto;font-size:24px;width:calc(var(--lw) / 48 * 1em);height:calc(var(--lh) / 48 * 1em);transform:translateY(calc(var(--ld) / 48 * 1em));background:var(--ink);-webkit-mask:var(--mm) 0 0/100% 100% no-repeat;mask:var(--mm) 0 0/100% 100% no-repeat}
 @media(max-width:719px){.dl{font-size:15px}.sec-h{flex-wrap:wrap;row-gap:var(--space-1)}}
 .sec-h{padding-bottom:10px}
